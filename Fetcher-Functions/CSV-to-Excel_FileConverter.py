@@ -80,7 +80,8 @@ for csv_path, out_xlsx in files.items():
     # Ordina per anno decrescente, timestamp decrescente e titolo alfabetico
     if date_col:
         try:
-            df[date_col] = pd.to_datetime(df[date_col], errors='coerce', utc=True)
+            # Converti in datetime e rendi timezone-naive
+            df[date_col] = pd.to_datetime(df[date_col], errors='coerce').dt.tz_localize(None)
             df['Year'] = df[date_col].dt.year
 
             sort_cols = ['Year', date_col]
