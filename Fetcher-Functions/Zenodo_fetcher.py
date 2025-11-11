@@ -2,160 +2,128 @@ import requests
 import csv
 from datetime import datetime
 import time
+import urllib.parse
 
 class ZenodoFetcher:
-    def __init__(self, max_retries=3, delay=5):
+    def __init__(self):
         self.base_url = "https://zenodo.org/api/records"
-        self.max_retries = max_retries
-        self.delay = delay
 
-    def fetch_records(self, query, batch_size=200, max_pages=5):
-        """Scarica tutti i record per la query, mostrando il progresso."""
+    def fetch_records(self, query, max_results=100):
+        """
+        Esegue la query su Zenodo API e restituisce una lista di dizionari con i metadati principali.
+        """
+        print(f"[INFO] Eseguo query: {query}")
         all_results = []
         page = 1
+        per_page = 100  # massimo consentito da Zenodo
 
-        while True:
-            if max_pages and page > max_pages:
-                print(f"[INFO] Raggiunto limite di {max_pages} pagine per questa query.")
+        while len(all_results) < max_results:
+            params = {
+                'q': query,
+                'size': per_page,
+                'page': page
+            }
+            url = f"{self.base_url}?{urllib.parse.urlencode(params)}"
+            response = requests.get(url)
+
+            if response.status_code != 200:
+                raise Exception(f"Errore API Zenodo: {response.status_code} - {response.text}")
+
+            data = response.json()
+            items = data.get('hits', {}).get('hits', [])
+            if not items:
                 break
 
-            print(f"[INFO] Query '{query}', pagina {page}...")
-            retries = 0
-            while retries < self.max_retries:
-                try:
-                    params = {
-                        'q': query,
-                        'size': batch_size,
-                        'page': page,
-                        'sort': 'mostdownloaded',
-                        'all_versions': 'false'
-                    }
-                    response = requests.get(self.base_url, params=params, timeout=30)
-                    if response.status_code == 200:
-                        hits = response.json().get('hits', {}).get('hits', [])
-                        print(f"[INFO] → {len(hits)} risultati trovati in pagina {page}")
-                        if not hits:
-                            print("[INFO] Nessun altro risultato. Fine query.")
-                            return all_results
+            for item in items:
+                metadata = item.get('metadata', {})
+                all_results.append({
+                    'title': metadata.get('title'),
+                    'author': ", ".join([a.get('name', '') for a in metadata.get('creators', [])]),
+                    'description': metadata.get('description'),
+                    'created': metadata.get('publication_date'),
+                    'updated': item.get('updated'),
+                    'keywords': ", ".join(metadata.get('keywords', [])) if metadata.get('keywords') else None,
+                    'url': metadata.get('doi') or item.get('links', {}).get('html'),
+                    'license': metadata.get('license', {}).get('id') if metadata.get('license') else None
+                })
 
-                        for item in hits:
-                            metadata = item.get('metadata', {})
-                            doc_type = metadata.get('resource_type', {}).get('type', '').lower()
-                            if doc_type not in ['publication', 'conferencepaper']:
-                                continue
-
-                            created = item.get('created')
-                            language = metadata.get('language')
-                            if language and language.lower() != 'en':
-                                continue
-
-                            if created:
-                                try:
-                                    year = datetime.strptime(created, '%Y-%m-%dT%H:%M:%S.%fZ').year
-                                    if year < 2014:
-                                        continue
-                                except:
-                                    pass
-
-                            record = {
-                                'title': metadata.get('title'),
-                                'author': ", ".join([c.get('name') for c in metadata.get('creators', [])]),
-                                'description': metadata.get('description'),
-                                'created': created,
-                                'updated': item.get('updated'),
-                                'language': language,
-                                'downloads': item.get('stats', {}).get('downloads', 0),
-                                'url': item.get('links', {}).get('html'),
-                                'license': metadata.get('license', {}).get('id')
-                                        if isinstance(metadata.get('license'), dict)
-                                        else metadata.get('license')
-                            }
-                            all_results.append(record)
-
-                        print(f"[INFO] Totale accumulato finora: {len(all_results)} record.")
-                        break  # uscita dal loop dei retry
-
-                    else:
-                        print(f"[WARN] Status {response.status_code}, retry in {self.delay}s")
-                        time.sleep(self.delay)
-                        retries += 1
-                except requests.exceptions.RequestException as e:
-                    print(f"[ERRORE] {e}, retry in {self.delay}s")
-                    time.sleep(self.delay)
-                    retries += 1
-            else:
-                print(f"[ERRORE] Query '{query}' pagina {page} fallita dopo {self.max_retries} tentativi.")
+            print(f"[INFO] Pagina {page} completata ({len(items)} risultati)")
+            time.sleep(1)  # pausa tra le richieste
+            if len(items) < per_page:
                 break
-
             page += 1
-            time.sleep(0.5)  # piccola pausa per non saturare Zenodo
 
+        print(f"[INFO] Totali risultati trovati: {len(all_results)}")
         return all_results
 
-    def save_as_csv(self, data, filename='zenodo_results.csv'):
+    def save_as_csv(self, data, filename):
         if not data:
             print("[WARN] Nessun dato da salvare.")
             return
-
-        data_sorted = sorted(data, key=lambda x: x.get('downloads', 0), reverse=True)
-        for i, row in enumerate(data_sorted, start=1):
-            row['n'] = i
-
-        fieldnames = ['n'] + [k for k in data_sorted[0].keys() if k != 'n']
-        with open(filename, 'w', newline='', encoding='utf-8-sig') as f:
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
+        with open(filename, mode='w', newline='', encoding='utf-8-sig') as csvfile:
+            fieldnames = ['title', 'author', 'description', 'created', 'updated', 'keywords', 'url', 'license']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             writer.writeheader()
-            for row in data_sorted:
-                writer.writerow({k: " ".join(str(v).split()) if isinstance(v, str) else v for k, v in row.items()})
+            writer.writerows(data)
+        print(f"[INFO] File CSV salvato come '{filename}'")
 
-        print(f"[INFO] File CSV salvato come '{filename}' con {len(data_sorted)} record.")
+    def save_as_bib(self, data, filename):
+        if not data:
+            print("[WARN] Nessun dato da salvare.")
+            return
+        with open(filename, 'w', encoding='utf-8') as f:
+            for i, rec in enumerate(data):
+                key = f"zenodo{i+1}"
+                title = rec.get('title', '')
+                author = rec.get('author', '')
+                year = ''
+                if rec.get('created'):
+                    try:
+                        year = datetime.strptime(rec['created'], '%Y-%m-%d').year
+                    except Exception:
+                        pass
+                url = rec.get('url', '')
+                note = f"Keywords: {rec.get('keywords', '')}, License: {rec.get('license', '')}"
+                f.write(f"@misc{{{key}, title={{{title}}}, author={{{author}}}, year={{{year}}}, howpublished={{\\url{{{url}}}}}, note={{{note}}}}}\n\n")
+        print(f"[INFO] File BibTeX salvato come '{filename}'")
 
-# === MAIN ===
+
 if __name__ == "__main__":
-    zen = ZenodoFetcher()
+    fetcher = ZenodoFetcher()
 
-    # Keywords principali / ontologiche / esclusioni
-    keywords_cloud = ['cloud computing', 'cloud-computing', 'multi-cloud']
-    keywords_ontology = ['ontology', 'ontologies', 'semantic web', 'knowledge graph', 
-                         'knowledge graphs', 'linked data', 'linked open data']
-    exclusions = ['internet of things', 'iot']
+    # --- 🔹 Keyword derivata da query Scopus/ACM
+    keywords_cloud = ['"cloud computing"', '"cloud-computing"', '"multi-cloud"']
+    keywords_ontology = [
+        '"ontology"', '"ontologies"', '"semantic web"', '"knowledge graph"',
+        '"knowledge graphs"', '"linked data"', '"linked open data"'
+    ]
+    exclusions = ['"internet of things"', 'iot']
 
-    all_records = []
-
-    # Costruzione query semplice: OR per cloud + OR per ontologie, senza NOT
+    queries = []
     for c in keywords_cloud:
         for o in keywords_ontology:
-            q = f'(metadata.title:{c} OR metadata.description:{c} OR metadata.keywords:{c}) ' \
-                f'AND (metadata.title:{o} OR metadata.description:{o} OR metadata.keywords:{o})'
-            print(f"[INFO] Esecuzione query semplificata: {q}")
-            recs = zen.fetch_records(q, batch_size=100, max_pages=None)
-            all_records.extend(recs)
+            q = (
+                f'({c} OR {c} in:title OR {c} in:description) '
+                f'AND ({o} OR {o} in:title OR {o} in:description) '
+                f'NOT ({" OR ".join(exclusions)}) '
+                f'AND publication_date:[2014-01-01 TO 2025-12-31]'
+            )
+            queries.append(q)
 
-    print(f"[INFO] Totale record prima di applicare esclusioni: {len(all_records)}")
+    all_results = []
+    for q in queries:
+        results = fetcher.fetch_records(query=q, max_results=200)
+        all_results.extend(results)
 
-    # Filtro brutale delle esclusioni (a mano)
-    filtered_records = []
-    for r in all_records:
-        text = " ".join([
-            str(r.get('title','')),
-            str(r.get('description','')),
-            str(r.get('author',''))
-        ]).lower()
-        if not any(e.lower() in text for e in exclusions):
-            filtered_records.append(r)
-
-    print(f"[INFO] Totale record dopo esclusioni: {len(filtered_records)}")
-
-    # Deduplicazione
+    # --- 🔹 Rimuove duplicati
     seen = set()
-    unique_records = []
-    for r in filtered_records:
-        key = (r.get('title'), r.get('author'))
-        if key not in seen:
-            unique_records.append(r)
-            seen.add(key)
+    unique_results = []
+    for r in all_results:
+        if r['url'] not in seen:
+            unique_results.append(r)
+            seen.add(r['url'])
 
-    print(f"[INFO] Totale record unici: {len(unique_records)}")
+    print(f"[INFO] Totale risultati unici combinati: {len(unique_results)}")
 
-    # Salvataggio
-    zen.save_as_csv(unique_records, "zenodo_results.csv")
+    fetcher.save_as_csv(unique_results, r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Results\zenodo_combined.csv")
+    fetcher.save_as_bib(unique_results, r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Results\zenodo_combined.bib")

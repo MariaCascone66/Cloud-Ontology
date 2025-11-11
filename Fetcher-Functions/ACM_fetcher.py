@@ -1,140 +1,94 @@
 import requests
+from bs4 import BeautifulSoup
 import csv
-from datetime import datetime
-import os
+import time
 
-class ACMFetcher:
+class ACMScraper:
     def __init__(self):
-        self.api_url = "https://api.crossref.org/works"
-        self.member_id = 320  # ACM Member ID in Crossref
+        self.base_url = "https://dl.acm.org/action/doSearch"
+        self.session = requests.Session()
         self.headers = {
-            'User-Agent': 'ACMFetcherColab/1.0 (mailto:your-email@example.com)'
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
         }
 
-    def fetch_records(self, query, max_results=30):
-        """
-        Cerca articoli ACM tramite Crossref.
-        """
-        print(f"[INFO] Ricerca ACM tramite Crossref: '{query}' con max {max_results} risultati")
-        params = {
-            'query': query,
-            'filter': f'member:{self.member_id}',
-            'rows': max_results,
-            'sort': 'relevance'
+    def build_query_params(self, page=1):
+        # 🔹 Query ACM DL esatta
+        query = (
+            '(Title:("cloud computing" OR "cloud-computing" OR "multi-cloud") '
+            'OR Abstract:("cloud computing" OR "cloud-computing" OR "multi-cloud") '
+            'OR Keyword:("cloud computing" OR "cloud-computing" OR "multi-cloud")) '
+            'AND '
+            '(Title:("ontolog*" OR "semantic web" OR "knowledge graph*" OR "linked data" OR "linked open data") '
+            'OR Abstract:("ontolog*" OR "semantic web" OR "knowledge graph*" OR "linked data" OR "linked open data") '
+            'OR Keyword:("ontolog*" OR "semantic web" OR "knowledge graph*" OR "linked data" OR "linked open data")) '
+            'AND !(Title:("internet of things" OR "iot") '
+            'OR Abstract:("internet of things" OR "iot") '
+            'OR Keyword:("internet of things" OR "iot"))'
+        )
+        return {
+            "AllField": query,
+            "startPage": page,
+            "pageSize": 20  # numero di risultati per pagina
         }
 
-        try:
-            response = requests.get(self.api_url, params=params, headers=self.headers)
-            response.raise_for_status()
-        except requests.RequestException as e:
-            print(f"[ERRORE] Richiesta fallita: {e}")
+    def fetch_page(self, page=1):
+        params = self.build_query_params(page)
+        response = self.session.get(self.base_url, headers=self.headers, params=params)
+        if response.status_code != 200:
+            print(f"[ERROR] Pagina {page} non disponibile: {response.status_code}")
             return []
-
-        items = response.json().get("message", {}).get("items", [])
+        soup = BeautifulSoup(response.text, "html.parser")
         results = []
 
-        for item in items:
-            record = {
-                'title': item.get('title', [''])[0],
-                'author': ", ".join([f"{a.get('family', '')} {a.get('given', '')}" for a in item.get('author', [])]) if item.get('author') else '',
-                'published': item.get('issued', {}).get('date-parts', [[None]])[0][0],
-                'DOI': item.get('DOI', ''),
-                'URL': item.get('URL', ''),
-                'publisher': item.get('publisher', ''),
-                'journal': item.get('container-title', [''])[0] if item.get('container-title') else ''
-            }
-            results.append(record)
+        # 🔹 Trova articoli nella pagina
+        articles = soup.select("div.search__item")  # selettore CSS ACM DL
+        for art in articles:
+            title_tag = art.select_one("h5.issue-item__title a")
+            if not title_tag:
+                continue
+            title = title_tag.get_text(strip=True)
+            url = "https://dl.acm.org" + title_tag.get("href")
+            authors = ", ".join([a.get_text(strip=True) for a in art.select("ul.rlist--inline li span.hlFld-ContribAuthor")])
+            abstract_tag = art.select_one("div.issue-item__abstract")
+            abstract = abstract_tag.get_text(strip=True) if abstract_tag else ""
+            keywords_tag = art.select("div.issue-item__keywords span")
+            keywords = ", ".join([k.get_text(strip=True) for k in keywords_tag]) if keywords_tag else ""
 
-        print(f"[INFO] Trovati {len(results)} record ACM")
+            results.append({
+                "title": title,
+                "authors": authors,
+                "abstract": abstract,
+                "keywords": keywords,
+                "url": url
+            })
+
         return results
 
-    def print_records(self, records, max_display=5):
-        """
-        Stampa i primi 'max_display' record.
-        """
-        print(f"\n[INFO] Visualizzazione dei primi {max_display} record:")
-        for i, rec in enumerate(records[:max_display]):
-            print(f"{i+1}. {rec['title']} ({rec['published']})")
-            print(f"   Autore/i: {rec['author']}")
-            print(f"   Rivista: {rec['journal']}")
-            print(f"   DOI: {rec['DOI']}")
-            print(f"   URL: {rec['URL']}\n")
+    def fetch_all(self, max_pages=5):
+        all_results = []
+        for page in range(1, max_pages + 1):
+            print(f"[INFO] Scaricando pagina {page}...")
+            page_results = self.fetch_page(page)
+            if not page_results:
+                break
+            all_results.extend(page_results)
+            time.sleep(2)  # pausa per rispettare ToS
+        print(f"[INFO] Totale articoli raccolti: {len(all_results)}")
+        return all_results
 
-    def save_as_csv(self, records, filename='acm_results.csv'):
-        """
-        Salva i record ACM in CSV.
-        """
-        if not records:
-            print("[WARN] Nessun record da salvare in CSV.")
+    def save_as_csv(self, data, filename="acm_scraped.csv"):
+        if not data:
+            print("[WARN] Nessun dato da salvare.")
             return
-
-        fieldnames = ['title', 'author', 'published', 'journal', 'publisher', 'DOI', 'URL']
-        with open(filename, 'w', newline='', encoding='utf-8-sig') as f:
+        fieldnames = ["title", "authors", "abstract", "keywords", "url"]
+        with open(filename, "w", newline="", encoding="utf-8-sig") as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
-            for row in records:
-                writer.writerow(row)
-
-        print(f"[INFO] File CSV salvato come: {filename}")
-
-    def save_as_bib(self, records, filename='acm_results.bib'):
-        """
-        Salva i record ACM in formato BibTeX.
-        """
-        if not records:
-            print("[WARN] Nessun record da salvare in BibTeX.")
-            return
-
-        with open(filename, 'w', encoding='utf-8') as f:
-            for i, rec in enumerate(records):
-                key = f"acm{i+1}"
-                title = rec['title'].replace('{', '\\{').replace('}', '\\}')
-                author = rec['author'].replace('{', '\\{').replace('}', '\\}')
-                year = rec['published']
-                doi = rec['DOI']
-                url = rec['URL']
-                journal = rec['journal']
-                entry = f"""@article{{{key},
-  title={{ {title} }},
-  author={{ {author} }},
-  journal={{ {journal} }},
-  year={{ {year} }},
-  doi={{ {doi} }},
-  url={{ {url} }}
-}}
-
-"""
-                f.write(entry)
-
-        print(f"[INFO] File BibTeX salvato come: {filename}")
-
+            writer.writerows(data)
+        print(f"[INFO] File CSV salvato come {filename}")
 
 
 if __name__ == "__main__":
-    acm = ACMFetcher()
-    results = acm.fetch_records("machine learning", max_results=30)
-    acm.print_records(results)
-
-    # Salva i file
-    acm.save_as_csv(results, "acm_ml.csv")
-    acm.save_as_bib(results, "acm_ml.bib")
-
-    def open_file_local(filename):
-        """
-        #Apre un file locale con l'app predefinita (solo su Windows).
-        """
-        try:
-            os.startfile(filename)  # Solo su Windows
-            print(f"[INFO] File '{filename}' aperto nel programma associato.")
-        except Exception as e:
-            print(f"[ERRORE] Impossibile aprire il file: {e}")
-
-    def download_csv_file(filename='acm_ml.csv'):
-        open_file_local(filename)
-
-    def download_bib_file(filename='acm_ml.bib'):
-        open_file_local(filename)
-
-    # Scarica i file
-    download_csv_file("acm_ml.csv")
-    download_bib_file("acm_ml.bib")
+    scraper = ACMScraper()
+    articles = scraper.fetch_all(max_pages=2)  # dovrebbe bastare per i 19 risultati
+    scraper.save_as_csv(articles, r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Results\acm_scraped.csv")

@@ -209,3 +209,4 @@ __marimo__/
 #Ignore di questo progetto
 Annotazioni per Tirocinio.md
 token.env
+scopus_key.env

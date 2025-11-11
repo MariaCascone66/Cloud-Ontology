@@ -168,5 +168,5 @@ class LodCloudFetcher:
 if __name__ == "__main__":
     lod = LodCloudFetcher()
     datasets = lod.fetch_datasets()
-    lod.save_as_csv(datasets, "lodcloud_results.csv")
-    lod.save_as_bib(datasets, "lodcloud_results.bib")
+    lod.save_as_csv(datasets, r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Results\lodcloud_results.csv")
+    lod.save_as_bib(datasets, r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Results\lodcloud_results.bib")
