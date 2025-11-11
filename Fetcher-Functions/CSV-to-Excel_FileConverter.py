@@ -63,6 +63,9 @@ for csv_path, out_xlsx in files.items():
     print(f"📥 Leggo: {csv_path}")
     df = pd.read_csv(csv_path, encoding='utf-8', sep=None, engine='python')
 
+    # 🔹 Rimuovi tutte le colonne completamente vuote
+    df = df.dropna(axis=1, how='all')
+
     # Trova colonna di data/anno
     date_col = None
     for col in df.columns:
@@ -80,7 +83,6 @@ for csv_path, out_xlsx in files.items():
     # Ordina per anno decrescente, timestamp decrescente e titolo alfabetico
     if date_col:
         try:
-            # Converti in datetime e rendi timezone-naive
             df[date_col] = pd.to_datetime(df[date_col], errors='coerce').dt.tz_localize(None)
             df['Year'] = df[date_col].dt.year
 
