@@ -53,7 +53,7 @@ class ZenodoFetcher:
                 break
             page += 1
 
-        print(f"[INFO] Totali risultati trovati: {len(all_results)}")
+        print(f"[INFO] Totali risultati trovati per query: {len(all_results)}")
         return all_results
 
     def save_as_csv(self, data, filename):
@@ -66,6 +66,7 @@ class ZenodoFetcher:
             writer.writeheader()
             writer.writerows(data)
         print(f"[INFO] File CSV salvato come '{filename}'")
+        print(f"[COUNT] Articoli scritti nel CSV: {len(data)} ✅")
 
     def save_as_bib(self, data, filename):
         if not data:
@@ -86,12 +87,13 @@ class ZenodoFetcher:
                 note = f"Keywords: {rec.get('keywords', '')}, License: {rec.get('license', '')}"
                 f.write(f"@misc{{{key}, title={{{title}}}, author={{{author}}}, year={{{year}}}, howpublished={{\\url{{{url}}}}}, note={{{note}}}}}\n\n")
         print(f"[INFO] File BibTeX salvato come '{filename}'")
+        print(f"[COUNT] Articoli scritti nel BibTeX: {len(data)} ✅")
 
 
 if __name__ == "__main__":
     fetcher = ZenodoFetcher()
 
-    # --- 🔹 Keyword derivata da query Scopus/ACM
+    # --- 🔹 Keyword derivate da query Scopus/ACM
     keywords_cloud = ['"cloud computing"', '"cloud-computing"', '"multi-cloud"']
     keywords_ontology = [
         '"ontology"', '"ontologies"', '"semantic web"', '"knowledge graph"',
@@ -125,5 +127,11 @@ if __name__ == "__main__":
 
     print(f"[INFO] Totale risultati unici combinati: {len(unique_results)}")
 
-    fetcher.save_as_csv(unique_results, r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Results\zenodo_combined.csv")
-    fetcher.save_as_bib(unique_results, r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Results\zenodo_combined.bib")
+    # --- 🔹 Salvataggio file
+    csv_path = r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Results\zenodo_combined.csv"
+    bib_path = r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Results\zenodo_combined.bib"
+
+    fetcher.save_as_csv(unique_results, csv_path)
+    fetcher.save_as_bib(unique_results, bib_path)
+
+    print("\n✅ Estrazione e salvataggio completati con successo!")
