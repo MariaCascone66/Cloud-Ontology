@@ -1,32 +1,27 @@
 import pandas as pd
 from openpyxl import load_workbook
-from openpyxl.styles import Alignment, Border, Side
+from openpyxl.styles import Alignment, Border, Side, Font
 from openpyxl.worksheet.table import Table, TableStyleInfo
 from openpyxl.utils import get_column_letter
 from pathlib import Path
 import csv
-import bibtexparser
+import re
 
-# === PERCORSI INPUT/OUTPUT ===
+# === Percorsi ===
 files = {
     r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Results\github_combined.csv":
         r"C:\Users\maria\Desktop\Replication package\File Excel\output_github.xlsx",
-
     r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Results\lodcloud_results.csv":
         r"C:\Users\maria\Desktop\Replication package\File Excel\output_lodcloud.xlsx",
-
-    # r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Results\zenodo_combined.csv":  # disattivato CSV
-    #     r"C:\Users\maria\Desktop\Replication package\File Excel\output_zenodo.xlsx",
-
     r"C:\Users\maria\Desktop\Replication package\Biblioteca\Biblioteca.csv":
         r"C:\Users\maria\Desktop\Replication package\File Excel\output_zotero.xlsx",
 }
 
-zenodo_bib = r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Results\zenodo_combined.bib"
+zenodo_csv = r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Results\zenodo_combined.csv"
 zenodo_xlsx = r"C:\Users\maria\Desktop\Replication package\File Excel\output_zenodo.xlsx"
 
 
-# === Lettura CSV standard ===
+# === Utility CSV ===
 def detect_separator(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         sample = f.read(4096)
@@ -45,31 +40,16 @@ def read_csv_stable(file_path):
     return df
 
 
-# === Lettura diretta del file .bib di Zenodo ===
-def read_zenodo_bib(bib_path):
-    print(f"[INFO] Leggo BibTeX: {bib_path}")
-    with open(bib_path, encoding='utf-8') as bibtex_file:
-        bib_database = bibtexparser.load(bibtex_file)
-
-    entries = []
-    for entry in bib_database.entries:
-        entries.append({
-            "Title": entry.get("title", "").replace("\n", " ").strip(),
-            "Author": entry.get("author", "").replace("\n", " ").strip(),
-            "Year": entry.get("year", ""),
-            "DOI": entry.get("doi", ""),
-            "URL": entry.get("url", ""),
-            "Abstract": entry.get("abstract", "").replace("\n", " ").strip(),
-            "Publisher": entry.get("publisher", entry.get("journal", "")),
-            "EntryType": entry.get("ENTRYTYPE", ""),
-        })
-
-    df = pd.DataFrame(entries)
-    print(f"[OK] Letto BibTeX Zenodo: {len(df)} record, {len(df.columns)} colonne")
-    return df
+# === Funzione per pulire testo (HTML, spazi, newline) ===
+def clean_text(s):
+    if pd.isna(s):
+        return ''
+    s = re.sub(r'<[^>]+>', '', str(s))
+    s = re.sub(r'\s+', ' ', s).strip()
+    return s
 
 
-# === Formattazione Excel ===
+# === Funzione di formattazione Excel e hyperlink ===
 def format_excel_table(excel_path):
     wb = load_workbook(excel_path)
     ws = wb.active
@@ -79,46 +59,59 @@ def format_excel_table(excel_path):
     last_col = get_column_letter(max_col)
     table_range = f"A1:{last_col}{max_row}"
 
+    # Tabella con stile
     table = Table(displayName="DataTable", ref=table_range)
     style = TableStyleInfo(name="TableStyleMedium9", showRowStripes=True)
     table.tableStyleInfo = style
     ws.add_table(table)
 
+    # Bordo e allineamento
     thin = Side(border_style="thin", color="000000")
     border = Border(top=thin, left=thin, right=thin, bottom=thin)
-
     for row in ws.iter_rows():
         for cell in row:
             cell.alignment = Alignment(wrap_text=True, vertical="top")
             cell.border = border
 
+    # Hyperlink automatici per DOI e URL + dimensione colonne
     for col in ws.columns:
-        max_length = 0
         col_letter = col[0].column_letter
+        max_len = 0
         for cell in col:
-            if cell.value:
-                max_length = max(max_length, len(str(cell.value)))
-        ws.column_dimensions[col_letter].width = min(max_length + 2, 60)
+            if cell.row == 1 or not cell.value:
+                continue
+            val = str(cell.value).strip()
+            max_len = max(max_len, len(val))
+
+            # Se sembra un DOI (10.x) lo trasformiamo in https://doi.org/...
+            if val.startswith("10."):
+                cell.hyperlink = f"https://doi.org/{val}"
+                cell.font = Font(color="0000EE", underline="single")
+            # Se è già un URL completo
+            elif val.startswith("http://") or val.startswith("https://"):
+                cell.hyperlink = val
+                cell.font = Font(color="0000EE", underline="single")
+
+        ws.column_dimensions[col_letter].width = min(max_len + 2, 60)
 
     wb.save(excel_path)
-    print(f"🎨 Formattato Excel come tabella: {excel_path}")
+    print(f"🎨 Excel formattato e link cliccabili: {excel_path}")
 
 
-# === Pipeline principale ===
+# === Pipeline principale per GitHub, LODCloud, Zotero ===
 for csv_path, out_xlsx in files.items():
     print(f"\n📥 Elaboro: {csv_path}")
     df = read_csv_stable(csv_path)
 
-    # 🔹 Rimuovi colonne completamente vuote
+    # Rimuove colonne completamente vuote
     empty_cols = [c for c in df.columns if df[c].isna().all()]
     if empty_cols:
         print(f"[CLEANUP] Rimosse colonne vuote: {empty_cols}")
         df = df.drop(columns=empty_cols)
 
-    # 🔹 Ordina se possibile
+    # Ordinamento per data e titolo
     date_col = next((c for c in df.columns if any(k in c.lower() for k in ['date', 'time', 'year'])), None)
     name_col = next((c for c in df.columns if any(k in c.lower() for k in ['title', 'name'])), None)
-
     if date_col:
         try:
             df[date_col] = pd.to_datetime(df[date_col], errors='coerce').dt.tz_localize(None)
@@ -137,19 +130,32 @@ for csv_path, out_xlsx in files.items():
     df.to_excel(out_xlsx, index=False)
     format_excel_table(out_xlsx)
 
-# === Zenodo dal .bib ===
-print("\n📚 Elaboro Zenodo dal .bib ...")
-df_zen = read_zenodo_bib(zenodo_bib)
 
-# Ordina per anno decrescente + titolo
-if 'Year' in df_zen.columns:
-    try:
-        df_zen['Year'] = pd.to_numeric(df_zen['Year'], errors='coerce')
-        df_zen = df_zen.sort_values(by=['Year', 'Title'], ascending=[False, True])
-    except Exception:
-        pass
+# === Zenodo completo dal CSV senza rinomina ===
+print("\n📚 Elaboro Zenodo direttamente dal CSV completo ...")
+df_zen = read_csv_stable(zenodo_csv)
 
+# Pulizia dati
+for col in df_zen.columns:
+    df_zen[col] = df_zen[col].apply(clean_text)
+
+# Ordinamento per anno e titolo se presenti
+year_col = next((c for c in df_zen.columns if 'year' in c.lower()), None)
+title_col = next((c for c in df_zen.columns if 'title' in c.lower()), None)
+sort_cols = []
+ascending = []
+if year_col:
+    df_zen[year_col] = pd.to_numeric(df_zen[year_col], errors='coerce')
+    sort_cols.append(year_col)
+    ascending.append(False)
+if title_col:
+    sort_cols.append(title_col)
+    ascending.append(True)
+if sort_cols:
+    df_zen = df_zen.sort_values(by=sort_cols, ascending=ascending)
+
+# Salva Excel
 df_zen.to_excel(zenodo_xlsx, index=False)
 format_excel_table(zenodo_xlsx)
 
-print("\n✅ Tutti i file Excel (incluso Zenodo da BibTeX) sono stati creati e formattati correttamente!")
+print("\n✅ Tutti i file Excel (incluso Zenodo) sono stati creati e formattati correttamente!")

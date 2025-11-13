@@ -60,13 +60,34 @@ class ZenodoFetcher:
         if not data:
             print("[WARN] Nessun dato da salvare.")
             return
+
+        import re
+
+        def clean_field(val):
+            if val is None:
+                return ""
+            # Se lista, unisci con ;
+            if isinstance(val, list):
+                val = "; ".join(str(v) for v in val)
+            # rimuove tag HTML
+            val = re.sub(r'<[^>]+>', '', str(val))
+            # sostituisce newline e tab con spazio
+            val = re.sub(r'[\r\n\t]+', ' ', val).strip()
+            return val
+
+        fieldnames = ['title', 'author', 'description', 'created', 'updated', 'keywords', 'url', 'license']
+        cleaned_data = []
+        for rec in data:
+            cleaned_data.append({k: clean_field(rec.get(k)) for k in fieldnames})
+
         with open(filename, mode='w', newline='', encoding='utf-8-sig') as csvfile:
-            fieldnames = ['title', 'author', 'description', 'created', 'updated', 'keywords', 'url', 'license']
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_ALL)
             writer.writeheader()
-            writer.writerows(data)
+            writer.writerows(cleaned_data)
+
         print(f"[INFO] File CSV salvato come '{filename}'")
-        print(f"[COUNT] Articoli scritti nel CSV: {len(data)} ✅")
+        print(f"[COUNT] Articoli scritti nel CSV: {len(cleaned_data)} ✅")
+
 
     def save_as_bib(self, data, filename):
         if not data:
