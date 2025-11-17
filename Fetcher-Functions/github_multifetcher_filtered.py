@@ -1,45 +1,68 @@
-import os
 import requests
 import csv
-from datetime import datetime
-from dotenv import load_dotenv
 import time
+from datetime import datetime
+import os
+
 
 class GitHubFetcher:
-    def __init__(self, token=None):
-        self.base_url = "https://api.github.com/search/repositories"
-        self.headers = {}
-        if token:
-            self.headers['Authorization'] = f'token {token}'
+    """
+    Fetcher generico per interrogare GitHub Search API
+    e recuperare metadati su repository.
+    """
 
-    def fetch_repositories(self, query, max_results=100):
-        print(f"[INFO] Eseguo query: {query}")
+    def __init__(self, token=None, per_page=100, max_retries=3):
+        self.base_url = "https://api.github.com/search/repositories"
+        self.headers = {"Accept": "application/vnd.github+json"}
+        if token:
+            self.headers["Authorization"] = f"token {token}"
+
+        self.per_page = per_page
+        self.max_retries = max_retries
+
+    def fetch(self, query, max_results=200):
+        """
+        Recupera tutti i risultati di una query GitHub.
+        Restituisce una lista di dizionari uniformi.
+        """
+        print(f"[INFO] Query GitHub: {query}")
+
         all_results = []
         page = 1
 
         while len(all_results) < max_results:
             params = {
-                'q': query,
-                'per_page': 100,
-                'page': page
+                "q": query,
+                "per_page": self.per_page,
+                "page": page
             }
-            response = requests.get(self.base_url, headers=self.headers, params=params)
 
-            # --- 🔹 Gestione automatica del rate limit
-            if response.status_code == 403 and "rate limit" in response.text.lower():
-                reset_time = response.headers.get('X-RateLimit-Reset')
-                if reset_time:
-                    reset_timestamp = datetime.fromtimestamp(int(reset_time))
-                    wait_seconds = max(0, (reset_timestamp - datetime.utcnow()).seconds) + 5
-                    print(f"[WARN] Limite API raggiunto — attendo {wait_seconds} secondi fino a {reset_timestamp}...")
-                    time.sleep(wait_seconds)
-                else:
-                    print("[WARN] Limite API raggiunto — attendo 60 secondi...")
-                    time.sleep(60)
-                continue  # ripete la richiesta dopo l’attesa
+            # retry loop
+            for attempt in range(self.max_retries):
+                response = requests.get(self.base_url, headers=self.headers, params=params)
 
-            if response.status_code != 200:
-                raise Exception(f"Errore API GitHub: {response.status_code} - {response.text}")
+                # rate limit
+                if response.status_code == 403 and "rate limit" in response.text.lower():
+                    reset_time = response.headers.get("X-RateLimit-Reset")
+                    if reset_time:
+                        wait = max(0, int(reset_time) - int(time.time())) + 5
+                        print(f"[WARN] Rate limit GitHub. Attendo {wait}s...")
+                        time.sleep(wait)
+                    else:
+                        print("[WARN] Rate limit. Attendo 60s...")
+                        time.sleep(60)
+                    continue
+
+                # errori temporanei
+                if response.status_code >= 500:
+                    print(f"[WARN] Errore {response.status_code}. Riprovo...")
+                    time.sleep(3)
+                    continue
+
+                break
+            else:
+                print(f"[ERROR] Impossibile completare richiesta GitHub pagina {page}")
+                break
 
             data = response.json()
             items = data.get("items", [])
@@ -48,117 +71,75 @@ class GitHubFetcher:
 
             for item in items:
                 all_results.append({
-                    'title': item.get('name'),
-                    'author': item.get('owner', {}).get('login'),
-                    'description': item.get('description'),
-                    'created': item.get('created_at'),
-                    'updated': item.get('updated_at'),
-                    'language': item.get('language'),
-                    'stars': item.get('stargazers_count'),
-                    'url': item.get('html_url'),
-                    'license': item.get('license', {}).get('name') if item.get('license') else None
+                    "title": item.get("name"),
+                    "author": item.get("owner", {}).get("login"),
+                    "description": item.get("description"),
+                    "created": item.get("created_at"),
+                    "updated": item.get("updated_at"),
+                    "language": item.get("language"),
+                    "stars": item.get("stargazers_count"),
+                    "url": item.get("html_url"),
+                    "license": item.get("license", {}).get("name") if item.get("license") else None,
                 })
 
-            # --- 🔹 Informazioni sul rate limit
-            remaining = response.headers.get('X-RateLimit-Remaining')
-            print(f"[INFO] Pagina {page} completata ({len(items)} risultati). Limite residuo: {remaining}")
+            print(f"[INFO] GitHub: pagina {page} ok ({len(items)} risultati)")
 
-            # --- 🔹 Pausa di sicurezza tra le richieste
-            time.sleep(3)
-
-            if len(items) < 100:
+            if len(items) < self.per_page:
                 break
-            page += 1
 
-        print(f"[INFO] Trovati {len(all_results)} risultati per la query")
+            page += 1
+            time.sleep(2)
+
+        print(f"[INFO] Totale risultati GitHub: {len(all_results)}")
         return all_results
 
-
-    def save_as_csv(self, data, filename):
-        if not data:
-            print("[WARN] Nessun dato da salvare.")
+    def save_csv(self, records, path):
+        if not records:
+            print("[WARN] Nessun record da salvare.")
             return
-        with open(filename, mode='w', newline='', encoding='utf-8-sig') as csvfile:
-            fieldnames = ['title', 'author', 'description', 'created', 'updated',
-                          'language', 'stars', 'url', 'license']
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        fieldnames = list(records[0].keys())
+
+        with open(path, "w", newline="", encoding="utf-8-sig") as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
-            writer.writerows(data)
-        print(f"[INFO] File CSV salvato come '{filename}'")
+            writer.writerows(records)
 
-    def save_as_bib(self, data, filename):
-        if not data:
-            print("[WARN] Nessun dato da salvare.")
+        print(f"[INFO] CSV GitHub salvato in: {path}")
+
+    def save_bib(self, records, path):
+        if not records:
+            print("[WARN] Nessun record da salvare.")
             return
-        with open(filename, 'w', encoding='utf-8') as f:
-            for i, rec in enumerate(data):
+
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+
+        with open(path, "w", encoding="utf-8") as f:
+            for i, rec in enumerate(records):
                 key = f"github{i+1}"
-                title = rec.get('title', '')
-                author = rec.get('author', '')
-                year = ''
-                if rec.get('created'):
+
+                year = ""
+                if rec.get("created"):
                     try:
-                        year = datetime.strptime(rec['created'], '%Y-%m-%dT%H:%M:%SZ').year
-                    except Exception:
+                        year = datetime.strptime(rec["created"], "%Y-%m-%dT%H:%M:%SZ").year
+                    except:
                         pass
-                url = rec.get('url', '')
-                note = f"Language: {rec.get('language', '')}, Stars: {rec.get('stars', '')}, License: {rec.get('license', '')}"
-                f.write(f"@misc{{{key}, title={{{title}}}, author={{{author}}}, year={{{year}}}, howpublished={{\\url{{{url}}}}}, note={{{note}}}}}\n\n")
-        print(f"[INFO] File BibTeX salvato come '{filename}'")
 
+                note = (
+                    f"Language: {rec.get('language', '')}, "
+                    f"Stars: {rec.get('stars', '')}, "
+                    f"License: {rec.get('license', '')}"
+                )
 
-if __name__ == "__main__":
-    load_dotenv("token.env")
-    token = os.getenv("GITHUB_TOKEN")
-    if not token:
-        raise ValueError("⚠️ Token GitHub non trovato. Verifica il file token.env e il nome della variabile.")
-    else:
-        print("[INFO] Token GitHub caricato correttamente.")
+                f.write(
+                    f"@misc{{{key},\n"
+                    f"  title={{{{{rec.get('title', '')}}}}},\n"
+                    f"  author={{{{{rec.get('author', '')}}}}},\n"
+                    f"  year={{{{{year}}}}},\n"
+                    f"  howpublished={{\\url{{{rec.get('url', '')}}}}},\n"
+                    f"  note={{{{{note}}}}}\n"
+                    f"}}\n\n"
+                )
 
-    fetcher = GitHubFetcher(token=token)
-
-    # --- 🔹 Controllo del rate limit
-    check = requests.get("https://api.github.com/rate_limit", headers={'Authorization': f'token {token}'})
-    if check.status_code == 200:
-        limits = check.json().get('resources', {}).get('search', {})
-        print(f"[INFO] Limite rimanente: {limits.get('remaining', '?')}/{limits.get('limit', '?')} richieste disponibili")
-    else:
-        print("[WARN] Errore nel controllo del rate limit:", check.text)
-
-    # --- 🔹 Query derivate dalla formula Scopus
-    keywords_cloud = ['"cloud computing"', '"cloud-computing"', '"multi-cloud"']
-    keywords_ontology = [
-        '"ontology"', '"ontologies"', '"semantic web"', '"knowledge graph"',
-        '"knowledge graphs"', '"linked data"', '"linked open data"'
-    ]
-    exclusions = ['"internet of things"', 'iot']
-
-    queries = []
-    for c in keywords_cloud:
-        for o in keywords_ontology:
-            q = (
-                f'{c} {o} NOT ({" OR ".join(exclusions)}) '
-                'in:name,description '
-                'created:>2014-01-01 created:<2027-01-01 '
-                'language:English'
-            )
-            queries.append(q)
-
-    all_results = []
-    for q in queries:
-        results = fetcher.fetch_repositories(query=q, max_results=200)
-        all_results.extend(results)
-
-    # 🔹 Rimuove duplicati
-    seen = set()
-    unique_results = []
-    for r in all_results:
-        if r['url'] not in seen:
-            unique_results.append(r)
-            seen.add(r['url'])
-
-    print(f"[INFO] Totale risultati unici combinati: {len(unique_results)}")
-
-    fetcher.save_as_csv(unique_results, r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Results\github_combined.csv")
-    fetcher.save_as_bib(unique_results, r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Results\github_combined.bib")
-
+        print(f"[INFO] BibTeX GitHub salvato in: {path}")

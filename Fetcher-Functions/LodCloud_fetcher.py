@@ -13,6 +13,8 @@ class LodCloudFetcher:
 
     def fetch_catalog(self):
         """Scarica il catalogo LOD Cloud (JSON ufficiale)"""
+        if self.catalog:
+            return
         print("[INFO] Download catalogo LOD Cloud...")
         retries = 0
         while retries < self.max_retries:
@@ -35,23 +37,23 @@ class LodCloudFetcher:
         if isinstance(value, str):
             return value
         elif isinstance(value, dict):
-            return str(value.get(lang, ''))  # solo lingua desiderata
+            return str(value.get(lang, ''))
         elif isinstance(value, list):
             return " ".join([self._normalize_text(v, lang) for v in value])
         return ""
 
     def filter_dataset(self, dataset, include_terms, exclude_terms, year_min=2014, year_max=2027):
-        """Filtra dataset secondo TITLE/ABS/KEY e anno (solo inglese)"""
+        """Filtra dataset secondo TITLE/ABS/KEY e anno"""
         text = " ".join([
             self._normalize_text(dataset.get('title', ''), lang='en'),
             self._normalize_text(dataset.get('description', ''), lang='en'),
             self._normalize_text(dataset.get('tags', []), lang='en')
         ]).lower()
 
-        # Gruppo AND 1 (cloud computing)
+        # Gruppo AND 1
         if not any(term.lower() in text for term in include_terms[0]):
             return False
-        # Gruppo AND 2 (ontologie)
+        # Gruppo AND 2
         if not any(term.lower() in text for term in include_terms[1]):
             return False
         # Gruppo NOT
@@ -70,17 +72,9 @@ class LodCloudFetcher:
 
         return True
 
-    def fetch_datasets(self):
-        """Scarica, filtra e restituisce i dataset rilevanti"""
-        if not self.catalog:
-            self.fetch_catalog()
-
-        include_terms = [
-            ["cloud computing", "cloud-computing", "multi-cloud"],
-            ["ontolog", "semantic web", "knowledge graph", "linked data", "linked open data"]
-        ]
-        exclude_terms = ["internet of things", "iot"]
-
+    def fetch(self, include_terms, exclude_terms, year_min=2014, year_max=2027):
+        """Restituisce i dataset filtrati secondo la query passata"""
+        self.fetch_catalog()
         results = []
         for dataset_id, entry in self.catalog.items():
             dataset = {
@@ -92,7 +86,7 @@ class LodCloudFetcher:
                 'url': f"{BASE_PAGE_URL}{dataset_id}"
             }
 
-            if self.filter_dataset(dataset, include_terms, exclude_terms):
+            if self.filter_dataset(dataset, include_terms, exclude_terms, year_min, year_max):
                 results.append(dataset)
 
         # Deduplicazione basata sul titolo in inglese
@@ -108,11 +102,9 @@ class LodCloudFetcher:
         return unique_results
 
     def save_as_csv(self, datasets, filename='lodcloud_results.csv'):
-        """Salva i risultati in CSV"""
         if not datasets:
             print("[WARN] Nessun dataset da salvare.")
             return
-
         fieldnames = ['title', 'description', 'tags', 'created', 'url']
         with open(filename, 'w', newline='', encoding='utf-8-sig') as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -128,7 +120,6 @@ class LodCloudFetcher:
         print(f"[INFO] File CSV salvato: {filename}")
 
     def save_as_bib(self, datasets, filename='lodcloud_results.bib'):
-        """Salva i risultati in formato BibTeX"""
         if not datasets:
             print("[WARN] Nessun dataset da salvare in BibTeX.")
             return
@@ -162,11 +153,3 @@ class LodCloudFetcher:
                     f"}}\n\n"
                 )
         print(f"[INFO] File BibTeX salvato: {filename}")
-
-
-# === MAIN ===
-if __name__ == "__main__":
-    lod = LodCloudFetcher()
-    datasets = lod.fetch_datasets()
-    lod.save_as_csv(datasets, r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Results\lodcloud_results.csv")
-    lod.save_as_bib(datasets, r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Results\lodcloud_results.bib")
