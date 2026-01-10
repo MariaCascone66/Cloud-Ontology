@@ -105,3 +105,65 @@ class GitHubFetcher:
                 note = f"Language: {rec.get('language', '')}, Stars: {rec.get('stars', '')}, License: {rec.get('license', '')}"
                 f.write(f"@misc{{{key}, title={{{title}}}, author={{{author}}}, year={{{year}}}, howpublished={{\\url{{{url}}}}}, note={{{note}}}}}\n\n")
         print(f"[INFO] File BibTeX salvato come '{filename}'")
+
+# ==================== MAIN =============================
+if __name__ == "__main__":
+    # --- Cartella output dedicata
+    output_dir = r"C:\Users\maria\Desktop\Cloud-Ontology\fetcher-Functions\output-github"
+    os.makedirs(output_dir, exist_ok=True)
+
+    # --- Caricamento token
+    load_dotenv(r"C:\Users\maria\Desktop\Cloud-Ontology\token.env")
+    github_token = os.getenv("GITHUB_TOKEN")
+    if not github_token:
+        raise ValueError("⚠️ Token GitHub non trovato. Verifica token.env")
+
+    github_fetcher = GitHubFetcher(token=github_token)
+
+    # --- Controllo rate limit ---
+    check = requests.get(
+        "https://api.github.com/rate_limit",
+        headers={'Authorization': f'token {github_token}'}
+    )
+    if check.status_code == 200:
+        limits = check.json().get('resources', {}).get('search', {})
+        print(f"[INFO] Limite rimanente GitHub: {limits.get('remaining', '?')}/{limits.get('limit', '?')}")
+
+    # --- Keywords principali ---
+    keywords_cloud = ['"cloud computing"', '"cloud-computing"', '"multi-cloud"']
+    keywords_ontology = [
+        '"ontology"', '"ontologies"', '"semantic web"', '"knowledge graph"',
+        '"knowledge graphs"', '"linked data"', '"linked open data"'
+    ]
+    exclusions = ['"internet of things"', 'iot']
+
+    # --- Creazione query ---
+    queries = []
+    for c in keywords_cloud:
+        for o in keywords_ontology:
+            q = (f'{c} {o} NOT ({" OR ".join(exclusions)}) '
+                 'in:name,description '
+                 'created:>2014-01-01 created:<2027-01-01 '
+                 'language:English')
+            queries.append(q)
+
+    # --- Recupero risultati ---
+    all_results = []
+    for q in queries:
+        results = github_fetcher.fetch_repositories(query=q, max_results=200)
+        all_results.extend(results)
+
+    # --- Deduplicazione ---
+    seen = set()
+    unique_results = []
+    for r in all_results:
+        if r['url'] not in seen:
+            unique_results.append(r)
+            seen.add(r['url'])
+
+    # --- Salvataggio ---
+    github_fetcher.save_as_csv(unique_results, os.path.join(output_dir, "github_results.csv"))
+    github_fetcher.save_as_bib(unique_results, os.path.join(output_dir, "github_results.bib"))
+
+    # --- Info finale ---
+    print(f"[INFO] Totale repository uniche salvate: {len(unique_results)}")

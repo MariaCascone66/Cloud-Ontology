@@ -210,3 +210,5 @@ __marimo__/
 Annotazioni per Tirocinio.md
 token.env
 scopus_key.env
+token-zenodo.env
+

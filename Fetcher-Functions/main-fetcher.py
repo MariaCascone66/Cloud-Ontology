@@ -80,7 +80,7 @@ def main():
     # =====================================================
     # ===================== GITHUB ========================
     # =====================================================
-    load_dotenv("token.env")
+    load_dotenv(r"C:\Users\maria\Desktop\Cloud-Ontology\token.env")
     github_token = os.getenv("GITHUB_TOKEN")
     if not github_token:
         raise ValueError("⚠️ Token GitHub non trovato. Verifica token.env")
@@ -133,19 +133,71 @@ def main():
     # =====================================================
     # ===================== ZENODO ========================
     # =====================================================
-    zenodo_fetcher = ZenodoFetcher()
+    zenodo_fetcher = ZenodoFetcher(per_page=100, sleep_time=1)
 
-    zenodo_query = (
-        '("cloud computing" OR "cloud-computing" OR "multi-cloud") '
-        'AND ("ontology" OR "ontologies" OR "semantic web" OR "knowledge graph" OR "knowledge graphs" '
-        'OR "linked data" OR "linked open data") '
-        'AND NOT ("internet of things" OR iot) '
-        'AND publication_date:[2014-01-01 TO 2027-12-31]'
-    )
+    # Lista termini cloud e ontology
+    keywords_cloud = ['cloud computing', 'cloud-computing', 'multi-cloud']
+    keywords_ontology = [
+        'ontology', 'ontologies', 'semantic web', 'knowledge graph',
+        'knowledge graphs', 'linked data', 'linked open data'
+    ]
 
-    zenodo_records = zenodo_fetcher.fetch(zenodo_query)
-    zenodo_fetcher.save_csv(zenodo_records, os.path.join(output_dir, "zenodo_results.csv"))
-    zenodo_fetcher.save_bib(zenodo_records, os.path.join(output_dir, "zenodo_results.bib"))
+    # Recupera i record separatamente e combinale in AND logico in Python
+    all_records = []
+
+    for cloud_term in keywords_cloud:
+        print(f"[INFO] Recupero record per cloud term: '{cloud_term}'")
+        cloud_records = zenodo_fetcher.fetch(query=f'"{cloud_term}"', max_results=500)
+
+        for ontology_term in keywords_ontology:
+            print(f"[INFO] Filtraggio AND con ontology term: '{ontology_term}'")
+            ontology_term_lower = ontology_term.lower()
+
+            for rec in cloud_records:
+                # AND logico: almeno un termine ontology in titolo/descrizione/keywords
+                text = ((rec.get("title") or "") + " " +
+                        (rec.get("description") or "") + " " +
+                        (rec.get("keywords") or "")).lower()
+                if ontology_term_lower in text:
+                    all_records.append(rec)
+
+    # Filtro termini negativi (NOT) in Python
+    exclusions = ['internet of things', 'iot']
+    filtered_records = []
+    for rec in all_records:
+        text = ((rec.get("title") or "") + " " +
+                (rec.get("description") or "") + " " +
+                (rec.get("keywords") or "")).lower()
+        if any(ex in text for ex in exclusions):
+            continue
+        filtered_records.append(rec)
+
+    # Deduplicazione robusta basata su DOI o titolo
+    unique_records = []
+    seen_doi = set()
+    seen_title = set()
+
+    for rec in filtered_records:
+        doi = (rec.get("doi") or "").strip().lower()
+        title = (rec.get("title") or "").strip().lower()
+
+        if doi:
+            if doi in seen_doi:
+                continue
+            seen_doi.add(doi)
+        else:
+            if title in seen_title:
+                continue
+            seen_title.add(title)
+
+        unique_records.append(rec)
+
+    # Salvataggio dei risultati
+    zenodo_fetcher.save_csv(unique_records, os.path.join(output_dir, "zenodo_results.csv"))
+    zenodo_fetcher.save_bib(unique_records, os.path.join(output_dir, "zenodo_results.bib"))
+
+    print(f"[INFO] Zenodo fetch completato: {len(unique_records)} record salvati")
+
 
     # =====================================================
     # ===================== LOD CLOUD =====================
