@@ -4,13 +4,43 @@ from openpyxl.styles import Alignment, Border, Side, Font
 from openpyxl.worksheet.table import Table, TableStyleInfo
 from openpyxl.utils import get_column_letter
 from pathlib import Path
+import sys
 import csv
 import re
 from datetime import datetime
 
+csv.field_size_limit(50 * 1024 * 1024)  # 50 MB
+
+def count_bibtex_records(bib_path):
+    count = 0
+    with open(bib_path, "r", encoding="utf-8") as f:
+        for line in f:
+            if line.strip().startswith("@"):
+                count += 1
+    return count
+
+def count_csv_records(csv_path):
+    with open(csv_path, "r", encoding="utf-8-sig") as f:
+        reader = csv.reader(f)
+        rows = list(reader)
+        if len(rows) > 0:
+            return len(rows) - 1  # esclude header
+        return 0
+
 # === Percorsi ===
-zenodo_csv = r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Functions\output\zenodo_all_years.csv"
-output_dir = Path(r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Functions\output")
+bib_path = r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Functions\output-zenodo\zenodo_all_years.bib"
+csv_path = r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Functions\output-zenodo\zenodo_all_years.csv"
+
+# === Conta record ===
+bib_count = count_bibtex_records(bib_path)
+csv_count = count_csv_records(csv_path)
+
+print(f"📚 Record BibTeX: {bib_count}")
+print(f"📄 Record CSV: {csv_count}")
+
+# === Percorsi ===
+zenodo_csv = r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Functions\output-zenodo\zenodo_all_years.csv"
+output_dir = Path(r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Functions\output-zenodo")
 zenodo_xlsx = output_dir / "zenodo_all_years.xlsx"
 duplicates_csv = output_dir / "zenodo_duplicates_removed.csv"
 bibtex_path = output_dir / "zenodo_all_years.bib"
@@ -61,26 +91,25 @@ def deduplicate(df):
     duplicates = []
 
     for _, row in df.iterrows():
+        title = normalize_title(row.get("title"))
+        authors = normalize_title(row.get("authors"))
         doi = str(row.get("doi", "")).strip().lower()
         url = str(row.get("url", "")).strip().lower()
-        title = normalize_title(row.get("title"))
 
-        if doi:
+        # --- CHIAVE ZENODO-ROBUSTA ---
+        if title and authors:
+            key = f"title_auth::{title}::{authors}"
+        elif doi:
             key = f"doi::{doi}"
         elif url:
             key = f"url::{url}"
         else:
-            key = f"title::{title}"
+            continue
 
         if key not in unique:
             unique[key] = row
         else:
-            old = unique[key]
-            if parse_date(row.get("updated")) > parse_date(old.get("updated")):
-                duplicates.append(old)
-                unique[key] = row
-            else:
-                duplicates.append(row)
+            duplicates.append(row)
 
     return pd.DataFrame(unique.values()), pd.DataFrame(duplicates)
 
