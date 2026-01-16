@@ -7,10 +7,15 @@ from pathlib import Path
 import sys
 import csv
 import re
+import html
+import unicodedata
 from datetime import datetime
 
 csv.field_size_limit(50 * 1024 * 1024)  # 50 MB
 
+# =====================================================
+# ================= COUNT RECORDS =====================
+# =====================================================
 def count_bibtex_records(bib_path):
     count = 0
     with open(bib_path, "r", encoding="utf-8") as f:
@@ -23,30 +28,20 @@ def count_csv_records(csv_path):
     with open(csv_path, "r", encoding="utf-8-sig") as f:
         reader = csv.reader(f)
         rows = list(reader)
-        if len(rows) > 0:
-            return len(rows) - 1  # esclude header
-        return 0
+        return len(rows) - 1 if len(rows) > 0 else 0
 
-# === Percorsi ===
-bib_path = r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Functions\output-zenodo\zenodo_all_years.bib"
-csv_path = r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Functions\output-zenodo\zenodo_all_years.csv"
-
-# === Conta record ===
-bib_count = count_bibtex_records(bib_path)
-csv_count = count_csv_records(csv_path)
-
-print(f"📚 Record BibTeX: {bib_count}")
-print(f"📄 Record CSV: {csv_count}")
-
-# === Percorsi ===
+# =====================================================
+# ================= PATHS =============================
+# =====================================================
 zenodo_csv = r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Functions\output-zenodo\zenodo_all_years.csv"
 output_dir = Path(r"C:\Users\maria\Desktop\Cloud-Ontology\Fetcher-Functions\output-zenodo")
+
 zenodo_xlsx = output_dir / "zenodo_all_years.xlsx"
 duplicates_csv = output_dir / "zenodo_duplicates_removed.csv"
 bibtex_path = output_dir / "zenodo_all_years.bib"
 
 # =====================================================
-# ==================== CSV UTILS ======================
+# ================= CSV UTILS =========================
 # =====================================================
 def detect_separator(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
@@ -66,11 +61,46 @@ def read_csv_stable(file_path):
 # ================= TEXT CLEANING =====================
 # =====================================================
 def clean_text(s):
+    """
+    Pulizia HTML aggressiva:
+    - rimuove script e style
+    - rimuove tutti i tag HTML
+    - decodifica ed elimina entità HTML (&nbsp;, &amp;, &#160;, ecc.)
+    - normalizza Unicode
+    - rimuove spazi, newline e caratteri invisibili
+    """
     if pd.isna(s):
-        return ''
-    s = re.sub(r'<[^>]+>', '', str(s))
-    s = re.sub(r'\s+', ' ', s).strip()
-    return s
+        return ""
+
+    s = str(s)
+
+    # 1. Rimuove script e style
+    s = re.sub(
+        r'<(script|style).*?>.*?</\1>',
+        '',
+        s,
+        flags=re.DOTALL | re.IGNORECASE
+    )
+
+    # 2. Rimuove tutti i tag HTML
+    s = re.sub(r'<[^>]+>', ' ', s)
+
+    # 3. Decodifica entità HTML
+    s = html.unescape(s)
+
+    # 4. Rimuove entità residue
+    s = re.sub(r'&[a-zA-Z0-9#]+;', ' ', s)
+
+    # 5. Normalizzazione Unicode
+    s = unicodedata.normalize("NFKC", s)
+
+    # 6. Rimuove caratteri invisibili
+    s = re.sub(r'[\x00-\x1F\x7F]', ' ', s)
+
+    # 7. Collassa spazi
+    s = re.sub(r'\s+', ' ', s)
+
+    return s.strip()
 
 def normalize_title(title):
     title = (title or "").lower()
@@ -96,7 +126,6 @@ def deduplicate(df):
         doi = str(row.get("doi", "")).strip().lower()
         url = str(row.get("url", "")).strip().lower()
 
-        # --- CHIAVE ZENODO-ROBUSTA ---
         if title and authors:
             key = f"title_auth::{title}::{authors}"
         elif doi:
@@ -168,10 +197,11 @@ def export_bibtex(df, path):
         for _, r in df.iterrows():
             key = r.get("doi") or r.get("url") or normalize_title(r.get("title"))[:40]
             year = str(r.get("created", ""))[:4]
+
             f.write(
                 f"@misc{{{key},\n"
                 f"  title = {{{r.get('title')}}},\n"
-                f"  author = {{{r.get('author')}}},\n"
+                f"  author = {{{r.get('authors')}}},\n"
                 f"  year = {{{year}}},\n"
                 f"  howpublished = {{Zenodo}},\n"
                 f"  url = {{{r.get('url')}}}\n"
