@@ -242,7 +242,7 @@ if __name__ == "__main__":
         semantic_terms=semantic_terms,
         exclude_terms=exclude_terms,
         year_min=2014,
-        year_max=2025,
+        year_max=2026,
     )
 
     fetcher.save_csv(datasets, f"{OUTPUT_DIR}/lodcloud_results.csv")

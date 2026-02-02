@@ -179,7 +179,7 @@ if __name__ == "__main__":
     query = zf.build_query(cloud_terms, semantic_terms, exclude_terms)
     print("[INFO] Query Zenodo:", query)
 
-    records = zf.fetch_all(query, from_year=2015, to_year=2025)
+    records = zf.fetch_all(query, from_year=2015, to_year=2026)
 
     zf.save_csv(records, "output-zenodo/zenodo_all_years.csv")
     zf.save_bibtex(records, "output-zenodo/zenodo_all_years.bib")
