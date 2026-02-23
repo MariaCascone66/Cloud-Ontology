@@ -1,0 +1,3096 @@
+TY  - CONF
+TI  - Convolutional Neural Network based Matchmaking for Service Oriented System Construction
+T2  - 2020 IEEE 10th International Conference on Electronics Information and Emergency Communication (ICEIEC)
+SP  - 204
+EP  - 207
+AU  - J. Liu
+PY  - 2020
+KW  - Semantics
+KW  - Convolutional neural networks
+KW  - Feature extraction
+KW  - Mashups
+KW  - Ontologies
+KW  - Task analysis
+KW  - Matchmaking
+KW  - Service-oriented System
+KW  - Convolutional Neural Network
+DO  - 10.1109/ICEIEC49280.2020.9152343
+JO  - 2020 IEEE 10th International Conference on Electronics Information and Emergency Communication (ICEIEC)
+IS  - 
+SN  - 2377-844X
+VO  - 
+VL  - 
+JA  - 2020 IEEE 10th International Conference on Electronics Information and Emergency Communication (ICEIEC)
+Y1  - 17-19 July 2020
+AB  - In recent years, service-oriented computing, as a new computing paradigm, has been developed rapidly. Following this trend, more and more Web services and cloud services have been developed and made publicly available on the Web. These publicly available services will be important components for service-oriented system construction. However, these large numbers of services increase the burden of service selection in service-oriented system construction. This paper proposes a convolutional neural network-based service matchmaking approach to match services according to developer requests in service-oriented system construction. In the model, the convolutional neural network aims to learn the semantic feature representation for matchmaking. We experimented on a real-world dataset, ProgammableWeb.com, and experiment results show that the proposed approach can help find relevant services according to developer requests.
+ER  - 
+
+TY  - CONF
+TI  - Cloud Services for Culture Aware Conversation: Socially Assistive Robots and Virtual Assistants
+T2  - 2020 17th International Conference on Ubiquitous Robots (UR)
+SP  - 270
+EP  - 277
+AU  - C. Recchuto
+AU  - L. Gava
+AU  - L. Grassi
+AU  - A. Grillo
+AU  - M. Lagomarsino
+AU  - D. Lanza
+AU  - Z. Liu
+AU  - C. Papadopoulos
+AU  - I. Papadopoulos
+AU  - A. Scalmato
+AU  - A. Sgorbissa
+PY  - 2020
+KW  - Cloud computing
+KW  - Cultural differences
+KW  - Task analysis
+KW  - Personal digital assistants
+KW  - Robot sensing systems
+KW  - Humanoid robots
+DO  - 10.1109/UR49135.2020.9144750
+JO  - 2020 17th International Conference on Ubiquitous Robots (UR)
+IS  - 
+SN  - 2325-033X
+VO  - 
+VL  - 
+JA  - 2020 17th International Conference on Ubiquitous Robots (UR)
+Y1  - 22-26 June 2020
+AB  - This paper introduces a new Cloud platform providing services for culturally competent interaction, that has been developed to expand the capabilities of Socially Assistive Robots and virtual assistants interacting with older persons. The rationale behind the proposed architecture is discussed, by outlining key principles as well as the functionalities provided, with a specific focus on verbal interaction. Three case studies, the humanoid robot Pepper, a robotic medicine dispenser Pillo, and a custom-built Android-based virtual assistant, are analyzed in detail, by showing how robots and other assistants may easily access culturally competent Cloud services to expand their interaction capabilities. Transcripts of conversations are reported and commented, in order to outline both the positive features and the limitations of the system.
+ER  - 
+
+TY  - JOUR
+TI  - Multi-Granularity Modeling and Aggregation of Design Resources in Cloud Manufacturing
+T2  - IEEE Access
+SP  - 130797
+EP  - 130819
+AU  - S. Ding
+AU  - J. Han
+AU  - X. Meng
+AU  - F. Ma
+PY  - 2020
+KW  - Manufacturing
+KW  - Task analysis
+KW  - Cloud computing
+KW  - Ontologies
+KW  - Software
+KW  - Dynamic scheduling
+KW  - Optimization
+KW  - Cloud manufacturing
+KW  - multi-granularity design resource
+KW  - ontology modeling
+KW  - resource aggregation
+KW  - resource evaluation
+DO  - 10.1109/ACCESS.2020.3009678
+JO  - IEEE Access
+IS  - 
+SN  - 2169-3536
+VO  - 8
+VL  - 8
+JA  - IEEE Access
+Y1  - 2020
+AB  - In most Cloud Manufacturing (CMfg) systems, Design Resource (DR) is encapsulated into cloud service under a fine-grained condition. However, due to the small granularity of DRs provided by cloud provider, it is difficult for the cloud services to match with design tasks if there is no initiative resource. For example, because of the lack of initiative perception capabilities, it is difficult for design software to match with design tasks directly. A method of DR multi-granularity modeling with two-stage aggregation is proposed, by which the resource granularity is increased and dynamic design capability is formed. In the proposed DR multi-granularity model, DRs are classified into three granularities: Static Physical Resource (SPR), Dynamic Capacity Resource (DCR), and Cross-functional Design Unit (CDU). Their ontology models are set up to represent the basic function, structure and component of DRs. In the two-stage aggregation of DRs, two strategies are proposed to increase the granularity of DRs. The first is DCR aggregation strategy based on auxiliary resources actively pushing, and the second is CDU aggregation strategy based on meta task and meta capability matching. Using the operation parameters of DRs and the associated evaluation matrix, a method of DCR and CDU evaluation is proposed to optimize the searched DRs. With the help of the preceding multi-granularity DR modeling and the two-stage access strategy, DR granularity is enlarged and initiative design capability is formed, which solves the problem of DRs matching with design tasks because of small resource granularity.
+ER  - 
+
+TY  - JOUR
+TI  - An Integrated Knowledge Graph to Automate Cloud Data Compliance
+T2  - IEEE Access
+SP  - 148541
+EP  - 148555
+AU  - K. P. Joshi
+AU  - L. Elluri
+AU  - A. Nagar
+PY  - 2020
+KW  - Standards
+KW  - Regulation
+KW  - Cloud computing security
+KW  - Data protection
+KW  - Data models
+KW  - Cloud computing
+KW  - cloud security
+KW  - security domains
+KW  - security compliance models
+KW  - cloud security models
+DO  - 10.1109/ACCESS.2020.3008964
+JO  - IEEE Access
+IS  - 
+SN  - 2169-3536
+VO  - 8
+VL  - 8
+JA  - IEEE Access
+Y1  - 2020
+AB  - To address data protection concerns, authorities and standards bodies worldwide have released a plethora of regulations, guidelines, and software controls to be applied to Cloud data. As a result, service providers maintaining their end-user's private attributes have seen a surge in compliance requirements. Since most of these regulations are not available in a machine-processable format, it requires significant manual effort to adhere to them. Often many of the laws have overlapping rules, but as they are not referencing each other, providers must duplicate efforts to comply with each regulation. We have done a detailed study of all the data protection regulations that apply to Cloud data. We have developed an integrated, semantically rich knowledge graph that captures these various data compliance regulations. It includes the data threats and security controls that are needed to mitigate the risks. In this paper, we present this knowledge graph in detail, along with the system that we have developed to evaluate it. We have validated our knowledge graph against the privacy policies of various Cloud service providers like Amazon, Google, IBM, and Rackspace. This knowledge graph is available in the public domain and can be used by organizations to automate their compliance processes and set their enterprise Cloud security policies.
+ER  - 
+
+TY  - CONF
+TI  - Towards Creating the Network of Situatonal Governance Centers and Decision Making Technologies in Distributed Environments
+T2  - 2020 IEEE 15th International Conference on Advanced Trends in Radioelectronics, Telecommunications and Computer Engineering (TCSET)
+SP  - 540
+EP  - 545
+AU  - O. Kovalenko
+AU  - V. Vishnevsky
+AU  - V. Kosolapov
+PY  - 2020
+KW  - Decision making
+KW  - Buildings
+KW  - Distributed information systems
+KW  - Organizations
+KW  - Computer architecture
+KW  - Market research
+KW  - Telecommunications
+KW  - Information technology
+KW  - Convergence
+KW  - system of situational management
+KW  - network of distributed situational centers
+KW  - convergence of information technologies
+KW  - agent-oriented environment
+DO  - 10.1109/TCSET49122.2020.235491
+JO  - 2020 IEEE 15th International Conference on Advanced Trends in Radioelectronics, Telecommunications and Computer Engineering (TCSET)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2020 IEEE 15th International Conference on Advanced Trends in Radioelectronics, Telecommunications and Computer Engineering (TCSET)
+Y1  - 25-29 Feb. 2020
+AB  - The paper proposes methodological approaches and concepts for building a network of distributed situational centers for state administration at different levels. The analysis of experience of application of situational centers in the activity of international organizations was conducted. The creation of a unified network of distributed situational centers is based on the methodological principles of coordinating the work of decisionmaking centers in the system of state administration as a joint distributed information system. A conceptual architecture of a joint network of distributed situation-al centers is proposed.
+ER  - 
+
+TY  - JOUR
+TI  - Hybrid semantic service matchmaking method based on a random forest
+T2  - Tsinghua Science and Technology
+SP  - 798
+EP  - 812
+AU  - W. Jiang
+AU  - J. Lin
+AU  - H. Wang
+AU  - S. Zou
+PY  - 2020
+KW  - Semantics
+KW  - Random forests
+KW  - Ontologies
+KW  - Decision trees
+KW  - Cloud computing
+KW  - Cognition
+KW  - Training
+KW  - Semantic Service Matchmaking (SSM)
+KW  - random forest
+KW  - logic-based service matchmaking
+KW  - false-positive
+KW  - false-negative
+DO  - 10.26599/TST.2020.9010003
+JO  - Tsinghua Science and Technology
+IS  - 6
+SN  - 1007-0214
+VO  - 25
+VL  - 25
+JA  - Tsinghua Science and Technology
+Y1  - Dec. 2020
+AB  - Semantic Service Matchmaking (SSM) can be leveraged for mining the most suitable service to accommodate a diversity of user demands. However, existing research on SSM mostly involves logical or non-logical matching, leading to unavoidable false-positive and false-negative problems. Combining different types of SSM methods is an effective way to improve this situation, but the adaptive combination of different service matching methods is still a difficult issue. To conquer this difficulty, a hybrid SSM method, which is based on a random forest and combines the advantages of existing SSM methods, is proposed in this paper. The result of each SSM method is treated as a multi-dimensional feature vector input for the random forest, converting the service matching into a two classification problem. Therefore, our method avoids the flaws found in manual threshold setting. Experimental results show that the proposed method achieves an outstanding performance.
+ER  - 
+
+TY  - CONF
+TI  - A Review Paper On The Application Of Knowledge Graph On Various Service Providing Platforms
+T2  - 2020 10th International Conference on Cloud Computing, Data Science & Engineering (Confluence)
+SP  - 716
+EP  - 720
+AU  - V. V. Nigam
+AU  - S. Paul
+AU  - A. P. Agrawal
+AU  - R. Bansal
+PY  - 2020
+KW  - Knowledge engineering
+KW  - Cloud computing
+KW  - Data science
+KW  - Filtering
+KW  - Facebook
+KW  - Google
+KW  - Semantic search
+KW  - knowledge graph
+KW  - recommendation system
+KW  - data
+KW  - google knowledge graph
+KW  - knowledge graph-based recommendation system
+DO  - 10.1109/Confluence47617.2020.9058298
+JO  - 2020 10th International Conference on Cloud Computing, Data Science & Engineering (Confluence)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2020 10th International Conference on Cloud Computing, Data Science & Engineering (Confluence)
+Y1  - 29-31 Jan. 2020
+AB  - During the past decade or so, knowledge graphs have stealthily made way into our daily lives, whether through voice assistants (the likes of Alexa, Google Assistant or Siri), spontaneous search results or customized personal shopping experiences through online stores recommenders. Today, we are surrounded and constantly interacting with knowledge graphs on a regular basis. The scope and impact of knowledge graphs and underlying graph databases are still a mystery to people. Considering its smooth entry into our lives, most of us are unaware of how dependent we actually are on the technology. In this paper, we have shown the working of the Google knowledge graph and how the knowledge graph works as the most effective recommendation system. We have discussed how it finds its way through daily life in various fields like Banking, Social media (Facebook, LinkedIn, Netflix), Food application (Uber Eats) and the Healthcare sector.
+ER  - 
+
+TY  - JOUR
+TI  - A Compact Brain Storm Algorithm for Matching Ontologies
+T2  - IEEE Access
+SP  - 43898
+EP  - 43907
+AU  - X. Xue
+AU  - J. Lu
+PY  - 2020
+KW  - Ontologies
+KW  - Storms
+KW  - Clustering algorithms
+KW  - Optimization
+KW  - Memory management
+KW  - Measurement
+KW  - Particle swarm optimization
+KW  - Ontology matching
+KW  - compact brain storm optimization algorithm
+KW  - ontology alignment evaluation initiative
+DO  - 10.1109/ACCESS.2020.2977763
+JO  - IEEE Access
+IS  - 
+SN  - 2169-3536
+VO  - 8
+VL  - 8
+JA  - IEEE Access
+Y1  - 2020
+AB  - An ontology can formally present the domain knowledge by specifying the domain concepts and their relationships, which is a kernel technique for addressing the data heterogeneity issue in the semantic web. However, since existing ontologies are developed and maintained independently by different communities, a concept and its relationship with the others could be described in different ways, yielding the ontology heterogeneity problem. To solve this problem, in this work, we formally construct an optimal model for it, and propose a similarity measure for distinguishing identical ontology entities. Since determining the high-quality ontology alignment is a complex process, we propose to utilize a Brain Storm Optimization algorithm (BSO) to optimize the alignment. BSO is a recently developed Swarm Intelligence algorithm (SI), which can effectively solve the complex optimization problem by imitating the human's idea generating process. However, classic BSO needs to cluster various ideas in each generation and carry out the evolving operators on all ideas, which increases the computational complexity. To improve the efficiency of BSO-based ontology matcher, a Compact BSO (CBSO) is further proposed, which can reduce the memory consumption by utilizing the probabilistic representation on the idea cluster, and improve the algorithm's speed through the compact crossover operator and perturbation operator. The experiment uses the benchmark track provided by the Ontology Alignment Evaluation Initiative (OAEI) to test our approach's performance. The comparisons among the state-of-the-art ontology matchers and our proposal show that CBSO-based ontology matcher can efficiently determine high-quality ontology alignments.
+ER  - 
+
+TY  - JOUR
+TI  - An Ontological Graph Identification Method for Improving Localization of IP Prefix Hijacking in Network Systems
+T2  - IEEE Transactions on Information Forensics and Security
+SP  - 1164
+EP  - 1174
+AU  - O. S. Alkadi
+AU  - N. Moustafa
+AU  - B. Turnbull
+AU  - K. -K. R. Choo
+PY  - 2020
+KW  - IP networks
+KW  - Routing
+KW  - Peer-to-peer computing
+KW  - Periodic structures
+KW  - Cloud computing
+KW  - Autonomous systems
+KW  - Real-time systems
+KW  - IP prefix hijacking
+KW  - anomaly detection
+KW  - BGP hijacking
+KW  - network systems
+DO  - 10.1109/TIFS.2019.2936975
+JO  - IEEE Transactions on Information Forensics and Security
+IS  - 
+SN  - 1556-6021
+VO  - 15
+VL  - 15
+JA  - IEEE Transactions on Information Forensics and Security
+Y1  - 2020
+AB  - IP prefix hijacking continues to be a pervasive cyber security threat to the core internet routing infrastructure. The data security of multiple cloud-based services is also susceptible to these threats, due to the high dependency on traditional routing protocols. Although a number of hijacking detection techniques have been recently proposed, no existing system has effectively addressed the problem of detecting malicious transit Autonomous System (AS) services in any detected hijacking occurrences. The ability to locate and isolate malicious services is critical for conducting a necessary mitigation strategy at an early stage, to minimise the impact of the attack, to restore cloud services quickly. In this paper, we propose an effective real-time processing method, so-called Ontological Graph Identification (OGI), for detecting IP prefix hijacking of nodes and suspicious transit nodes caused by the hijacked nodes through ASs. The proposed method is evaluated using the two public datasets of RIPE RIS and RouteView. Experimental results revealed improved performance for the detection of malicious transit nodes compared with peer techniques. It is, therefore, shown that the proposed method has utility in automating the process of investigating nodes with suspicious activities in real network systems.
+ER  - 
+
+TY  - JOUR
+TI  - Wisdom as a Service for Mental Health Care
+T2  - IEEE Transactions on Cloud Computing
+SP  - 539
+EP  - 552
+AU  - J. Chen
+AU  - N. Wang
+AU  - Y. Deng
+AU  - H. Zhong
+AU  - J. Han
+AU  - Y. Li
+AU  - Z. Wan
+AU  - T. Kotake
+AU  - D. Wang
+AU  - N. Zhong
+PY  - 2020
+KW  - Big data
+KW  - Databases
+KW  - Systematics
+KW  - Medical services
+KW  - Bismuth
+KW  - Cloud computing
+KW  - Medical diagnostic imaging
+KW  - Wisdom as a service
+KW  - mental health care
+KW  - Data-Brain
+KW  - brain informatics
+KW  - provenances
+DO  - 10.1109/TCC.2015.2464820
+JO  - IEEE Transactions on Cloud Computing
+IS  - 2
+SN  - 2168-7161
+VO  - 8
+VL  - 8
+JA  - IEEE Transactions on Cloud Computing
+Y1  - 1 April-June 2020
+AB  - Brain informatics adopts a systematic methodology to study clinical diagnosis and pathology of mental disorders from macro, meso and micro points of view. Systematic studies produce multi-level and multi-aspect health big data of mental disorders. Effectively integrating multi-level mental health big data and providing multi-level and content-oriented data services for different types of users by an open and extendable mode becomes new requirements on the acquisition and computing of mental health big data. The existing Data-Brain-based brain data center cannot meet these new requirements. This paper proposes a brain and health big data center and develops a content-oriented cloud service architecture, namely, wisdom as a service, for realizing the brain and health big data center. The illustrative example demonstrates significance and usefulness of the proposed approach.
+ER  - 
+
+TY  - CONF
+TI  - Representing cloud security and privacy policies and detecting potential problems
+T2  - 2019 IEEE 5th International Conference on Big Data Intelligence and Computing (DATACOM)
+SP  - 214
+EP  - 221
+AU  - A. Opara
+AU  - Y. Song
+AU  - S. -J. Cho
+AU  - L. Chung
+PY  - 2019
+KW  - Privacy
+KW  - Data privacy
+KW  - Runtime
+KW  - Cloud computing security
+KW  - Standards organizations
+KW  - Organizations
+KW  - Ontologies
+KW  - cloud security and privacy
+KW  - security policy
+DO  - 10.1109/DataCom.2019.00040
+JO  - 2019 IEEE 5th International Conference on Big Data Intelligence and Computing (DATACOM)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2019 IEEE 5th International Conference on Big Data Intelligence and Computing (DATACOM)
+Y1  - 18-21 Nov. 2019
+AB  - Cloud computing involves multiple stakeholders, each with its own security, privacy and trust requirements, where policy enforcement is shared between the various stakeholders, in contrast to on-premise computing, where an organizations policies are enforced using internal resources. To effectively manage and integrate security requirements in the cloud, the provider and customer needs to negotiate and agree upon the applied security policies. However, there is no standard way of expressing cloud security policies in a vendor-agnostic manner. Cloud security and privacy policies are often stated in an informal and ad-hoc manner, which leads to policy conflicts, incompleteness, ambiguity and inconsistencies. In this paper, we present CERBERUS, a framework for representing cloud security and privacy policies and detecting potential problems in the policies. CERBERUS adopts an object-oriented approach and consists of an ontology and notation, policies, guidelines and rules, and a tool for capturing and detecting policy errors. Using CERBERUS, policies can be analyzed for potential problems, including policy conflicts, inconsistencies, ambiguities, and incompleteness. An application of CERBERUS shows that it indeed helps to discover policy errors, which otherwise would go undetected or in many cases would be detected a posteriori at runtime.
+ER  - 
+
+TY  - CONF
+TI  - A Multi-Agent System of Semantic Analysis and Filtering of Modeled Traces to Calculate Interaction Indicators Favoring Collaboration in LMS
+T2  - 2019 International Conference on Intelligent Systems and Advanced Computing Sciences (ISACS)
+SP  - 1
+EP  - 7
+AU  - A. El Mhouti
+AU  - M. Erradi
+AU  - N. El Makhfi
+PY  - 2019
+KW  - Collaboration
+KW  - Electronic learning
+KW  - Cloud computing
+KW  - Collaborative work
+KW  - Filtering
+KW  - Computational modeling
+KW  - Multi-agent systems
+KW  - e-learning
+KW  - modeled trace
+KW  - interaction indicator
+KW  - collaborative learning
+KW  - LMS
+KW  - Multi-agent system
+DO  - 10.1109/ISACS48493.2019.9068907
+JO  - 2019 International Conference on Intelligent Systems and Advanced Computing Sciences (ISACS)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2019 International Conference on Intelligent Systems and Advanced Computing Sciences (ISACS)
+Y1  - 26-27 Dec. 2019
+AB  - This research work presents a traces engineering method for 1/interactive traces visualization and 2/computation of indicators helping to enhance collaboration in Learning Management Systems (LMS). The aims is to extend the LMS features by incorporating the intelligence of the multi-agents approach, semantic Web technologies and cloud computing services in order to intelligently support collaborative learning. The proposed system is implemented as a LMS based on a cloud architecture and integrating a multi-agents based-system for traces collection and content analysis and filtering. Data collected are modeled, stored, transformed, analyzed and filtered in order to visualize traces and calculate interaction indicators helping tutors to make optimal decisions supporting collaboration. The proposed approach is implemented through a representative prototype. The paper presents the graphical interface of the tool with some examples of computation of indicators of a social nature.
+ER  - 
+
+TY  - CONF
+TI  - Sequence Data Enhancement Method Based on Knowledge Graph
+T2  - 2019 IEEE Intl Conf on Parallel & Distributed Processing with Applications, Big Data & Cloud Computing, Sustainable Computing & Communications, Social Computing & Networking (ISPA/BDCloud/SocialCom/SustainCom)
+SP  - 1359
+EP  - 1364
+AU  - H. Xie
+AU  - W. Chai
+AU  - S. Lin
+PY  - 2019
+KW  - 6G mobile communication
+KW  - Distributed processing
+KW  - Big Data
+KW  - Cloud computing
+KW  - Social computing
+KW  - Channel hot electron injection
+KW  - Recommender System, Knowledge Graph, Inter-entity, Enhancement
+DO  - 10.1109/ISPA-BDCloud-SustainCom-SocialCom48970.2019.00195
+JO  - 2019 IEEE Intl Conf on Parallel & Distributed Processing with Applications, Big Data & Cloud Computing, Sustainable Computing & Communications, Social Computing & Networking (ISPA/BDCloud/SocialCom/SustainCom)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2019 IEEE Intl Conf on Parallel & Distributed Processing with Applications, Big Data & Cloud Computing, Sustainable Computing & Communications, Social Computing & Networking (ISPA/BDCloud/SocialCom/SustainCom)
+Y1  - 16-18 Dec. 2019
+AB  - To solve the problem of low recommendation accuracy caused by too little user behavior information in the current behavior recommendation system, an algorithm based on end-to-end data enhancement was proposed. In this paper, knowledge graph is constructed by learning and integrating structured knowledge network. Moreover, the characteristics of users with high preference similarity can be propagated through the inter-entity relations mapped by the knowledge map to reconstruct the preference vector of users. Through comparative experiments on open data sets, the AUC of RNN model, CNN model, RNN attention model and ATRank were improved by 3.28%, 2.35%, 2.89% and 1.30%, respectively.
+ER  - 
+
+TY  - CONF
+TI  - Prototyping and Validating the CORA Ontology: Case Study on a Simulated Reconnaissance Mission
+T2  - 2019 Latin American Robotics Symposium (LARS), 2019 Brazilian Symposium on Robotics (SBR) and 2019 Workshop on Robotics in Education (WRE)
+SP  - 341
+EP  - 345
+AU  - A. B. d. O. Neto
+AU  - J. A. Silva
+AU  - M. E. Barreto
+PY  - 2019
+KW  - Task analysis
+KW  - Ontologies
+KW  - Robot kinematics
+KW  - Servers
+KW  - Cloud computing
+KW  - Robot sensing systems
+KW  - ontology
+KW  - robotic architecture
+KW  - CORA
+KW  - ROA
+DO  - 10.1109/LARS-SBR-WRE48964.2019.00066
+JO  - 2019 Latin American Robotics Symposium (LARS), 2019 Brazilian Symposium on Robotics (SBR) and 2019 Workshop on Robotics in Education (WRE)
+IS  - 
+SN  - 2643-685X
+VO  - 
+VL  - 
+JA  - 2019 Latin American Robotics Symposium (LARS), 2019 Brazilian Symposium on Robotics (SBR) and 2019 Workshop on Robotics in Education (WRE)
+Y1  - 23-25 Oct. 2019
+AB  - Ontologies play an important role across several domains as they represent and define categories, properties and relationships among concepts, data and entities existing in those domains. Specially in Robotics, ontologies can be used as a standard way to represent and share knowledge and reasoning among autonomous agents. CORA (core ontology or robotics and automation) is a standard ontology developed by the IEEE ORA working group mapping main concepts and axioms from the robotics and automation (R&A) domain. After CORA has been approved as an official IEEE standard, ORA was split in different sub-groups addressing, among other topics, task representation (RTR) and autonomous robots architectures (AuR). This paper presents a simulation study on a multirobot reconnaissance application intended to serve as proof-ofconcept on the feasibility of the CORA ontology and its related architecture. We show how robots and tasks are represented and dynamically mapped into the ontology, as well discuss some technical aspects of our simulation when dealing with the proposed architecture. Our results show the proposed ontology (CORA) and its associated reference architecture (ROA) are able to be correctly mapped during application runtime.
+ER  - 
+
+TY  - CONF
+TI  - Automating the deployment of 5G Network Slices using ONAP
+T2  - 2019 10th International Conference on Networks of the Future (NoF)
+SP  - 32
+EP  - 39
+AU  - V. Q. Rodriguez
+AU  - F. Guillemin
+AU  - A. Boubendir
+PY  - 2019
+KW  - Network slicing
+KW  - Ontologies
+KW  - 5G mobile communication
+KW  - 3GPP
+KW  - Automation
+KW  - Virtual private networks
+KW  - Cloud computing
+KW  - Network slicing
+KW  - 5G
+KW  - ONAP
+KW  - NFV
+KW  - SDN
+KW  - On-demand Networks
+KW  - Automation
+DO  - 10.1109/NoF47743.2019.9015043
+JO  - 2019 10th International Conference on Networks of the Future (NoF)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2019 10th International Conference on Networks of the Future (NoF)
+Y1  - 1-3 Oct. 2019
+AB  - Open Network Automation Platform (ONAP) is a carrier grade platform for automatically deploying and managing Virtualized Network Functions. In this paper, we address the deployment of network slices in order to come up with a model that is compatible with ONAP. We analyze various types of network slice ontology presented in the framework of 5G standardization bodies and we propose an ONAP-compatible model on the basis of which we illustrate the design, onboarding, instantiation and distribution of a network slice. We concretely define and deploy a network slice implementing a private and customized mobile core network. The achieved results not only make true NFV and 5G promises, notably those referring to on-demand networks, service customization and time-to-market acceleration, but they open the door to the deployment of private tailored cloud-native 5G networks.
+ER  - 
+
+TY  - CONF
+TI  - Collaborative Streaming: Trust Requirements for Price Sharing
+T2  - 2019 IEEE International Conference on Big Data (Big Data)
+SP  - 3498
+EP  - 3505
+AU  - T. Grubenmann
+AU  - D. Dell’Aglio
+AU  - A. Bernstein
+PY  - 2019
+KW  - Collaboration
+KW  - Runtime
+KW  - Computational modeling
+KW  - Big Data
+KW  - Cloud computing
+KW  - TV
+KW  - Data models
+KW  - Trust
+KW  - Big Data
+KW  - Stream Processing
+KW  - Cost Sharing
+DO  - 10.1109/BigData47090.2019.9005470
+JO  - 2019 IEEE International Conference on Big Data (Big Data)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2019 IEEE International Conference on Big Data (Big Data)
+Y1  - 9-12 Dec. 2019
+AB  - Stream Processing (SP) is an important Big Data technology enabling continuous querying of data streams. The stream setting offers the opportunity to exploit synergies and, theoretically, share the access and processing costs between multiple different collaborators. But what should be the monetary contribution of each consumer when they do not trust each other and have varying valuations of the differing outcomes? In this article, we present Collaborative Stream Processing (CSP), a model where the costs, which are set exogenously by providers, are shared between multiple consumers, the collaborators. For this, we identify three important requirements for CSP to establish trust between the collaborators and propose a CSP algorithm, ENCSPA, adhering to these requirements. Based on the collaborators' outcome valuations and the costs of the raw data streams, ENCSPA computes the payment for each collaborator. At the same time, ENCSPA ensures that no collaborator has an incentive to manipulate the system by providing misinformation about her/his value, budget, or time limit. We show that ENCSPA can calculate payments in a reasonable amount of time for up to one thousand collaborators.
+ER  - 
+
+TY  - CONF
+TI  - Keeping interoperability between IMS-LD scenarios in Educational Cloud Computing based on Semantic Indexing
+T2  - 2019 1st International Conference on Smart Systems and Data Science (ICSSD)
+SP  - 1
+EP  - 6
+AU  - K. EL GUEMMAT
+AU  - S. OUAHABI
+PY  - 2019
+KW  - Indexing
+KW  - Semantics
+KW  - Cloud computing
+KW  - Ontologies
+KW  - Collaboration
+KW  - Electronic learning
+KW  - Interoperability
+KW  - Educational Cloud
+KW  - E-learning
+KW  - Learning Object
+KW  - Instructional Management Systems Learning Design
+KW  - Semi-automatic semantic indexing
+KW  - Ontologies
+DO  - 10.1109/ICSSD47982.2019.9002705
+JO  - 2019 1st International Conference on Smart Systems and Data Science (ICSSD)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2019 1st International Conference on Smart Systems and Data Science (ICSSD)
+Y1  - 3-4 Oct. 2019
+AB  - The purpose of this paper is to propose an effective system to automate the work between learning actors and manage interoperability between contents in the Educational Cloud (EC). Building e-learning systems in the cloud computing is a multidisciplinary endeavor that involves Learning Object (LO), Instructional Management Systems Learning Design (IMS-LD) specification, semi-automatic semantic indexing techniques according to ontologies, algorithms for the automatic processing of natural language (NLP) and system development framework. Our project implements a group of engaging, affectionate, and effective IMS-LD package equipped with abilities to facilitate and support reuse, sharing and identification of the LO between learning actors in the EC. We proposed a pedagogical system in EC that offer more benefits for the various actors to collaborate and to share LO flexibly.
+ER  - 
+
+TY  - CONF
+TI  - Context-Aware Security Evaluation Ontology for Cloud Services
+T2  - 2019 IEEE 4th Advanced Information Technology, Electronic and Automation Control Conference (IAEAC)
+SP  - 1012
+EP  - 1018
+AU  - S. Maroc
+AU  - J. B. Zhang
+PY  - 2019
+KW  - Security
+KW  - Cloud computing
+KW  - Ontologies
+KW  - Computational modeling
+KW  - NIST
+KW  - Measurement
+KW  - ontologies
+KW  - cloud computing
+KW  - services evaluation
+KW  - security evaluation
+KW  - security ontologies
+DO  - 10.1109/IAEAC47372.2019.8997783
+JO  - 2019 IEEE 4th Advanced Information Technology, Electronic and Automation Control Conference (IAEAC)
+IS  - 
+SN  - 2381-0947
+VO  - 
+VL  - 
+JA  - 2019 IEEE 4th Advanced Information Technology, Electronic and Automation Control Conference (IAEAC)
+Y1  - 20-22 Dec. 2019
+AB  - Cloud computing is witnessing a fast development and widespread adoption from small to large organizations due to its cost-effective and resource-efficient services. Nevertheless, security risks remain major concerns. One of the main challenges is how to evaluate the security level of cloud services. Among the problems arising are the large variety of knowledge associated with the security domain and the heterogeneity of cloud services descriptions. An effective solution to such problems is ontologies. Ontologies provide a more structured and formal representation of a particular domain, which will help to reduce the conceptual ambiguity and enable automatic reasoning functionalities. In this paper, we propose an ontology for cloud services security evaluation based on industry standards and best practices. Some of the core concepts included in the ontology are the target, criteria, yardstick, data gathering techniques and data synthesis approaches. The concepts are grouped into five general categories, namely: context, assumptions, external factors, activities, and outcomes. The ontology is implemented using Protégé tool and validated through different uses case scenarios.
+ER  - 
+
+TY  - CONF
+TI  - Boosting Projection Neural Features for Semantic Similar Clustered Documents in Cloud
+T2  - 2019 International Conference on Smart Systems and Inventive Technology (ICSSIT)
+SP  - 1163
+EP  - 1169
+AU  - B. Vinothini
+AU  - N. Gnanambigai
+AU  - P. Dinadayalan
+PY  - 2019
+KW  - Cloud computing
+KW  - Databases
+KW  - Clustering methods
+KW  - Semantics
+KW  - Clustering algorithms
+KW  - Ontologies
+KW  - Feature extraction
+KW  - Boosting
+KW  - Smart systems
+KW  - Computational complexity
+KW  - Document clustering
+KW  - Cloud Computing
+KW  - Entropy
+KW  - Boosting
+KW  - Projection Neural Feature
+KW  - dimensionality
+KW  - semantic feature
+KW  - ontologies
+KW  - factorization
+DO  - 10.1109/ICSSIT46314.2019.8987838
+JO  - 2019 International Conference on Smart Systems and Inventive Technology (ICSSIT)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2019 International Conference on Smart Systems and Inventive Technology (ICSSIT)
+Y1  - 27-29 Nov. 2019
+AB  - Cloud computing has emerged as real world technology over the Internet. Due to the development of big data with high dimensionality, data storage possibility over cloud has created large scope in recent times. Document clustering is the fundamental topic that turned into an indispensable component in many areas like cloud computing. Document clustering partitions the document into significant classes or groups for retrieving the relevant document. Many researchers used the factorization methods and ontologies for internal and external knowledge based document clustering. However, existing methods failed to provide the semantic feature construction and leads to the information loss while covering all the ideas in documents. In order to address these problems, different document clustering techniques in cloud has been reviewed in this paper. In addition to that Document clustering by Entropy-based Boosting with Projection Neural Feature (EB-PNF) method is presented. The proposed method involves two stages. They are, similar document identification based on semantic similarity score, feature extraction which includes the extraction of both single and multi-label features based on the precision, recall and computational complexity to prove that EB-PNF method produces high-quality clusters comparable to the state-of-the-art methods.
+ER  - 
+
+TY  - CONF
+TI  - A Novel Ontology-based Approach for Describing Cloud Services
+T2  - 2019 International Conference on Theoretical and Applicative Aspects of Computer Science (ICTAACS)
+SP  - 1
+EP  - 8
+AU  - S. ZERTAL
+AU  - Z. LABOUDI
+AU  - S. BECHOUA
+PY  - 2019
+KW  - Cloud computing
+KW  - Ontologies
+KW  - Business
+KW  - Web services
+KW  - Semantics
+KW  - OWL
+KW  - ontology
+KW  - cloud computing
+KW  - services
+KW  - composition constraints
+KW  - deployment constraints
+KW  - discovery
+DO  - 10.1109/ICTAACS48474.2019.8988129
+JO  - 2019 International Conference on Theoretical and Applicative Aspects of Computer Science (ICTAACS)
+IS  - 
+SN  - 
+VO  - 1
+VL  - 1
+JA  - 2019 International Conference on Theoretical and Applicative Aspects of Computer Science (ICTAACS)
+Y1  - 15-16 Dec. 2019
+AB  - The development of Cloud computing led to an increase in the number of services ready for use and therefore the number of consumers' requests. Cloud providers advertise the description of their offered services in different formats on the Internet. This makes the discovery and selection of services more difficult for users. Thus, a uniform description of Cloud services would be needed. The aim of this study is to provide a new ontology for uniform description of Cloud services coming from heterogeneous sources. The proposed model takes into account the different relationships and dependencies between services across Cloud's layers. These dependencies are represented by the different constraints of composition and deployment. To validate our proposal, qualitative and quantitative evaluations are conducted. The qualitative evaluation is carried out by making comparisons with both state-of-the-art works and the Bitnami platform according to some criteria. For the quantitative evaluation, comparisons are performed with the output results specified by users. Globally, the results are promising and encouraging.
+ER  - 
+
+TY  - CONF
+TI  - An evolutionary data model for the implementation of collective cloud manufacturing to maintain individual value-added networks
+T2  - 2019 IEEE 39th Central America and Panama Convention (CONCAPAN XXXIX)
+SP  - 1
+EP  - 6
+AU  - M. M. Strljic
+AU  - O. Riedel
+PY  - 2019
+KW  - Symbiosis
+KW  - Runtime
+KW  - Scalability
+KW  - Production
+KW  - Companies
+KW  - Milling
+KW  - Ontologies
+KW  - Data models
+KW  - Planning
+KW  - Resource management
+KW  - Cloud Manufacturing
+KW  - Ontology
+KW  - Service-oriented manufacturing
+KW  - Product data model
+DO  - 10.1109/CONCAPANXXXIX47272.2019.8976942
+JO  - 2019 IEEE 39th Central America and Panama Convention (CONCAPAN XXXIX)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2019 IEEE 39th Central America and Panama Convention (CONCAPAN XXXIX)
+Y1  - 20-22 Nov. 2019
+AB  - Cloud Manufacturing (CM) offers the possibility to use and provide production services within an as-a-service concept. The CM paradigm enables more efficient resource utilization in the context of industry 4.0 through fully automated order processing. Existing architecture solutions, however, follow a central platform approach with a global neutral data model. As a consequence, the individuality of companies within the CM is not given any room for expression and symbioses between companies are not established. The result is a disadvantage particularly for SMEs, which generate their competitive advantage from innovative production technologies and symbiotic connections with customers and other SMEs. The focus of Collective Cloud Manufacturing (CCM) is the preservation of these characteristics, in which an over-approximation of costs through the integration of production-related simulations is to be reduced and the data security of the customer is to be enhanced. So in this work, a data model for an existing concept for CCM is presented. The requirements for the data model and the runtime behavior are defined. Subsequently, the state of the art of existing models in the domain of CM is presented. The developed data model is presented with an application evaluation.
+ER  - 
+
+TY  - CONF
+TI  - Efficient State Update Exchange in a CPS Environment for Linked Data-based Digital Twins
+T2  - 2019 IEEE 17th International Conference on Industrial Informatics (INDIN)
+SP  - 983
+EP  - 989
+AU  - A. Berezovskyi
+AU  - R. Inam
+AU  - J. El-khoury
+AU  - M. Törngren
+AU  - E. Fersman
+PY  - 2019
+KW  - Filtering
+KW  - Event detection
+KW  - Scalability
+KW  - Linked data
+KW  - Digital twins
+KW  - Informatics
+DO  - 10.1109/INDIN41052.2019.8972284
+JO  - 2019 IEEE 17th International Conference on Industrial Informatics (INDIN)
+IS  - 
+SN  - 2378-363X
+VO  - 1
+VL  - 1
+JA  - 2019 IEEE 17th International Conference on Industrial Informatics (INDIN)
+Y1  - 22-25 July 2019
+AB  - This paper addresses the problem of reducing the number of messages needed to exchange state updates between the Cyber-Physical System (CPS) components that integrate with the rest of the CPS through Digital Twins in order to maintain uniform communication interface and carry out their tasks correctly and safely. The main contribution is a proposed architecture and the discussion of its suitability to support correct execution of complex tasks across the CPS. A new State Event Filtering component is presented to provide event-based communication among Digital Twins that are based on the Linked Data principles while keeping the fan-out limited to ensure the scalability of the architecture.
+ER  - 
+
+TY  - CONF
+TI  - Bills of Standard Manufacturing Services (BOSS) Construction Based on focused Crawler
+T2  - 2019 IEEE International Conference on Smart Manufacturing, Industrial & Logistics Engineering (SMILE)
+SP  - 135
+EP  - 140
+AU  - J. Bai
+AU  - S. Fang
+AU  - R. Tang
+AU  - Y. Wu
+PY  - 2019
+KW  - Manufacturing
+KW  - Ontologies
+KW  - Crawlers
+KW  - Cloud computing
+KW  - Standards
+KW  - Data models
+KW  - Industries
+KW  - Cloud Manufacturing
+KW  - Cloud Services
+KW  - Bill of Standard Manufacturing Service
+KW  - Focused crawler
+KW  - Ontology
+DO  - 10.1109/SMILE45626.2019.8965315
+JO  - 2019 IEEE International Conference on Smart Manufacturing, Industrial & Logistics Engineering (SMILE)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2019 IEEE International Conference on Smart Manufacturing, Industrial & Logistics Engineering (SMILE)
+Y1  - 20-21 April 2019
+AB  - As an advanced manufacturing model, cloud manufacturing(CMfg) has made great progress in recent years. The concept of CMfg has been introduced to many industries. With the growing diversity of products, the complexity of cloud manufacturing service encapsulation is also increasing. To solve the problem of product-oriented service standardized encapsulation, the Bills of Standard Manufacturing Service(BOSS) has been proposed. It can systematically solve the problem of deployment, registration and management of cloud manufacturing services in the whole product life cycle. In this paper, based on the service ontology model, we proposed an automatic perfecting service information method of BOSS using the focused crawler technology. Combined with the case study, we verified the feasibility and effectiveness of this method. Finally, the application framework of BOSS in the cloud manufacturing system is further discussed.
+ER  - 
+
+TY  - CONF
+TI  - A Reference Model for Digital Transformation and Innovation
+T2  - 2019 IEEE 23rd International Enterprise Distributed Object Computing Conference (EDOC)
+SP  - 21
+EP  - 30
+AU  - S. Bogea Gomes
+AU  - F. M. Santoro
+AU  - M. Mira da Silva
+AU  - M. -E. Iacob
+PY  - 2019
+KW  - Technological innovation
+KW  - Digital transformation
+KW  - Ontologies
+KW  - Companies
+KW  - Standards
+KW  - Proposals
+KW  - Digital Innovation (DI), Digital Transformation (DT), Conceptual Model, ArchiMate, Enterprise Architecture (EA), Business Process Management (BPM), Ontology
+DO  - 10.1109/EDOC.2019.00013
+JO  - 2019 IEEE 23rd International Enterprise Distributed Object Computing Conference (EDOC)
+IS  - 
+SN  - 2325-6362
+VO  - 
+VL  - 
+JA  - 2019 IEEE 23rd International Enterprise Distributed Object Computing Conference (EDOC)
+Y1  - 28-31 Oct. 2019
+AB  - Digital Transformation (DT) has a direct impact on relations and forms of consumption. New technologies are being incorporated continuously into our day-to-day life, introducing new shapes for traditional and original kinds of businesses. Nevertheless, it is interesting to notice that most novelty is based mainly on processes, rather than on technology. A DT initiative should start with conceptual modeling to organize and structure knowledge of its scope. However, there is not a specific proper language to model DT initiatives. Based on an extensive literature review, we propose an Ontology - the DI-BPM-Onto - with this purpose. The ontology proposed conceptualizes three aspects: Digital Transformation and Innovation (DT&I), Business Process Management Contextual Factors, and Digital Technology, which are independent layers, but orthogonally related. On the other side, modeling tools like the well-known standard ArchiMate are widely used by companies to provide an unambiguous understanding of their businesses, and already support the description, analysis, and visualization of most enterprise architecture (EA) elements. Therefore, in this paper, to better model DT initiatives, we propose a Reference Model that extending the ArchiMate with the main concepts of DT identified in the DI-BPM-Onto to better model DT&I initiatives and to discuss to what extent ArchiMate would support the implementation of DT&I initiatives. A practical modelling scenario concerning UBER is used to carry out a preliminary evaluation of the proposal.
+ER  - 
+
+TY  - CONF
+TI  - Proof of Encryption: Enforcement of Security Service Level Agreement for Encryption Outsourcing
+T2  - 2019 IEEE Conference on Dependable and Secure Computing (DSC)
+SP  - 1
+EP  - 8
+AU  - S. Alasmari
+AU  - W. Wang
+AU  - T. Qin
+AU  - Y. Wang
+PY  - 2019
+KW  - Ontologies
+KW  - Malware
+KW  - Encryption
+KW  - Safety
+KW  - Outsourcing
+KW  - Security
+KW  - Service level agreements
+DO  - 10.1109/DSC47296.2019.8937713
+JO  - 2019 IEEE Conference on Dependable and Secure Computing (DSC)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2019 IEEE Conference on Dependable and Secure Computing (DSC)
+Y1  - 18-20 Nov. 2019
+AB  - With the popularity of cloud and edge computing, various types of service level agreement (SLA) are used to enforce the amount of resources that service providers commit to end users. However, the security SLAs (SSLA) are usually hard to verify since their execution results are related to the intensity and frequency of cyber attacks. In this paper, we investigate the proof of encryption problem. Restricted by available resources and hardware capabilities, some end users need to outsource the strong encryption operations of data to external service providers. Verification of the correct execution of encryption is a problem since it is directly related to data safety. We first define the expected properties of the Proof of Encryption (PoE) mechanisms. We propose two mechanisms based on whether or not the service requester is aware of the encryption key. They allow an end user to verify that corresponding encryption algorithm and key strength are honored. We describe the details of the verification procedures. Simulation and experiments show that our approaches can detect a dishonest service provider with high probability.
+ER  - 
+
+TY  - CONF
+TI  - Data Acquisition Framework for Cloud Robotics
+T2  - 2019 IEEE 10th International Conference on Awareness Science and Technology (iCAST)
+SP  - 1
+EP  - 7
+AU  - Y. Watanobe
+AU  - Y. Yaguchi
+AU  - T. Miyaji
+AU  - R. Yamada
+AU  - K. Naruse
+PY  - 2019
+KW  - Cloud computing
+KW  - Robot sensing systems
+KW  - Base stations
+KW  - Data acquisition
+KW  - Databases
+KW  - Engines
+KW  - Cloud robotics
+KW  - Data acquisition
+KW  - Robotics technology components
+DO  - 10.1109/ICAwST.2019.8923436
+JO  - 2019 IEEE 10th International Conference on Awareness Science and Technology (iCAST)
+IS  - 
+SN  - 2325-5994
+VO  - 
+VL  - 
+JA  - 2019 IEEE 10th International Conference on Awareness Science and Technology (iCAST)
+Y1  - 23-25 Oct. 2019
+AB  - In cloud robotics environments, software components play important roles by acquiring data from heterogeneous devices and then performing context-aware computing with the help of knowledge bases organized by the data. However, there are numerous tasks that must be performed to create such components, their corresponding database schemas, services, and repositories, and these tasks can be burdensome for developers. In this paper, a framework for constructing a data acquisition system with integrated robotic technology components and modern web-based technologies is presented. Our proposed framework enables developers to construct a robot environment with data acquisition functionalities by defining scenarios in an ontology language. The framework is realized in such a way that allows it to automatically generate the required software components and their corresponding repositories, which are deployed on the cloud. A case study showcasing the proposed framework is also demonstrated.
+ER  - 
+
+TY  - CONF
+TI  - Losing Confidence in Quality: Unspoken Evolution of Computer Vision Services
+T2  - 2019 IEEE International Conference on Software Maintenance and Evolution (ICSME)
+SP  - 333
+EP  - 342
+AU  - A. Cummaudo
+AU  - R. Vasa
+AU  - J. Grundy
+AU  - M. Abdelrazek
+AU  - A. Cain
+PY  - 2019
+KW  - Computer vision
+KW  - Dogs
+KW  - Testing
+KW  - Cloud computing
+KW  - Documentation
+KW  - Software quality
+KW  - machine learning
+KW  - intelligent service
+KW  - computer vision
+KW  - quality assurance
+KW  - evolution risk
+KW  - documentation
+DO  - 10.1109/ICSME.2019.00051
+JO  - 2019 IEEE International Conference on Software Maintenance and Evolution (ICSME)
+IS  - 
+SN  - 2576-3148
+VO  - 
+VL  - 
+JA  - 2019 IEEE International Conference on Software Maintenance and Evolution (ICSME)
+Y1  - 29 Sept.-4 Oct. 2019
+AB  - The following topics are dealt with: software maintenance; public domain software; program testing; source code (software); program debugging; software quality; program diagnostics; learning (artificial intelligence); mobile computing; data mining.
+ER  - 
+
+TY  - CONF
+TI  - An Image-Based Vocabulary Learning System Based on Multi-Agent System
+T2  - 2019 16th International Joint Conference on Computer Science and Software Engineering (JCSSE)
+SP  - 324
+EP  - 329
+AU  - P. Tangworakitthaworn
+AU  - P. Owatsuwan
+AU  - N. Nongyai
+AU  - N. Arayapong
+PY  - 2019
+KW  - Vocabulary
+KW  - Image color analysis
+KW  - Multi-agent systems
+KW  - Servers
+KW  - Databases
+KW  - Compounds
+KW  - Image-Based Vocabulary Learning
+KW  - Multi Agent System
+KW  - MAS
+KW  - Image Processing
+KW  - Object Detection
+KW  - Ontology
+KW  - WordNet
+KW  - Technology-Enhanced Learning
+DO  - 10.1109/JCSSE.2019.8864170
+JO  - 2019 16th International Joint Conference on Computer Science and Software Engineering (JCSSE)
+IS  - 
+SN  - 2642-6579
+VO  - 
+VL  - 
+JA  - 2019 16th International Joint Conference on Computer Science and Software Engineering (JCSSE)
+Y1  - 10-12 July 2019
+AB  - Promoting and developing English language skills are essential for second language learners. This paper presents the design and development of a mobile application for promoting learners' experiences in learning the English vocabularies by formulating the compound words generated from images. The proposed system is based on the multi-agent system (MAS) covering three main agents: matching learners agent, combination vocabulary agent, and feedback agent. The innovation of the proposed approach is that many learners (matching learners agent) can formulate the new vocabulary that is formed from the combination algorithm (combination vocabulary agent) and learners can experience new vocabulary represented by using the image results (feedback agent). The two experiments of the system performance evaluation are reported. The experimental results show that the performance of the vocabularies' detection and the sub processes execution were achieved the high accuracy.
+ER  - 
+
+TY  - CONF
+TI  - Building Quick Resource Index List Using WordNet and High-Performance Computing Resource Ontology towards Efficient Resource Discovery
+T2  - 2019 IEEE 21st International Conference on High Performance Computing and Communications; IEEE 17th International Conference on Smart City; IEEE 5th International Conference on Data Science and Systems (HPCC/SmartCity/DSS)
+SP  - 885
+EP  - 892
+AU  - A. Zhou
+AU  - K. Ren
+AU  - X. Li
+AU  - W. Zhang
+AU  - X. Ren
+PY  - 2019
+KW  - Ontologies
+KW  - Computational modeling
+KW  - Hardware
+KW  - Software
+KW  - Cloud computing
+KW  - Semantics
+KW  - Indexes
+KW  - HPC resources
+KW  - ontology
+KW  - resource discovery
+KW  - QSQL
+KW  - WordNet
+DO  - 10.1109/HPCC/SmartCity/DSS.2019.00129
+JO  - 2019 IEEE 21st International Conference on High Performance Computing and Communications; IEEE 17th International Conference on Smart City; IEEE 5th International Conference on Data Science and Systems (HPCC/SmartCity/DSS)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2019 IEEE 21st International Conference on High Performance Computing and Communications; IEEE 17th International Conference on Smart City; IEEE 5th International Conference on Data Science and Systems (HPCC/SmartCity/DSS)
+Y1  - 10-12 Aug. 2019
+AB  - High-performance computing (HPC) has played a significant role in scientific discovery and technological innovation, but resources distributed in cross-regional supercomputing centers are still used inefficiently and hard to be managed uniformly, due to various challenging issues like the complex resource types, the heterogeneous interfaces of the resource management software, the inefficient coordination of software and hardware, and the lack of available and standardized description specification model. In this paper, we first propose a HPC resource ontology model called HPCRO to define the concepts of hardware resources and software resources, and specifies types, attributes, logical relations, and data transfer among resources. Moreover, based on the proposed model, we further propose a method called WordNet-based Quick Resource Index List (WQRIL) to support efficient HPC resources discovery. Specifically, the method extends and optimizes the existing method with Quick Service Quick List (QSQL) by extracting synonyms of ontology concepts from WordNet. The method not only can provide a unified representation of HPC resources, but also can support semantic-based fuzzy matching. More importantly, it improves the usability and utilization of hardware and software resources effectively in cross-regional high-performance computing centers. Extensive experiments have been conducted to verify the effectiveness and efficiency of our proposals.
+ER  - 
+
+TY  - JOUR
+TI  - A Centralised Cloud Services Repository (CCSR) Framework for Optimal Cloud Service Advertisement Discovery From Heterogenous Web Portals
+T2  - IEEE Access
+SP  - 128213
+EP  - 128223
+AU  - A. M. Alkalbani
+AU  - W. Hussain
+AU  - J. Y. Kim
+PY  - 2019
+KW  - Cloud computing
+KW  - Ontologies
+KW  - Search engines
+KW  - Google
+KW  - Portals
+KW  - Data mining
+KW  - Semantics
+KW  - Cloud services discovery
+KW  - web harvesting
+KW  - service advertisements
+KW  - ontology
+KW  - centralized repository
+KW  - heterogeneous data
+DO  - 10.1109/ACCESS.2019.2939543
+JO  - IEEE Access
+IS  - 
+SN  - 2169-3536
+VO  - 7
+VL  - 7
+JA  - IEEE Access
+Y1  - 2019
+AB  - A cloud service marketplace is the first point for a consumer to discovery, select and possible composition of different services. Although there are some private cloud service marketplaces, such as Microsoft Azure, that allow consumers to search service advertainment belonging to a given vendor. However, due to an increase in the number of cloud service advertisement, a consumer needs to find related services across the worldwide web (WWW). A consumer mostly uses a search engine such as Google, Bing, for the service advertisement discovery. However, these search engines are insufficient in retrieving related cloud services advertainments on time. There is a need for a framework that effectively and efficiently discovery of the related service advertisement for ordinary users. This paper addresses the issue by proposing a user-friendly harvester and a centralised cloud service repository framework. The proposed Centralised Cloud Service Repository (CCSR) framework has two modules - Harvesting as-a-Service (HaaS) and the service repository module. The HaaS module allows users to extract real-time data from the web and make it available to different file format without the need to write any code. The service repository module provides a centralised cloud service repository that enables a consumer for efficient and effective cloud service discovery. We validate and demonstrate the suitability of our framework by comparing its efficiency and feasibility with three widely used open-source harvesters. From the evaluative result, we observe that when we harvest a large number of services advertisements, the HaaS is more efficient compared with the traditional harvesting tools. Our cloud services advertisements dataset is publicly available for future research at: http://cloudmarketregistry.com/cloud-market-registry/home.html
+ER  - 
+
+TY  - CONF
+TI  - Knowledge Graph Provision for Heterogeneous Service Network
+T2  - 2019 IEEE World Congress on Services (SERVICES)
+SP  - 135
+EP  - 140
+AU  - L. Yu
+AU  - D. Yucong
+AU  - Z. Yonghao
+PY  - 2019
+KW  - Mashups
+KW  - Knowledge discovery
+KW  - Computer science
+KW  - Google
+KW  - Databases
+KW  - Cognition
+KW  - W3C
+KW  - knowledge extraction, knowledge discovery, knowledge graph, service
+DO  - 10.1109/SERVICES.2019.00037
+JO  - 2019 IEEE World Congress on Services (SERVICES)
+IS  - 
+SN  - 2642-939X
+VO  - 2642-939X
+VL  - 2642-939X
+JA  - 2019 IEEE World Congress on Services (SERVICES)
+Y1  - 8-13 July 2019
+AB  - Cloud computing and service computing are merging together rapidly. This process brings large challenges to create knowledge graphs for service data. Our aim is to develop a knowledge graph for service analysis, and recommendation to boost API economy. In this paper, knowledge extraction and knowledge discovery are shown for the knowledge graph.
+ER  - 
+
+TY  - CONF
+TI  - Multi Authority Access Control in a Cloud EHR System with MA-ABE
+T2  - 2019 IEEE International Conference on Edge Computing (EDGE)
+SP  - 107
+EP  - 109
+AU  - S. Dixit
+AU  - K. P. Joshi
+AU  - S. Geol Choi
+PY  - 2019
+KW  - Cloud computing
+KW  - Access control
+KW  - Encryption
+KW  - Electronic medical records
+KW  - Organizations
+KW  - Ontologies
+KW  - Multi-Authority Attribute Based Encryption (MA ABE)
+KW  - Attribute Based Access Control (ABAC)
+KW  - Knowledge Graph (Ontologies)
+KW  - Cloud Computing
+KW  - Access Handler
+KW  - Document Processor & Crypto Module
+DO  - 10.1109/EDGE.2019.00032
+JO  - 2019 IEEE International Conference on Edge Computing (EDGE)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2019 IEEE International Conference on Edge Computing (EDGE)
+Y1  - 8-13 July 2019
+AB  - With the rapid adoption of Cloud-based Electronic Health Record (EHR) systems, health providers are particularly concerned about managing data privacy on the cloud. Existing approaches have either a scalability bottleneck by requiring that patients approve each sharing of their medical data or a trust bottleneck by having a single authority control every access thereby creating the problem of a single point of attack. To address both these bottlenecks, we have developed a novel framework that enables policy based multi-authority access authorization to EHR systems accessed by multiple care providers from different locations or organizations. This framework, which resides on the Edge, has been built using the Multi-Authority Attribute Based Encryption (MA-ABE) and Semantic Web technologies to provide a secure, semantically rich approach to facilitate secure data sharing among organizations who manage different attributes of end users using a shared dataset. In this paper, we describe our novel approach along with the proof of concept prototype that we created to evaluate our framework.
+ER  - 
+
+TY  - CONF
+TI  - Collective Cloud Manufacturing for Maintaining Diversity in Production through Digital Transformation
+T2  - 2019 IEEE 21st Conference on Business Informatics (CBI)
+SP  - 594
+EP  - 603
+AU  - M. M. Strljic
+AU  - O. Riedel
+AU  - A. Lechler
+PY  - 2019
+KW  - Production
+KW  - Manufacturing
+KW  - Cloud computing
+KW  - Data models
+KW  - Solid modeling
+KW  - Companies
+KW  - Cloud manufacturing
+KW  - Service-oriented manufacturing
+KW  - Industry 4.0
+KW  - Production process planning
+DO  - 10.1109/CBI.2019.00075
+JO  - 2019 IEEE 21st Conference on Business Informatics (CBI)
+IS  - 
+SN  - 2378-1971
+VO  - 01
+VL  - 01
+JA  - 2019 IEEE 21st Conference on Business Informatics (CBI)
+Y1  - 15-17 July 2019
+AB  - In the area of production, individual domains are growing more and more closely together. Producing value-added chains and complex supply chains is becoming increasingly intertwined in the process of production planning. The exchange of data between the involved partners plays a critical role. The needs of the customer, the current order situation of the supplier as well as the manufacturing process dependencies of the manufacturer must be coordinated in a symbiotic manner to achieve efficient production. Therefore, this paper presents a variant of cloud manufacturing, collective cloud manufacturing, which focuses on the formation of cross-company symbioses to exchange production information in an environment isolated for data protection via an evolutionary needs model. For this purpose, a previously presented concept and the challenges of industry strategies are described to show how the concept of collective cloud manufacturing can meet the requirements of digitalization.
+ER  - 
+
+TY  - CONF
+TI  - A Semantic-driven Approach for Industry 4.0
+T2  - 2019 15th International Conference on Distributed Computing in Sensor Systems (DCOSS)
+SP  - 347
+EP  - 354
+AU  - S. Cho
+AU  - G. May
+AU  - D. Kiritsis
+PY  - 2019
+KW  - Green manufacturing
+KW  - Runtime
+KW  - Soft sensors
+KW  - Ontologies
+KW  - Real-time systems
+KW  - Fourth Industrial Revolution
+KW  - Digital twins
+KW  - Synchronization
+KW  - Standards
+KW  - Semantic technology
+KW  - Industry 4.0, sustainable manufacturing, semantic, ontology, incremental approach, gaussian mixture model
+DO  - 10.1109/DCOSS.2019.00076
+JO  - 2019 15th International Conference on Distributed Computing in Sensor Systems (DCOSS)
+IS  - 
+SN  - 2325-2944
+VO  - 
+VL  - 
+JA  - 2019 15th International Conference on Distributed Computing in Sensor Systems (DCOSS)
+Y1  - 29-31 May 2019
+AB  - Toward industry 4.0, modern manufacturing companies are aiming at building digital twins to manage physical assets, processes, people, and places. Since in this environment, massive amounts of data have been generated and collected, integration and management of various data sources is of paramount importance. In this context, cloud computing as a crucial part of Industry 4.0 facilitates distribution of computer resources without direct active management by users. Accordingly, an ontology enables efficient integration and management of data as a reference data model through representation of knowledge. Besides, data mining from massive data is very important to identify significant meaning of data, and to avoid unexpected errors through predictions from experiences described in data replica. This research addresses problems towards efficient integration and management of data for predictive maintenance.
+ER  - 
+
+TY  - CONF
+TI  - Big Data Interoperability in e-Health Systems
+T2  - 2019 9th International Conference on Cloud Computing, Data Science & Engineering (Confluence)
+SP  - 217
+EP  - 222
+AU  - N. Gupta
+AU  - B. Gupta
+PY  - 2019
+KW  - Interoperability
+KW  - Standards
+KW  - Medical services
+KW  - Metadata
+KW  - Ontologies
+KW  - Cloud computing
+KW  - Biomedical imaging
+KW  - Data sharing
+KW  - Interoperability
+KW  - Electronic Health Data(EHR)
+KW  - Standards
+KW  - Ontology
+DO  - 10.1109/CONFLUENCE.2019.8776621
+JO  - 2019 9th International Conference on Cloud Computing, Data Science & Engineering (Confluence)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2019 9th International Conference on Cloud Computing, Data Science & Engineering (Confluence)
+Y1  - 10-11 Jan. 2019
+AB  - Health sector has evolved into a major source of digital data. The data generated is distributed on various servers at different place. Interoperability is a major concern whenever the electronic data is shared among peers. The main goal of an interoperable solution is to provide an understanding of data both syntactically and semantically. The research reviews the current work in data interoperability, its need and existing solutions in health domain. It also highlights the current issues for not achieving a fully interoperable system in healthcare and proposed Architecture for handling existing issues for secure Patient data retrieval and sharing across boundaries. This work will be a knowledge source for various professional and researchers working with Electronic Health Record of patients.
+ER  - 
+
+TY  - CONF
+TI  - Towards a Clustering-Based Approach to Speed up IaaS Service Discovery Process
+T2  - 2019 International Conference on Advanced Communication Technologies and Networking (CommNet)
+SP  - 1
+EP  - 5
+AU  - D. Riane
+AU  - A. Ettalbi
+PY  - 2019
+KW  - Cloud computing
+KW  - Ontologies
+KW  - Indexing
+KW  - Computational modeling
+KW  - Quality of service
+KW  - Search engines
+KW  - Linux
+KW  - Composite infrastructure Service
+KW  - Multi-Cloud
+KW  - Cloud Service Discovery
+KW  - Quality of Service
+KW  - Cloud Service Description
+KW  - Clustering
+KW  - Ontology
+DO  - 10.1109/COMMNET.2019.8742374
+JO  - 2019 International Conference on Advanced Communication Technologies and Networking (CommNet)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2019 International Conference on Advanced Communication Technologies and Networking (CommNet)
+Y1  - 12-14 April 2019
+AB  - Cloud computing technology offers on-demand access to different cloud services over the Internet. The huge number of cloud providers that offer various services with different descriptions caused many problems, such as the complexity of multi-cloud service discovery and taking a lot of time to find candidates services that meets user's requirements. In this paper, we propose a new approach for composite infrastructure service discovery in multi-cloud environment. In our approach, we propose an indexing technique to facilitate virtual cloud resource discovery and their matching to user requirements.
+ER  - 
+
+TY  - CONF
+TI  - A Description Method of Cloud Simulation Model Resources Based on Knowledge Graph
+T2  - 2019 IEEE 4th International Conference on Cloud Computing and Big Data Analysis (ICCCBDA)
+SP  - 655
+EP  - 663
+AU  - S. Xiong
+AU  - F. Zhu
+AU  - Y. Yao
+AU  - W. Tang
+PY  - 2019
+KW  - Computational modeling
+KW  - Atmospheric modeling
+KW  - Cloud computing
+KW  - Context modeling
+KW  - Web services
+KW  - Analytical models
+KW  - cloud simulation
+KW  - knowledge graph
+KW  - simulation model resources description
+DO  - 10.1109/ICCCBDA.2019.8725713
+JO  - 2019 IEEE 4th International Conference on Cloud Computing and Big Data Analysis (ICCCBDA)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2019 IEEE 4th International Conference on Cloud Computing and Big Data Analysis (ICCCBDA)
+Y1  - 12-15 April 2019
+AB  - The description of model is the important foundation of realizing cloud computing-based simulation. Current description methods of simulation model resources have difficulty supporting search and discovery of simulation model in cloud architecture environment. So this article proposes a description method of cloud simulation model resources based on knowledge graph, concluding the information that cloud simulation model resources description is needed, and transforms the information into four different RDF triples to construct knowledge graphs for describing cloud simulation model resources. Taking the descriptions of three aircraft models as case study, this article tests the function of search and discovery of simulation model for the specific needs of users on the knowledge graph constructed from the case to prove the availability and effectiveness of this method.
+ER  - 
+
+TY  - CONF
+TI  - Providing Satellite Data to Mobile Developers Using Semantic Technologies and Linked Data
+T2  - 2019 IEEE 13th International Conference on Semantic Computing (ICSC)
+SP  - 348
+EP  - 351
+AU  - K. Bereta
+AU  - M. Koubarakis
+AU  - D. -A. Pantazi
+AU  - G. Stamoulis
+AU  - H. Caumont
+AU  - U. Daniels
+AU  - D. Dirk
+AU  - S. Ubels
+AU  - V. Venus
+AU  - F. Wahyudi
+PY  - 2019
+KW  - Ontologies
+KW  - Resource description framework
+KW  - Geospatial analysis
+KW  - Satellites
+KW  - Europe
+KW  - Software
+KW  - Cloud computing
+DO  - 10.1109/ICOSC.2019.8665579
+JO  - 2019 IEEE 13th International Conference on Semantic Computing (ICSC)
+IS  - 
+SN  - 2325-6516
+VO  - 
+VL  - 
+JA  - 2019 IEEE 13th International Conference on Semantic Computing (ICSC)
+Y1  - 30 Jan.-1 Feb. 2019
+AB  - Copernicus is the European program for monitoring the Earth. It consists of a set of complex systems that collect data from satellites and in-situ sensors, process it, and provide users with reliable and up-to-date information on a range of environmental and security issues. Information extracted from Copernicus data is made available to users through Copernicus services addressing six thematic areas: land, marine, atmosphere, climate, emergency and security. The data processed and disseminated puts Copernicus at the forefront of the big data paradigm and gives rise to all relevant challenges: volume, velocity, variety, veracity and value. In this paper we discuss the challenges of big Copernicus data and how the Copernicus program handled them. We also present lessons learned from our project Copernicus App Lab, which takes Copernicus services information and makes it available on the Web using semantic technologies to aid its take up by mobile developers.
+ER  - 
+
+TY  - CONF
+TI  - Framework modeling for User privacy in cloud computing
+T2  - 2019 IEEE 9th Annual Computing and Communication Workshop and Conference (CCWC)
+SP  - 0819
+EP  - 0826
+AU  - A. Almtrf
+AU  - Y. Alagrash
+AU  - M. Zohdy
+PY  - 2019
+KW  - Cloud computing
+KW  - Privacy
+KW  - Encryption
+KW  - Access control
+KW  - Data privacy
+KW  - Organizations
+KW  - cloud computing
+KW  - Data privacy
+KW  - security in cloud computing
+KW  - privacy issues over cloud
+KW  - Privacy framework
+DO  - 10.1109/CCWC.2019.8666453
+JO  - 2019 IEEE 9th Annual Computing and Communication Workshop and Conference (CCWC)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2019 IEEE 9th Annual Computing and Communication Workshop and Conference (CCWC)
+Y1  - 7-9 Jan. 2019
+AB  - Many organizations around the world recognize the vitality of cloud computing. However, some concerns make organizations reluctant to adopting cloud computing. These include data security, privacy, and trust issues. It is very important that these issues are addressed to meet client concerns and to encourage the wider adoption of cloud computing. This paper develops a user privacy framework based upon on emerging security model that includes access control, encryption and protection monitor schemas in the cloud environment.
+ER  - 
+
+TY  - JOUR
+TI  - Reconfigurable Smart Factory for Drug Packing in Healthcare Industry 4.0
+T2  - IEEE Transactions on Industrial Informatics
+SP  - 507
+EP  - 516
+AU  - J. Wan
+AU  - S. Tang
+AU  - D. Li
+AU  - M. Imran
+AU  - C. Zhang
+AU  - C. Liu
+AU  - Z. Pang
+PY  - 2019
+KW  - Production
+KW  - Ontologies
+KW  - Pharmaceuticals
+KW  - IEC Standards
+KW  - Smart manufacturing
+KW  - Cyber-physical systems (CPS)
+KW  - healthcare industry 4.0
+KW  - IEC 61499
+KW  - ontology
+KW  - reconfiguration
+KW  - smart factory
+DO  - 10.1109/TII.2018.2843811
+JO  - IEEE Transactions on Industrial Informatics
+IS  - 1
+SN  - 1941-0050
+VO  - 15
+VL  - 15
+JA  - IEEE Transactions on Industrial Informatics
+Y1  - Jan. 2019
+AB  - Industry 4.0, which exploits cyber-physical systems and represents digital transformation of manufacturing, is deeply affecting healthcare as well as other traditional production sector. To accommodate the increasing demand of agility, flexibility, and low cost in healthcare sector, a data-driven reconfigurable production mode of Smart Factory for pharmaceutical manufacturing is proposed in this paper. The architecture of the Smart Factory is consisted of three primary layers, namely perception layer, deployment layer, and executing layer. A Manufacturing's Semantics Ontology based knowledgebase is introduced in the perception layer, which is responsible for plan scheduling of pharmaceutical production. The reconfigurable plans are generated from the production demand of drugs as well as the information statement of low-level machine resources. To further functionality reconfiguration and low-level controlling, the IEC 61499 standard is also introduced for functionality modeling and machine controlling. We verify the proposed method with an experiment of demand-based drug packing production, which reflects the feasibility and adequate flexibility of the proposed method.
+ER  - 
+
+TY  - JOUR
+TI  - Mobile Cloud Support for Semantic-Enriched Speech Recognition in Social Care
+T2  - IEEE Transactions on Cloud Computing
+SP  - 259
+EP  - 272
+AU  - A. Corradi
+AU  - M. Destro
+AU  - L. Foschini
+AU  - S. Kotoulas
+AU  - V. Lopez
+AU  - R. Montanari
+PY  - 2019
+KW  - Cloud computing
+KW  - Mobile communication
+KW  - Speech recognition
+KW  - Mobile handsets
+KW  - Medical services
+KW  - Semantics
+KW  - Computer architecture
+KW  - Mobile cloud
+KW  - semantic web
+KW  - speech recognition
+KW  - natural language processing
+DO  - 10.1109/TCC.2016.2570757
+JO  - IEEE Transactions on Cloud Computing
+IS  - 1
+SN  - 2168-7161
+VO  - 7
+VL  - 7
+JA  - IEEE Transactions on Cloud Computing
+Y1  - 1 Jan.-March 2019
+AB  - Nowadays, most users carry high computing power mobile devices where speech recognition is certainly one of the main technologies available in every modern smartphone, although battery draining and application performance (resource shortage) have a big impact on the experienced quality. Shifting applications and services to the cloud may help to improve mobile user satisfaction as demonstrated by several ongoing efforts in the mobile cloud area. However, the quality of speech recognition is still not sufficient in many complex cases to replace the common hand written text, especially when prompt reaction to short-term provisioning requests is required. To address the new scenario, this paper proposes a mobile cloud infrastructure to support the extraction of semantics information from speech recognition in the Social Care domain, where carers have to speak about their patients conditions in order to have reliable notes used afterward to plan the best support. We present not only an architecture proposal, but also a real prototype that we have deployed and thoroughly assessed with different queries, accents, and in presence of load peaks, in our experimental mobile cloud Platform as a Service (PaaS) testbed based on Cloud Foundry.
+ER  - 
+
+TY  - CONF
+TI  - NLP Tools for Knowledge Extraction from Italian Archaeological Free Text
+T2  - 2018 3rd Digital Heritage International Congress (DigitalHERITAGE) held jointly with 2018 24th International Conference on Virtual Systems & Multimedia (VSMM 2018)
+SP  - 1
+EP  - 8
+AU  - A. Felicetti
+AU  - D. Williams
+AU  - I. Galluccio
+AU  - D. Tudhope
+AU  - F. Niccolucci
+PY  - 2018
+KW  - Tools
+KW  - Natural language processing
+KW  - Metadata
+KW  - Data mining
+KW  - Documentation
+KW  - Europe
+KW  - Cloud computing
+KW  - NLP
+KW  - NER
+KW  - Italian language
+KW  - archaeology
+KW  - textual documents
+KW  - grey literature
+KW  - metadata extraction
+KW  - metadata integration
+KW  - standards
+KW  - CIDOC CRM
+DO  - 10.1109/DigitalHeritage.2018.8810001
+JO  - 2018 3rd Digital Heritage International Congress (DigitalHERITAGE) held jointly with 2018 24th International Conference on Virtual Systems & Multimedia (VSMM 2018)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 3rd Digital Heritage International Congress (DigitalHERITAGE) held jointly with 2018 24th International Conference on Virtual Systems & Multimedia (VSMM 2018)
+Y1  - 26-30 Oct. 2018
+AB  - This paper deals with the development of advanced tools and technologies for creating relevant information and suitable metadata out of textual documentation produced by Italian archaeological research. A set of Natural Language Processing tools were developed to recognize and annotate various archaeological entities in Italian language textual reports. The CIDOC CRM is the ontology chosen for encoding resulting output, allowing for a maximum degree of standardisation of the produced metadata to guarantee interoperability with archaeological information already existing in other semantically enabled digital archives. The work took place as part of the development for the TEXTCROWD platform for the European Open Science Cloud for Research Pilot Project.
+ER  - 
+
+TY  - CONF
+TI  - A Machine Learning Approach to Service Rule Conversion
+T2  - 2018 IEEE 4th International Conference on Computer and Communications (ICCC)
+SP  - 1961
+EP  - 1965
+AU  - X. Ye
+PY  - 2018
+KW  - Semantics
+KW  - Companies
+KW  - Manufacturing
+KW  - Cloud computing
+KW  - Drilling machines
+KW  - Machine learning
+KW  - Natural languages
+KW  - semantic web
+KW  - natural language processing
+KW  - machine learning
+KW  - cloud manufacturing
+DO  - 10.1109/CompComm.2018.8780992
+JO  - 2018 IEEE 4th International Conference on Computer and Communications (ICCC)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 IEEE 4th International Conference on Computer and Communications (ICCC)
+Y1  - 7-10 Dec. 2018
+AB  - This paper proposed a scheme that automatically converts service rules of cloud manufacturing to semantic rules. The scheme classifies the semantics of typical service rules into several semantic categories. Sentence embedding is used to represent the semantics of service rules. A logistic regression classifier is used to identify the semantic category of a service rule according to its sentence embedding. Based on the identified semantic category, the service rule is converted to a semantic rule. The evaluation of the scheme shows that the scheme achieves good conversion accuracy.
+ER  - 
+
+TY  - CONF
+TI  - Implementation Approach for IDS based on Risk Assessment and Attack Pattern in Cloud Computing
+T2  - 2018 International Conference on Control, Automation and Diagnosis (ICCAD)
+SP  - 1
+EP  - 5
+AU  - B. Charhi Youssef
+AU  - B. Elmehdi
+AU  - M. Nada
+AU  - R. Boubker
+PY  - 2018
+KW  - Cloud computing
+KW  - Intrusion detection
+KW  - Risk management
+KW  - Computer architecture
+KW  - Taxonomy
+KW  - Ontologies
+KW  - Cloud computing
+KW  - IDS
+KW  - IPS
+KW  - RAPA
+KW  - Behavioural analysis
+KW  - risk assessment
+KW  - taxonomy
+KW  - attack pattern
+DO  - 10.1109/CADIAG.2018.8751361
+JO  - 2018 International Conference on Control, Automation and Diagnosis (ICCAD)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 International Conference on Control, Automation and Diagnosis (ICCAD)
+Y1  - 19-21 March 2018
+AB  - Cloud computing is an evolution in the computing area that takes advantage of the falling cost of CPU's and storage, combined with the ubiquity of broadband Internet access and dramatic increase of Internet connected devices. The impact of Cloud Computing technologies adoption include new standards, architecture paradigms, security challenges and disruptive business models. Security is a top concern in choosing the right cloud service provider. Analyzing intrusion based on attack patterns and risk assessment in cloud computing has demonstrated its efficiency in reducing the number of false alarms and optimizing the IDS performances. This paper intended to present the implementation of a new architecture to quantify attacks in cloud environment based on risk assessment. With the main objective to increase the efficiency of IDS and decrease the number of alarms. Experimental results show that our approach is better to the state-of-the-art approach for intrusion detection in cloud.
+ER  - 
+
+TY  - CONF
+TI  - An Architecture for a Management Agency for Cloud Resources
+T2  - 2018 20th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing (SYNASC)
+SP  - 288
+EP  - 295
+AU  - M. Erascu
+AU  - G. Iuhasz
+AU  - F. Micota
+PY  - 2018
+KW  - Cloud computing
+KW  - Ontologies
+KW  - Crawlers
+KW  - Tools
+KW  - Software
+KW  - Hardware
+KW  - Genetic algorithms
+KW  - Cloud Computing, crawling, ontology, optimization, SMT solving, metaheuristics
+DO  - 10.1109/SYNASC.2018.00052
+JO  - 2018 20th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing (SYNASC)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 20th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing (SYNASC)
+Y1  - 20-23 Sept. 2018
+AB  - Cloud computing offers attractive options to migrate corporate applications without the end users needing to manage any physical resources. While this "ease" is appealing, several issues arise: 1) Which Cloud Providers (CPs) offer the best infrastructure at a fair budget? 2) I am no Cloud expert, then what are the characteristics of the infrastructure which best fit my application? To answer these questions, one must solve a resource management problem, that is, the allocation of computing, storage, networking and (indirectly) cost resources to a set of applications such that the performance objectives of the application are fulfilled. There are many approaches which answer separately these questions but there is no comprehensive and easily usable solution for these issues. MANeUveR solves them by integrating the following components: 1) a Web User Interface offers the end user the possibility to describe his application in terms of interactions between components and their software and hardware requirements, 2) an Offers Management System, through a crawler, periodically updates an ontology with infrastructure and services details from different CPs, 3) a Recommendation Engine provides a (sub) optimal solution for application deployment in the CP infrastructure regarding the leasing price of the virtual machines needed for deployment and their characteristics. Using a secure-billing e-mail service, we demonstrate the effectiveness of our solution.
+ER  - 
+
+TY  - CONF
+TI  - ACIT 2018
+T2  - 2018 International Arab Conference on Information Technology (ACIT)
+SP  - 1
+EP  - 1
+PY  - 2018
+KW  - Information technology
+KW  - Conferences
+DO  - 10.1109/ACIT.2018.8672580
+JO  - 2018 International Arab Conference on Information Technology (ACIT)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 International Arab Conference on Information Technology (ACIT)
+Y1  - 28-30 Nov. 2018
+AB  - The following topics are dealt with: ontologies (artificial intelligence); natural language processing; cloud computing; pattern classification; control engineering computing; Internet; text analysis; business data processing; medical signal processing; organisational aspects.
+ER  - 
+
+TY  - CONF
+TI  - A Review on Intelligent Cloud Broker for Effective Service Provisioning in Cloud
+T2  - 2018 Second International Conference on Intelligent Computing and Control Systems (ICICCS)
+SP  - 519
+EP  - 524
+AU  - R. Nagarajan
+AU  - R. Thirunavukarasu
+PY  - 2018
+KW  - Cloud computing
+KW  - Ontologies
+KW  - Quality of service
+KW  - Computer architecture
+KW  - Conferences
+KW  - Control systems
+KW  - Cloud computing
+KW  - Cloud service
+KW  - Service selection
+KW  - Intelligent cloud broker
+KW  - Service recommendation
+DO  - 10.1109/ICCONS.2018.8662953
+JO  - 2018 Second International Conference on Intelligent Computing and Control Systems (ICICCS)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 Second International Conference on Intelligent Computing and Control Systems (ICICCS)
+Y1  - 14-15 June 2018
+AB  - Cloud computing offers wide variety of utility oriented services from different service providers. With the advent of cloud, users can avail the required services even without owning the infrastructure. However, the selection of required services from the available service provider is always a challenging task. In this paper, we attempt to introduce an intelligent cloud broker for simplifying the cloud service selection process. Also, the paper presents a comprehensive survey of research work in the phase of cloud service selection. Various research attempts have been discussed elaborately along with their limitations for further exploration. Finally, the paper emphasizes the need for the cloud broker in service selection phase. The novel idea has been strengthened by introducing an intelligent cloud broker for the existing cloud architecture to perform the effective selection and delivery of required services.
+ER  - 
+
+TY  - CONF
+TI  - A Recommendation System for Cloud Services Based on Knowledge Graph
+T2  - 2018 IEEE 9th International Conference on Software Engineering and Service Science (ICSESS)
+SP  - 1
+EP  - 4
+AU  - C. Luo
+AU  - X. Liu
+AU  - K. Zhang
+AU  - Q. Chang
+PY  - 2018
+KW  - Cloud computing
+KW  - Pricing
+KW  - Knowledge based systems
+KW  - Knowledge engineering
+KW  - Databases
+KW  - Data models
+KW  - Crawlers
+KW  - recommendation system
+KW  - knowledge graph
+KW  - crawler
+DO  - 10.1109/ICSESS.2018.8663716
+JO  - 2018 IEEE 9th International Conference on Software Engineering and Service Science (ICSESS)
+IS  - 
+SN  - 2327-0594
+VO  - 
+VL  - 
+JA  - 2018 IEEE 9th International Conference on Software Engineering and Service Science (ICSESS)
+Y1  - 23-25 Nov. 2018
+AB  - Cloud vendors have launched their public cloud computing products and solutions. It is a professional job to buy and deploy appropriate ones. In this paper, we build a recommendation system for cloud products based on the real- time price data and knowledge graph. The way of knowledge modeling is discussed in this paper, coupled with the collection of detail information about real-time price and configuration by crawler. It provides the implementation method of an intelligent assistant for buying and configuration cloud services.
+ER  - 
+
+TY  - CONF
+TI  - Semantic Service Description and Compositions: A Systematic Literature Review
+T2  - 2018 2nd International Conference on Informatics and Computational Sciences (ICICoS)
+SP  - 1
+EP  - 6
+AU  - K. Kurniawan
+AU  - F. J. Ekaputra
+AU  - P. R. Aryan
+PY  - 2018
+KW  - Semantics
+KW  - Web services
+KW  - Semantic Web
+KW  - Ontologies
+KW  - Linked data
+KW  - Bibliographies
+KW  - Databases
+KW  - semantic service description
+KW  - semantic service composition
+KW  - semantic web services
+KW  - semantic APIs
+DO  - 10.1109/ICICOS.2018.8621686
+JO  - 2018 2nd International Conference on Informatics and Computational Sciences (ICICoS)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 2nd International Conference on Informatics and Computational Sciences (ICICoS)
+Y1  - 30-31 Oct. 2018
+AB  - For decades, researchers and practitioners develop various approaches such as Web Service technologies (e.g., UDDI, WSDL, SOAP) to address application integration problems. In particular, Web Service composition methods can solve complex service integrations. However, in highly dynamic environments, these manual service compositions still requires a lot of effort. To address this challenge, researchers have recently introduced semantic web service composition methods. The growing interest in this topic of semantic web service composition has led to an increasing number of approaches, which has not been systematically surveyed so far. Researchers have reported several surveys in the related areas such as web service composition or semantic web service search. However, to the best of our knowledge, none of them provides a survey about these semantic web service compositions in particular. Hence, this review aims to address this issue by identifying existing efforts on semantic web service compositions. The survey focuses on two aspects (i) semantic web service description, as it is an essential aspect for semantic service composition, (ii) semantic web service composition, to identify methods and their implementations on the real world problem.
+ER  - 
+
+TY  - CONF
+TI  - Outsourcing Resource Combinatorial Optimization of Complex Product in Cloud Manufacturing
+T2  - 2018 5th International Conference on Information Science and Control Engineering (ICISCE)
+SP  - 874
+EP  - 878
+AU  - Y. Liu
+AU  - X. Li
+AU  - L. Wang
+AU  - B. Du
+PY  - 2018
+KW  - Outsourcing
+KW  - Manufacturing
+KW  - Optimization
+KW  - Genetic algorithms
+KW  - Cloud computing
+KW  - Encoding
+KW  - Production
+KW  - Cloud manufacturing
+KW  - Combinatorial optimization
+KW  - Outsourcing resource
+KW  - Self-adaptive genetic algorithm
+DO  - 10.1109/ICISCE.2018.00183
+JO  - 2018 5th International Conference on Information Science and Control Engineering (ICISCE)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 5th International Conference on Information Science and Control Engineering (ICISCE)
+Y1  - 20-22 July 2018
+AB  - In cloud manufacturing (CMfg) environment, more and more manufacturing enterprises outsource many manufacturing activities to more professional subcontractor and focus on their core business. To address outsourcing resource (OR) combinatorial optimization for cement equipment manufacturing enterprise and reduce cost, a novel multi-objective optimization model and heuristic approach are investigated in this study. A matrix model based on ontology for outsourcing resource optimization is established. Then, an improved self-adaptive genetic algorithm (SEGA) has been developed. Finally, a case study and comparison of performances with simple genetic algorithm (SGA) and SEGA are presented. Experimental results show the proposed method is more preferably and efficient in optimal solution searching.
+ER  - 
+
+TY  - CONF
+TI  - Performance of Generating Dialogs from Ontology and Context
+T2  - 2018 IEEE/ACS 15th International Conference on Computer Systems and Applications (AICCSA)
+SP  - 1
+EP  - 6
+AU  - M. A. Ababneh
+AU  - M. Qasaimeh
+AU  - D. Wijesekera
+AU  - P. Costa
+PY  - 2018
+KW  - Ontologies
+KW  - Cognition
+KW  - Benchmark testing
+KW  - Delays
+KW  - Access control
+KW  - Speech recognition
+KW  - Interviews
+KW  - Performance Analysis
+KW  - Semantic Web
+KW  - Ontology
+KW  - reasoning
+KW  - Contextual Reasoning
+KW  - Dialogs
+KW  - IVR
+KW  - Artificial Intelligence
+KW  - Access Control
+KW  - Security
+DO  - 10.1109/AICCSA.2018.8612883
+JO  - 2018 IEEE/ACS 15th International Conference on Computer Systems and Applications (AICCSA)
+IS  - 
+SN  - 2161-5330
+VO  - 
+VL  - 
+JA  - 2018 IEEE/ACS 15th International Conference on Computer Systems and Applications (AICCSA)
+Y1  - 28 Oct.-1 Nov. 2018
+AB  - In this paper we evaluate the performance of question generation using contextual reasoning in dialogs generated from an Ontology to provide identification, authentication, and access control. Generating relevant questions requires frequent querying after each question, using its context to generate the next one. This process is tedious and might lead to a situation where the interviewee has to wait for a question for an unacceptably long time. The objective of this work is to show that our method for generation of questions using context does not cause delays that might turn the dialogs useless.
+ER  - 
+
+TY  - CONF
+TI  - Modeling and Automated Deployment of Serverless Applications Using TOSCA
+T2  - 2018 IEEE 11th Conference on Service-Oriented Computing and Applications (SOCA)
+SP  - 73
+EP  - 80
+AU  - M. Wurster
+AU  - U. Breitenbücher
+AU  - K. Képes
+AU  - F. Leymann
+AU  - V. Yussupov
+PY  - 2018
+KW  - Cloud computing
+KW  - Computational modeling
+KW  - Topology
+KW  - Standards
+KW  - Computer architecture
+KW  - FAA
+KW  - Serverless
+KW  - Multi-Cloud
+KW  - Modeling
+KW  - Automated Deployment
+KW  - TOSCA
+DO  - 10.1109/SOCA.2018.00017
+JO  - 2018 IEEE 11th Conference on Service-Oriented Computing and Applications (SOCA)
+IS  - 
+SN  - 2163-2871
+VO  - 
+VL  - 
+JA  - 2018 IEEE 11th Conference on Service-Oriented Computing and Applications (SOCA)
+Y1  - 20-22 Nov. 2018
+AB  - The serverless computing paradigm brings multiple benefits to application developers who are interested in consuming computing resources as services without the need to manage physical capacities or limits. There are several deployment technologies and languages available suitable for deploying applications to a single cloud provider. However, for multi-cloud application deployments, multiple technologies have to be used and orchestrated. In addition, the event-driven nature of serverless computing imposes further requirements on modeling such application structures in order to automate their deployment. In this paper, we tackle these issues by introducing an event-driven deployment modeling approach using the standard Topology and Orchestration Specification for Cloud Applications (TOSCA) that fully employs the suggested standard lifecycle to provision and manage multi-cloud serverless applications. To show the feasibility of our approach, we extended the existing TOSCA-based ecosystem OpenTOSCA.
+ER  - 
+
+TY  - CONF
+TI  - On Big Wisdom
+T2  - 2018 IEEE International Conference on Data Mining (ICDM)
+SP  - 1
+EP  - 2
+AU  - M. Wu
+AU  - X. Wu
+PY  - 2018
+KW  - Expert systems
+KW  - Problem-solving
+KW  - Artificial intelligence
+DO  - 10.1109/ICDM.2018.00009
+JO  - 2018 IEEE International Conference on Data Mining (ICDM)
+IS  - 
+SN  - 2374-8486
+VO  - 
+VL  - 
+JA  - 2018 IEEE International Conference on Data Mining (ICDM)
+Y1  - 17-20 Nov. 2018
+AB  - We define Big Wisdom with a HAO/BIBLE framework, which integrates human intelligence (HI), artificial intelligence (AI) and organizational/business intelligence (0/BI) with Bigdata analytics in large environments, for industrial intelligence in organizational activities. Big Wisdom starts with Bigdata, discovers Big Knowledge, and facilitates human and machine synergism for complex problem solving. When the HAO/BIBLE framework is applied to a regular (non-Bigdata) environment, it becomes the well-known PEAS agent structure, and when the knowledge graph in HAO/BIBLE relies on domain expertise (rather than Big Knowledge), HAO/BIBLE serves as an expert system.
+ER  - 
+
+TY  - CONF
+TI  - An Architecture of Knowledge Cloud Based on Manufacturing Big Data
+T2  - IECON 2018 - 44th Annual Conference of the IEEE Industrial Electronics Society
+SP  - 4176
+EP  - 4180
+AU  - C. Zhao
+AU  - L. Ren
+AU  - Y. Laili
+AU  - L. Lai
+PY  - 2018
+KW  - Manufacturing
+KW  - Ontologies
+KW  - Cloud computing
+KW  - Knowledge based systems
+KW  - Big Data
+KW  - Data mining
+KW  - Computers
+KW  - cloud manufacturing
+KW  - big data
+KW  - knowledge cloud
+KW  - ontology
+DO  - 10.1109/IECON.2018.8591529
+JO  - IECON 2018 - 44th Annual Conference of the IEEE Industrial Electronics Society
+IS  - 
+SN  - 2577-1647
+VO  - 
+VL  - 
+JA  - IECON 2018 - 44th Annual Conference of the IEEE Industrial Electronics Society
+Y1  - 21-23 Oct. 2018
+AB  - With the conception and application of cloud manufacturing getting into manufacturing enterprises, more and more enterprises begin to establish the cloud system. How to collect the knowledge generated in these systems and pro-vide it to the enterprise manufacturing cloud for use is now an important issue. This paper presents an architecture of knowledge cloud based on manufacturing big data, according to the characteristics of manufacturing big data, building a knowledge database by ontology, encapsulation the knowledge service, and finally providing the provide the support for the enterprise manufacturing cloud.
+ER  - 
+
+TY  - CONF
+TI  - Enterprise Architecture Driven and User-Friendly SaaS Service Selection
+T2  - 2018 Sixth International Conference on Enterprise Systems (ES)
+SP  - 196
+EP  - 203
+AU  - S. Kurjakovic
+AU  - K. Hinkelmann
+PY  - 2018
+KW  - Software as a service
+KW  - Stakeholders
+KW  - Ontologies
+KW  - Biological system modeling
+KW  - Computer architecture
+KW  - enterprise architecture
+KW  - enterprise ontologies
+KW  - business IT alignment
+KW  - SaaS service selection
+DO  - 10.1109/ES.2018.00037
+JO  - 2018 Sixth International Conference on Enterprise Systems (ES)
+IS  - 
+SN  - 2572-6609
+VO  - 
+VL  - 
+JA  - 2018 Sixth International Conference on Enterprise Systems (ES)
+Y1  - 1-2 Oct. 2018
+AB  - In the last decade the number of cloud services has grown significantly, and its nature challenges the traditional process of requirements elicitation for software solutions. Most of the conducted cloud research address non-functional requirements, such as payment strategies, performance or security. Methods are required which provide an appropriate level of abstraction for describing the functional aspects of cloud services. We suggest an approach which exploits the potential of enterprise architecture modeling for cloud service selection. This study contributes to cloud service selection in two ways. First, we suggest a concept for the description of functional requirements for vertical SaaS services. Second, we provide a method that enables various kinds of stakeholders to describe their requirements considering their individual knowledge level.
+ER  - 
+
+TY  - CONF
+TI  - Semantic Networks Based Approach for SaaS Management in Cloud Computing
+T2  - 2018 International Conference on Smart Communications in Network Technologies (SaCoNeT)
+SP  - 255
+EP  - 260
+AU  - L. Ouchaou
+AU  - S. Boukria
+AU  - H. Nacer
+AU  - H. Slimani
+PY  - 2018
+KW  - Cloud computing
+KW  - Indexes
+KW  - Semantics
+KW  - Software as a service
+KW  - Silicon
+KW  - Ontologies
+KW  - Web services
+KW  - Cloud service publication
+KW  - SaaS publication
+KW  - SaaS management
+KW  - semantic graph networks
+KW  - ontology
+DO  - 10.1109/SaCoNeT.2018.8585543
+JO  - 2018 International Conference on Smart Communications in Network Technologies (SaCoNeT)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 International Conference on Smart Communications in Network Technologies (SaCoNeT)
+Y1  - 27-31 Oct. 2018
+AB  - Nowadays, Cloud Computing has emerged as a new model for hosting, managing and delivering services (IaaS, PaaS, SaaS) over the Internet. Enterprises and vendors are continuously migrating their services to the Cloud, this resulted an exponential amount of data, services and resources stored in data centers. Since there is no standard about Cloud service description or publication, therefore a key requirement that every Cloud provider needs to take into consideration is efficient management of resources and services by providing automated solutions, for a better service publication and discovery. The proposed approach aims to manage Cloud SaaS services for an efficient publication by classifying them into sets according to their domain to reduce the search space then interconnected the SaaS services of the same domain in a Semantic Network using the similarity measure (Input/Output similarity) between concepts. The proposed solution takes advantages from multidimensional index framework, WordNet Domain Ontology and semantic Web. A guided publication process and an implemented prototype are introduced validating the system using a real data set corpus.
+ER  - 
+
+TY  - CONF
+TI  - The Future of Multi-Clouds: A Survey of Essential Architectural Elements
+T2  - 2018 International Scientific and Technical Conference Modern Computer Network Technologies (MoNeTeC)
+SP  - 1
+EP  - 13
+AU  - I. Baldin
+AU  - P. Ruth
+AU  - C. Wang
+AU  - J. S. Chase
+PY  - 2018
+KW  - Cloud computing
+KW  - Metadata
+KW  - Authorization
+KW  - Topology
+KW  - Computer architecture
+KW  - Resource management
+DO  - 10.1109/MoNeTeC.2018.8572139
+JO  - 2018 International Scientific and Technical Conference Modern Computer Network Technologies (MoNeTeC)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 International Scientific and Technical Conference Modern Computer Network Technologies (MoNeTeC)
+Y1  - 25-26 Oct. 2018
+AB  - In this paper we present a vision of an environment composed of multiple independent cloud providers of various sizes, interconnected by programmable networks in which tenants may acquire resources from the providers and interconnect them together to serve a variety of distributed applications. Based on several years of working with GENI and NSF Cloud efforts in the US we present the essential elements of such an architecture and discuss their attributes. These elements perform functions that we claim are minimally necessary in order to realize a multi-cloud environment and include: provider and resource discovery services that rely on flexible, semantically rich description and query mechanisms, common meta-data services for maintaining information state of tenant resource allocations, and programmable interconnect mechanisms to create multi-provider Software-Defined Exchanges (SDXs) that allow tenants to control their connectivity using a declarative authorization logic.
+ER  - 
+
+TY  - CONF
+TI  - Cloud Service Selection with Fuzzy C-Means Artificial Immune Network Memory Classifier
+T2  - 2018 14th International Conference on Computational Intelligence and Security (CIS)
+SP  - 264
+EP  - 268
+AU  - W. Ha
+PY  - 2018
+KW  - Web services
+KW  - Quality of service
+KW  - Cloning
+KW  - Classification algorithms
+KW  - Knowledge based systems
+KW  - Adaptation models
+KW  - Mathematical model
+KW  - cloud service
+KW  - evaluation model
+KW  - Web ontology language for services(OWL-S)
+KW  - Fuzzy C-Means
+KW  - artificial immune network
+DO  - 10.1109/CIS2018.2018.00065
+JO  - 2018 14th International Conference on Computational Intelligence and Security (CIS)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 14th International Conference on Computational Intelligence and Security (CIS)
+Y1  - 16-19 Nov. 2018
+AB  - This paper addresses an cloud service selection model which supports to customize evaluation attributes dynamically. Using expanding the OWL-S Ontology, Cloud service QoS semantics is constructed. The weight of attribute is obtained by the objective and subjective synthetic approach. Based on fuzzy theory and artificial immune network, a new data classification method, named Fuzzy C-Means artificial immune network memory classifier (FCMAINMC), is put forward. According the algorithm, memory antibody collection in which characteristics of service are condensed is abstracted, and each service (antigen) that belongs to some type is also obtained. Using membership matrix and a hundred-mark way, evaluation result which reflects Web quality of service is obtain. The prototype is designed. It is applied to case evaluation fruitfully, and the experiment results are veracious and reliable as well as stable.
+ER  - 
+
+TY  - CONF
+TI  - A Cloud-Driven Framework for a Holistic Approach to Semantic Annotation
+T2  - 2018 Fifth International Conference on Social Networks Analysis, Management and Security (SNAMS)
+SP  - 128
+EP  - 134
+AU  - O. Adedugbe
+AU  - E. Benkhelifa
+AU  - R. Campion
+PY  - 2018
+KW  - Ontologies
+KW  - Semantics
+KW  - Servers
+KW  - Cloud computing
+KW  - Semantic Web
+KW  - Tools
+KW  - Metadata
+KW  - Semantic Annotation
+KW  - Semantic Web
+KW  - Cloud-Driven
+KW  - Cloud Computing
+DO  - 10.1109/SNAMS.2018.8554742
+JO  - 2018 Fifth International Conference on Social Networks Analysis, Management and Security (SNAMS)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 Fifth International Conference on Social Networks Analysis, Management and Security (SNAMS)
+Y1  - 15-18 Oct. 2018
+AB  - Semantic Annotation is the main activity for the semantic web, but it has been faced with many challenges which has hindered its growth as initially expected. While several tools exist for providing semantic annotation to web documents, the techniques used in these tools vary very widely. Also, the mode of implementation and the solutions offered by the tools are inconsistent with each other leaving end users confused on the appropriate tool for use to deliver their expected results. Based on these, a holistic perspective to the development of semantic annotation tools as well as their implementation is necessary. This is to ensure uniformity in the expected end results and guarantee a continuous, dynamic and consistent semantic annotation for web documents; encompassing the complete needs of end users. To achieve this, cloud computing is proposed for the delivery of semantic annotation as a holistic service, as it provides an enabling environment for processing the vast amount of data required to annotate web documents. Also, cloud computing essential characteristics such as ubiquitous network access, rapid elasticity and on-demand self-service are very necessary to achieve a holistic semantic annotation service for documents on the web. This paper presents a cloud-driven framework to facilitate the delivery of a holistic semantic annotation on the web.
+ER  - 
+
+TY  - CONF
+TI  - Semantically Rich, Context Aware Access Control for Openstack
+T2  - 2018 IEEE 4th International Conference on Collaboration and Internet Computing (CIC)
+SP  - 460
+EP  - 465
+AU  - V. Rathod
+AU  - S. Narayanan
+AU  - S. Mittal
+AU  - A. Joshi
+PY  - 2018
+KW  - Engines
+KW  - Cloud computing
+KW  - Authorization
+KW  - Computational modeling
+KW  - Organizations
+KW  - Standards organizations
+KW  - Cybersecurity, Access Control, Knowledge Graphs, OpenStack, Contextual Attributes
+DO  - 10.1109/CIC.2018.00069
+JO  - 2018 IEEE 4th International Conference on Collaboration and Internet Computing (CIC)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 IEEE 4th International Conference on Collaboration and Internet Computing (CIC)
+Y1  - 18-20 Oct. 2018
+AB  - In an open source cloud computing platform such as OpenStack, operators use Role-Based Access Control (RBAC) model to grant access to cloud resources. However, these user-level role-based access control techniques fail to include comprehensive user context. We believe a situational aware framework will improve security by bringing in user's context to such cloud systems. In this paper, we create a semantically rich context-sensitive access control system for OpenStack by incorporating the user's current context attributes like location, time, etc. In a proof-of-concept implementation, we integrate a knowledge graph with our own access control system to express and enforce the contextual-situation policies in OpenStack. The proposed system provides enhanced, flexible access control while minimizing the overhead of altering the existing access control framework. We also discuss various use cases, to highlight the benefits of our system and show enforcement results.
+ER  - 
+
+TY  - CONF
+TI  - Toward an Automatic Approach for Multi-PaaS Environments Selection
+T2  - 2018 IEEE World Congress on Services (SERVICES)
+SP  - 7
+EP  - 8
+AU  - R. Sellami
+AU  - S. Mouton
+PY  - 2018
+KW  - Cloud computing
+KW  - Ontologies
+KW  - Active appearance model
+KW  - NIST
+KW  - Computational modeling
+KW  - Task analysis
+KW  - Conferences
+KW  - Cloud computing, Multi-PaaS, Service discovery, Services selection, Semantic Web
+DO  - 10.1109/SERVICES.2018.00017
+JO  - 2018 IEEE World Congress on Services (SERVICES)
+IS  - 
+SN  - 2378-3818
+VO  - 
+VL  - 
+JA  - 2018 IEEE World Congress on Services (SERVICES)
+Y1  - 2-7 July 2018
+AB  - Cloud computing has recently attracted full attention of many organizations due to its economic, business and technical benefits. Indeed, we observe that the proliferation of offers by cloud providers raises several challenges. One of these innovative challenges is discovering and selecting services in order to deploy applications in multi-PaaS environments. To tackle this challenge, we propose an automatic and declarative approach to discover and select services offered by multi-PaaS providers. It enables developers to express their requirements and PaaS providers to expose their offers in manifests.
+ER  - 
+
+TY  - CONF
+TI  - A Data Provenance based Architecture to Enhance the Reliability of Data Analysis for Industry 4.0
+T2  - 2018 IEEE 23rd International Conference on Emerging Technologies and Factory Automation (ETFA)
+SP  - 1375
+EP  - 1382
+AU  - P. Li
+AU  - O. Niggemann
+PY  - 2018
+KW  - Data analysis
+KW  - Production
+KW  - Manufacturing
+KW  - Data models
+KW  - Ontologies
+KW  - Computer architecture
+KW  - Temperature sensors
+DO  - 10.1109/ETFA.2018.8502519
+JO  - 2018 IEEE 23rd International Conference on Emerging Technologies and Factory Automation (ETFA)
+IS  - 
+SN  - 1946-0759
+VO  - 1
+VL  - 1
+JA  - 2018 IEEE 23rd International Conference on Emerging Technologies and Factory Automation (ETFA)
+Y1  - 4-7 Sept. 2018
+AB  - Integrating data analysis into workflows is a recent tendency in manufacturing sectors. According to the vision of Industry 4.0, data analysis can be automatically performed at any point of workflows if needed. In distributed and complex manufacturing systems, checking the integrity of data analysis processes is becoming more and more challenging and the dependency between (intermediate) analysis results is no more easy to understand for users involved in workflows. Therefore, a mechanism is desired, which is able to assist users in tracking and verifying distributed data analysis processes. In this paper, we extend the concept “data provenance” in the manufacturing domain to acquire information about the data origin and data changes. Furthermore, an architecture is proposed to manage provenance of process data, in which the data provenance is considered as annotation of process data. Different use cases are also given to show how data provenance can have impact on understanding and verifying data analysis processes in the manufacturing domain.
+ER  - 
+
+TY  - CONF
+TI  - Summary Report for the Data Exploration in the Web 3.0 Age (DEW) Track
+T2  - 2018 IEEE 27th International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises (WETICE)
+SP  - 139
+EP  - 141
+AU  - M. Atzori
+AU  - B. Pes
+PY  - 2018
+KW  - Conferences
+KW  - Collaboration
+KW  - Cognition
+KW  - Big Data
+KW  - Text mining
+KW  - Social network services
+KW  - Data Exploration
+KW  - Web and Semantic Web
+KW  - Data Mining
+DO  - 10.1109/WETICE.2018.00033
+JO  - 2018 IEEE 27th International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises (WETICE)
+IS  - 
+SN  - 1524-4547
+VO  - 
+VL  - 
+JA  - 2018 IEEE 27th International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises (WETICE)
+Y1  - 27-29 June 2018
+AB  - Data Exploration in the Web 3.0 Age (DEW) is a track of the IEEE International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises (WETICE). DEW aims at bringing together researchers and practitioners from both the Academia and Industry working in the areas related to data exploration, in a very broad sense. The track welcomes contributions from data mining, query languages, data visualization, graph databases and other fields related to the analysis and exploitation of data. This summary report includes a brief description of the papers accepted for presentation at the 2018 edition of DEW.
+ER  - 
+
+TY  - CONF
+TI  - Control of Virtual Scenes
+T2  - 2018 3rd Russian-Pacific Conference on Computer Technology and Applications (RPC)
+SP  - 1
+EP  - 5
+AU  - V. Gribova
+AU  - L. Fedorishchev
+PY  - 2018
+KW  - Virtual environments
+KW  - Ontologies
+KW  - Tools
+KW  - Software
+KW  - Maintenance engineering
+KW  - Task analysis
+KW  - ontologies
+KW  - control
+KW  - virtual environments
+KW  - user interfaces
+DO  - 10.1109/RPC.2018.8482137
+JO  - 2018 3rd Russian-Pacific Conference on Computer Technology and Applications (RPC)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 3rd Russian-Pacific Conference on Computer Technology and Applications (RPC)
+Y1  - 18-25 Aug. 2018
+AB  - The article describes a concept and a tool for development and control of professional virtual environments. Control of the virtual environment logical model is based on a new extended ontology of professional virtual environments. A technology of control of 3D scenes is realized on the basis of a presentation model of the virtual environment. A mechanism of creation and control of specific functions for processing virtual environments is presented. A process of interpreting and launching a virtual environment taking into account the verification of its integrity is described.
+ER  - 
+
+TY  - CONF
+TI  - Software Toolkit for Creating Intelligent Systems in Practical and Educational Medicine
+T2  - 2018 3rd Russian-Pacific Conference on Computer Technology and Applications (RPC)
+SP  - 1
+EP  - 5
+AU  - V. V. Gribova
+AU  - M. V. Petryaeva
+AU  - D. B. Okun
+AU  - A. V. Tarasov
+PY  - 2018
+KW  - Diseases
+KW  - Ontologies
+KW  - Databases
+KW  - Medical diagnostic imaging
+KW  - Intelligent systems
+KW  - Expert systems
+KW  - medical intelligent systems
+KW  - expert system shell
+KW  - ontology
+KW  - knowledge base
+KW  - virtual patient simulator
+DO  - 10.1109/RPC.2018.8482130
+JO  - 2018 3rd Russian-Pacific Conference on Computer Technology and Applications (RPC)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 3rd Russian-Pacific Conference on Computer Technology and Applications (RPC)
+Y1  - 18-25 Aug. 2018
+AB  - The article considers a specialized cloud toolkit for development of medical expert systems and computer simulators. A special feature of the toolkit is usage of specialized ontologies for formation of knowledge bases and databases for diagnosis and treatment of diseases that do not depend on the area of medicine, and which can be reused for different types of intelligent systems (expert systems and simulators).
+ER  - 
+
+TY  - CONF
+TI  - OPC UA Realization Of Cloud Cyber-Physical System
+T2  - 2018 IEEE 16th International Conference on Industrial Informatics (INDIN)
+SP  - 115
+EP  - 120
+AU  - V. Jirkovský
+AU  - P. Kadera
+AU  - M. Obitko
+PY  - 2018
+KW  - Cyber-physical systems
+KW  - Sensors
+KW  - Actuators
+KW  - Cloud computing
+KW  - Memory
+KW  - Standards
+KW  - Data models
+DO  - 10.1109/INDIN.2018.8471975
+JO  - 2018 IEEE 16th International Conference on Industrial Informatics (INDIN)
+IS  - 
+SN  - 2378-363X
+VO  - 
+VL  - 
+JA  - 2018 IEEE 16th International Conference on Industrial Informatics (INDIN)
+Y1  - 18-20 July 2018
+AB  - Cloud cyber-physical systems are the natural evolution of embedded systems based on trends which may be observed in various domains. Cloud-based systems may be understood as a transformation of legacy system hardware and software architecture into more flexible, robust, powerful, and reliable solution. Cloud cyber-physical system (CPS) is the extension of the well-known CPS concept where complex computations may be moved to a cloud platform. We proposed the solution which benefits from utilization of OPC UA standard. This standard provides rich expressivity for data model design as well as for secure communication, data subscription, and triggering methods. The overall approach is demonstrated on proposed and implemented Semantic Big Data Historian which forms together with a cyber-physical system the implementation of cloud CPS concept.
+ER  - 
+
+TY  - CONF
+TI  - MaestROB: A Robotics Framework for Integrated Orchestration of Low-Level Control and High-Level Reasoning
+T2  - 2018 IEEE International Conference on Robotics and Automation (ICRA)
+SP  - 527
+EP  - 534
+AU  - A. Munawar
+AU  - G. De Magistris
+AU  - T. -H. Pham
+AU  - D. Kimura
+AU  - M. Tatsubori
+AU  - T. Moriyama
+AU  - R. Tachibana
+AU  - G. Booch
+PY  - 2018
+KW  - Task analysis
+KW  - Service robots
+KW  - Natural languages
+KW  - Robot kinematics
+KW  - Middleware
+KW  - Robot sensing systems
+DO  - 10.1109/ICRA.2018.8462870
+JO  - 2018 IEEE International Conference on Robotics and Automation (ICRA)
+IS  - 
+SN  - 2577-087X
+VO  - 
+VL  - 
+JA  - 2018 IEEE International Conference on Robotics and Automation (ICRA)
+Y1  - 21-25 May 2018
+AB  - This paper describes a framework called MaestROBe It is designed to make the robots perform complex tasks with high precision by simple high-level instructions given by natural language or demonstration. To realize this, it handles a hierarchical structure by using the knowledge stored in the forms of ontology and rules for bridging among different levels of instructions. Accordingly, the framework has multiple layers of processing components; perception and actuation control at the low level, symbolic planner and Watson APIs for cognitive capabilities and semantic understanding, and orchestration of these components by a new open source robot middleware called Project Intu at its core. We show how this framework can be used in a complex scenario where multiple actors (human, a communication robot, and an industrial robot) collaborate to perform a common industrial task. Human teaches an assembly task to Pepper (a humanoid robot from SoftBank Robotics) using natural language conversation and demonstration. Our framework helps Pepper perceive the human demonstration and generate a sequence of actions for UR5 (collaborative robot arm from Universal Robots), which ultimately performs the assembly (e.g. insertion) task.
+ER  - 
+
+TY  - CONF
+TI  - Attribute Based Encryption for Secure Access to Cloud Based EHR Systems
+T2  - 2018 IEEE 11th International Conference on Cloud Computing (CLOUD)
+SP  - 932
+EP  - 935
+AU  - M. Joshi
+AU  - K. Joshi
+AU  - T. Finin
+PY  - 2018
+KW  - Encryption
+KW  - Cloud computing
+KW  - Access control
+KW  - Ontologies
+KW  - Organizations
+KW  - Medical services
+KW  - Attribute Based Encryption (ABE), Attribute Based Access Control (ABAC), Electronic Health Record (EHR), Cloud Storage, Semantic Web, Access Broker, Knowledge Graph (Ontology), Cloud Computing
+DO  - 10.1109/CLOUD.2018.00139
+JO  - 2018 IEEE 11th International Conference on Cloud Computing (CLOUD)
+IS  - 
+SN  - 2159-6190
+VO  - 
+VL  - 
+JA  - 2018 IEEE 11th International Conference on Cloud Computing (CLOUD)
+Y1  - 2-7 July 2018
+AB  - Medical organizations find it challenging to adopt cloud-based electronic medical records services, due to the risk of data breaches and the resulting compromise of patient data. Existing authorization models follow a patient centric approach for EHR management where the responsibility of authorizing data access is handled at the patients' end. This however creates a significant overhead for the patient who has to authorize every access of their health record. This is not practical given the multiple personnel involved in providing care and that at times the patient may not be in a state to provide this authorization. Hence there is a need of developing a proper authorization delegation mechanism for safe, secure and easy cloud-based EHR management. We have developed a novel, centralized, attribute based authorization mechanism that uses Attribute Based Encryption (ABE) and allows for delegated secure access of patient records. This mechanism transfers the service management overhead from the patient to the medical organization and allows easy delegation of cloud-based EHR's access authority to the medical providers. In this paper, we describe this novel ABE approach as well as the prototype system that we have created to illustrate it.
+ER  - 
+
+TY  - CONF
+TI  - SAM: A Semantic-Aware Middleware for Mobile Cloud Computing
+T2  - 2018 IEEE 11th International Conference on Cloud Computing (CLOUD)
+SP  - 375
+EP  - 382
+AU  - H. Baraki
+AU  - C. Schwarzbach
+AU  - S. Jakob
+AU  - A. Jahl
+AU  - K. Geihs
+PY  - 2018
+KW  - Cloud computing
+KW  - Ontologies
+KW  - Semantics
+KW  - Mobile handsets
+KW  - Middleware
+KW  - Synchronization
+KW  - Task analysis
+KW  - IPC
+KW  - Ontologies
+KW  - Mobile Cloud Computing
+DO  - 10.1109/CLOUD.2018.00054
+JO  - 2018 IEEE 11th International Conference on Cloud Computing (CLOUD)
+IS  - 
+SN  - 2159-6190
+VO  - 
+VL  - 
+JA  - 2018 IEEE 11th International Conference on Cloud Computing (CLOUD)
+Y1  - 2-7 July 2018
+AB  - Mobile Cloud Computing (MCC) requires an infrastructure that is combining the capabilities of resource-constrained but mobile and context-aware devices with that of immovable but powerful resources in the cloud. Application execution shall be boosted and battery consumption reduced. Our goal is to relieve mobile devices by enabling applications to cooperate transparently with components provided by third parties remotely, locally, or both. For this purpose, we developed SAM - the Semantic-aware Middleware - and the SAM Store. The latter resembles a registry. It allows component providers to publish semantically enriched interfaces and to offer corresponding local and remote implementations. SAM makes use of the SAM Store to match local interprocess communication (IPC) messages transparently against local and remote components. This architecture facilitates the integration of powerful, but resource-intensive remote components, which may be prioritized over local ones, and fosters various patterns of cooperation that demonstrate useful solutions in the area of MCC. By means of a realistic scenario, our evaluation proves the efficiency with respect to latency and practicality.
+ER  - 
+
+TY  - CONF
+TI  - (WIP) Evaluation of a Cloud-Based System for Delivering Adaptive Micro Open Education Resource to Fresh Learners
+T2  - 2018 IEEE 11th International Conference on Cloud Computing (CLOUD)
+SP  - 586
+EP  - 589
+AU  - G. Sun
+AU  - T. Cui
+AU  - F. Dong
+AU  - D. Xu
+AU  - J. Shen
+AU  - S. Chen
+AU  - J. Lin
+PY  - 2018
+KW  - Heuristic algorithms
+KW  - Cloud computing
+KW  - Education
+KW  - Mathematical model
+KW  - Australia
+KW  - Semantics
+KW  - Ontologies
+KW  - Cloud-based System, Micro Learning, Open Education Resource, Cold Start, Heuristic Recommendation
+DO  - 10.1109/CLOUD.2018.00114
+JO  - 2018 IEEE 11th International Conference on Cloud Computing (CLOUD)
+IS  - 
+SN  - 2159-6190
+VO  - 
+VL  - 
+JA  - 2018 IEEE 11th International Conference on Cloud Computing (CLOUD)
+Y1  - 2-7 July 2018
+AB  - In this paper, we present an online computation approach implemented in a cloud-based system to assist open education resource (OER) providers and instructors dealing with the sparsity of data in micro OER recommendation. An algorithmic framework is provided to realize the novel micro OER recommendation system based on heuristic rules. These rules can also optimize the approaches to blending new-coming micro OERs into established learning paths. Comparing with different widely used recommender systems, our evaluation shows the proposed heuristic algorithms for online computation performs satisfactorily in terms of precision and recall values.
+ER  - 
+
+TY  - CONF
+TI  - A User-Oriented Approach toward Price Prediction for IaaS Service
+T2  - 2018 IEEE International Conference on Web Services (ICWS)
+SP  - 343
+EP  - 346
+AU  - J. Zhang
+AU  - J. Xie
+AU  - M. Yuan
+PY  - 2018
+KW  - Cloud computing
+KW  - Ontologies
+KW  - Collaboration
+KW  - Predictive models
+KW  - Filtering
+KW  - Forecasting
+KW  - Analytical models
+KW  - services, price prediction, ontology, collaborative approach, service selection
+DO  - 10.1109/ICWS.2018.00057
+JO  - 2018 IEEE International Conference on Web Services (ICWS)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 IEEE International Conference on Web Services (ICWS)
+Y1  - 2-7 July 2018
+AB  - With the continuous development of cloud services, the types and the number of services have increased significantly. It has become the current focus on how to find a service to meet their needs in cloud market. However in cloud market, the difficult is that how to maximize the benefit of users and make users understand the reasonable pricing of their services. So this paper proposes a method based on the ARIMA (Autoregressive Integrated Moving Average Model) model to predict the future price of the cloud service, and choose the service is used ontology collaborative filtering algorithm. Finally, we take the cloud service of infrastructure as a service (IaaS) as an example to do experiment. The experimental results show our approach can find the optimal service price accuracy. This will make it possible to provide more accuracy service to user.
+ER  - 
+
+TY  - CONF
+TI  - DKEM: A Distributed Knowledge Based Evolution Model for Service Ecosystem
+T2  - 2018 IEEE International Conference on Web Services (ICWS)
+SP  - 1
+EP  - 8
+AU  - X. Wang
+AU  - Z. Feng
+AU  - S. Chen
+AU  - K. Huang
+PY  - 2018
+KW  - Knowledge based systems
+KW  - Ecosystems
+KW  - Stability analysis
+KW  - Ontologies
+KW  - Semantics
+KW  - Runtime
+KW  - Business
+KW  - service ecosystem
+KW  - runtime self-adaptation
+KW  - distributed knowledge
+KW  - service evolution
+KW  - stability evaluation
+DO  - 10.1109/ICWS.2018.00008
+JO  - 2018 IEEE International Conference on Web Services (ICWS)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 IEEE International Conference on Web Services (ICWS)
+Y1  - 2-7 July 2018
+AB  - With the popularity of cloud computing and micro service architectures, various service ecosystems including services, venders, and service-based processes continuously emerge on Internet or in an enterprise. Semantics of services from different venders may be described by distributed domain ontologies. Distributed knowledge brings difficulty to competition and cooperation among services, and hampers the evolution of a service ecosystem. In this paper, we propose a distributed knowledge based evolution model (DKEM) to promote competition and cooperation among services from different venders. DKEM considers stability as key factor in competition, and a stability evaluation model is designed to compute stability of services, venders, and service-based processes according to service invocation histories. Based on the evaluation model, two evolution patterns are given, and they can automatically explore new and more stable cooperation among services by means of runtime self-adaption mechanism. A prototype system for DKEM is implemented and a series of experiments show that DKEM is effective for competition and cooperation among services with distributed knowledge, and, evolved processes have higher stability and response efficiency.
+ER  - 
+
+TY  - CONF
+TI  - Towards Blending Semantics with an Education Based Ontology Using Protege 5.2.0 A Revisit
+T2  - 2018 8th International Conference on Cloud Computing, Data Science & Engineering (Confluence)
+SP  - 733
+EP  - 738
+AU  - S. Tanwar
+AU  - S. Kumar Malik
+PY  - 2018
+KW  - Ontologies
+KW  - Education
+KW  - Semantics
+KW  - OWL
+KW  - Remuneration
+KW  - Syntactics
+KW  - Cloud computing
+KW  - Semantic web
+KW  - Education Domain
+KW  - Ontology
+KW  - DLquery
+KW  - Protege 5.2.0
+DO  - 10.1109/CONFLUENCE.2018.8442831
+JO  - 2018 8th International Conference on Cloud Computing, Data Science & Engineering (Confluence)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 8th International Conference on Cloud Computing, Data Science & Engineering (Confluence)
+Y1  - 11-12 Jan. 2018
+AB  - In today's world of globalization, there is a serious need of incorporating semantics in Education Domain which is very significant with an ultimate goal of providing an efficient, adaptive and personalized learning environment. An attempt towards this goal has been made to develop an Education based Ontology with some capability to describe a semantic web based sharable knowledge. So as a contribution, this paper presents a revisit towards amalgamating Semantics in Education. In this direction, an effort has been made to construct an Education based Ontology using Protege 5.2.0, where a hierarchy of classes and subclasses have been defined along with their properties, relations, and instances. Finally, at the end of this paper an implementation is also presented involving query retrieval using DLquery illustrations.
+ER  - 
+
+TY  - CONF
+TI  - Structuring OWL Documents to Enhance Trust for Big Data Analytical Tools to Promote Computational Intelligence in Semantic Web
+T2  - 2018 8th International Conference on Cloud Computing, Data Science & Engineering (Confluence)
+SP  - 14
+EP  - 15
+AU  - M. Pandey
+AU  - R. Pandey
+AU  - U. Kumar Chopra
+PY  - 2018
+KW  - Cloud computing
+KW  - Data science
+KW  - Semantic web
+KW  - Provenance
+KW  - Trust
+KW  - Ontology
+KW  - Big Data
+DO  - 10.1109/CONFLUENCE.2018.8442943
+JO  - 2018 8th International Conference on Cloud Computing, Data Science & Engineering (Confluence)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 8th International Conference on Cloud Computing, Data Science & Engineering (Confluence)
+Y1  - 11-12 Jan. 2018
+AB  - The world that we have today is intelligent web that is a web that aims to show, present, and deliver intelligent information. The web contains a diversified amount of information in terms of veracity, velocity, and variance. This scenario demands for intelligent data mining agents that are able to retrieve information and derive patterns and relationships in this information. Contemporary research focuses on pattern discovery using analytical tools but does not provide for ways and means to successfully interpret the source and the authenticity of this information. Our paper thus focuses on embedding the trustable components inside semantic web so as to enable big data mining agents to successfully retrieve trustworthy information from the semantic web.
+ER  - 
+
+TY  - CONF
+TI  - LOD: Linking and Querying Shared Data on Web
+T2  - 2018 8th International Conference on Cloud Computing, Data Science & Engineering (Confluence)
+SP  - 568
+EP  - 573
+AU  - G. Jaglan
+AU  - S. Kumar Malik
+PY  - 2018
+KW  - Handheld computers
+KW  - Cloud computing
+KW  - Data science
+KW  - Semantic web
+KW  - RDF
+KW  - SPARQL
+KW  - 5-Star Linked Open Data Scheme
+KW  - Linked Open data
+KW  - Shared data
+DO  - 10.1109/CONFLUENCE.2018.8442718
+JO  - 2018 8th International Conference on Cloud Computing, Data Science & Engineering (Confluence)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 8th International Conference on Cloud Computing, Data Science & Engineering (Confluence)
+Y1  - 11-12 Jan. 2018
+AB  - In today's era of digitization, due to the improper structuring of huge data available from various sources leading to poor interlinking of data, the web is not being utilized to its full potential. So, there is a need for re-establishing the structures of openly published data on the web by giving various specifications or frameworks of data published in cyberspace. With the aim of better utilization of web data and transition from keyword-based search to contextual search, the Semantic web has emerged as a key milestone. In this direction, Tim Berners Lee has proposed the conventions namely RDF and SPARQL for linking and querying the machine-processable shared data on the web and also a 5-star linked data scheme to distinguish the type of data on web based on its linking properties. This paper presents a Framework for Linking and querying open datasets on government portals, embedding semantics in the data by RDF alignment using state-of-art tools such as OpenRefine and Twinkle tool. The 5-Star scheme has been discussed and practical demonstration of enriching data is given. This clearly puts forward the transition from web of documents to web of data. This paper also presents the framework for translating the data in datasets to the graph based RDF data in Triple format. This translated data is then queried using standard SPARQL Queries showcasing the linked data fetched in tuple format. The data-graph of the resultant linked data is also presented.
+ER  - 
+
+TY  - CONF
+TI  - NECTAR: Knowledge-based Collaborative Active Learning for Activity Recognition
+T2  - 2018 IEEE International Conference on Pervasive Computing and Communications (PerCom)
+SP  - 1
+EP  - 10
+AU  - G. Civitarese
+AU  - C. Bettini
+AU  - T. Sztyler
+AU  - D. Riboni
+AU  - H. Stuckenschmidt
+PY  - 2018
+KW  - Ontologies
+KW  - Correlation
+KW  - Semantics
+KW  - Activity recognition
+KW  - Collaboration
+KW  - Training
+DO  - 10.1109/PERCOM.2018.8444590
+JO  - 2018 IEEE International Conference on Pervasive Computing and Communications (PerCom)
+IS  - 
+SN  - 2474-249X
+VO  - 
+VL  - 
+JA  - 2018 IEEE International Conference on Pervasive Computing and Communications (PerCom)
+Y1  - 19-23 March 2018
+AB  - Due to the emerging popularity of pervasive healthcare applications, tools for monitoring activities in smart homes are gaining momentum. Existing methods mainly rely on supervised learning algorithms for recognizing activities based on sensor data. A key issue with those approaches is the acquisition of comprehensive training sets of activities. Indeed, that task incurs significant costs in terms of manual labeling effort; moreover, labeling by external observers violates the individual's privacy. For these reasons, there is an increasing interest in unsupervised activity recognition methods. A popular approach relies on knowledge-based models expressed by ontologies of activities, environment and sensors. Unfortunately, those models require significant knowledge engineering efforts, and are often limited to a specific application. In this paper, we address the issues of existing methods by proposing a novel hybrid approach. Our intuition is that a generic knowledge-based model of activities can be refined to target specific individuals and environments by collaboratively acquiring feedback from inhabitants. Specifically, we propose a collaborative active learning method to refine correlations among sensor events and activity types that are initially extracted from a high-level ontology. Generic correlations are personalized to each target smart-home considering the similarity between the feedback target and the feedback provider in terms of environment and inhabitant's profiles. Moreover, thanks to this method, new sensors installed in the home are seamlessly integrated in the recognition framework. In order to reduce the burden of providing feedback, we also propose a technique to carefully select the conditions that trigger a feedback request. We conducted experiments with a real-world dataset and a generic ontology of activities. Results show that our hybrid method outperforms state-of-the-art supervised and unsupervised activity recognition techniques while triggering an acceptable number of feedback queries.
+ER  - 
+
+TY  - CONF
+TI  - A Reliable Ring Analysis Engine for Establishment of Multi-Level Security Management in Clouds
+T2  - 2018 41st International Conference on Telecommunications and Signal Processing (TSP)
+SP  - 1
+EP  - 5
+AU  - F. F. Moghaddam
+AU  - P. Wieder
+AU  - R. Yahyapour
+AU  - T. Khodadadi
+PY  - 2018
+KW  - Security
+KW  - Indexes
+KW  - Engines
+KW  - Cloud computing
+KW  - Protocols
+KW  - Reliability
+KW  - Semantics
+KW  - Cloud Computing
+KW  - Security
+KW  - Policy Management
+KW  - Semantic Mapping
+KW  - Security Management
+DO  - 10.1109/TSP.2018.8441183
+JO  - 2018 41st International Conference on Telecommunications and Signal Processing (TSP)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 41st International Conference on Telecommunications and Signal Processing (TSP)
+Y1  - 4-6 July 2018
+AB  - Security and Privacy challenges are the most obstacles for the advancement of cloud computing and the erosion of trust boundaries already happening in organizations is amplified and accelerated by this emerging technology. Policy Management Frameworks are the most proper solutions to create dedicated security levels based on the sensitivity of resources and according to the mapping process between requirements cloud customers and capabilities of service providers. The most concerning issue in these frameworks is the rate of perfect matches between capabilities and requirements. In this paper, a reliable ring analysis engine has been introduced to efficiently map the security requirements of cloud customers to the capabilities of service provider and to enhance the rate of perfect matches between them for establishment of different security levels in clouds. In the suggested model a structural index has been introduced to receive the requirement and efficiently map them to the most proper security mechanism of the service provider. Our results show that this index-based engine enhances the rate of perfect matches considerably and decreases the detected conflicts in syntactic and semantic analysis.
+ER  - 
+
+TY  - CONF
+TI  - Profiling Contributors in the Human-Computer Cloud
+T2  - 2018 IEEE International Conference on Smart Computing (SMARTCOMP)
+SP  - 327
+EP  - 332
+AU  - A. Smirnov
+AU  - N. Teslya
+AU  - A. Ponomarev
+AU  - A. Kashevnik
+PY  - 2018
+KW  - Cloud computing
+KW  - Ontologies
+KW  - Contracts
+KW  - Task analysis
+KW  - Hardware
+KW  - Information processing
+KW  - Resource management
+KW  - cloud
+KW  - profile
+KW  - human
+KW  - factors
+KW  - socio-technical systems
+DO  - 10.1109/SMARTCOMP.2018.00024
+JO  - 2018 IEEE International Conference on Smart Computing (SMARTCOMP)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 IEEE International Conference on Smart Computing (SMARTCOMP)
+Y1  - 18-20 June 2018
+AB  - The concept of human-computer cloud is an adaptation of a traditional cloud computing paradigm to applications that require human expertise for performing some of the information processing operations. In these environments, it is important to maintain rich contributor profile that would allow to automatically route task requests to the contributors who will most likely complete them with high quality. On the other hand, the burden of filling and updating the profile shouldn't be entirely on the shoulders of contributors. This paper describes the profile structure of human-computer cloud environment and several mechanisms for automatically filling it and keeping up-to-date.
+ER  - 
+
+TY  - CONF
+TI  - Cloud Services Categories Identification from Requirements Specifications
+T2  - 2018 32nd International Conference on Advanced Information Networking and Applications Workshops (WAINA)
+SP  - 436
+EP  - 441
+AU  - B. Di Martino
+AU  - J. Pascarella
+AU  - S. Nacchia
+AU  - S. A. Maisto
+AU  - P. Iannucci
+AU  - F. Cerri
+PY  - 2018
+KW  - Ontologies
+KW  - Cloud computing
+KW  - Entropy
+KW  - Security
+KW  - Databases
+KW  - Natural languages
+KW  - Usability
+KW  - Cloud Services categories identification
+KW  - Re quirements classification
+KW  - Convolutional Neural Networks for text classification
+KW  - Naïve Bayes classifier
+KW  - Maximum Entropy classifier
+KW  - Requirements ontology
+KW  - Cloud ontology
+DO  - 10.1109/WAINA.2018.00125
+JO  - 2018 32nd International Conference on Advanced Information Networking and Applications Workshops (WAINA)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 32nd International Conference on Advanced Information Networking and Applications Workshops (WAINA)
+Y1  - 16-18 May 2018
+AB  - In the Cloud Computing field, with the increasing number of Cloud Services available thanks to several cloud providers, looking for a particular service has become very difficult, especially with the evolution of the stakeholders' needs. At the same time requirements specifications have become more and more complex to define in a formal representation and to analyse, since the stakeholders' goals are typically high-level, abstract, and hard-to-measure. For these reasons it would be useful to automate, as much as possible, requirements analysis. In this work we propose an automatic classification and modelling of requirements that are expressed in a natural language form, and an automatic identification of cloud services categories from requirements in order to support the development of a cloud application. Automated requirements analysis is not an easy subject, due to the natural languages variability and ambiguity, that's why different machine/deep learning and natural language processing approaches are used and compared. The target data set is provided by the Open-Security tera-PROMISE repository.
+ER  - 
+
+TY  - CONF
+TI  - HIC: An interactive and ubiquitous home controller system for the smart home
+T2  - 2018 IEEE 6th International Conference on Serious Games and Applications for Health (SeGAH)
+SP  - 1
+EP  - 6
+AU  - S. Pizzagalli
+AU  - D. Spoladore
+AU  - S. Arlati
+AU  - M. Sacco
+AU  - L. Greci
+PY  - 2018
+KW  - Graphical user interfaces
+KW  - Smart homes
+KW  - Home appliances
+KW  - Image recognition
+KW  - Sensors
+KW  - Task analysis
+KW  - Cloud computing
+KW  - Home Controller
+KW  - Smart Home
+KW  - Interactive Projection
+KW  - Ambient Assisted Living
+DO  - 10.1109/SeGAH.2018.8401374
+JO  - 2018 IEEE 6th International Conference on Serious Games and Applications for Health (SeGAH)
+IS  - 
+SN  - 2573-3060
+VO  - 
+VL  - 
+JA  - 2018 IEEE 6th International Conference on Serious Games and Applications for Health (SeGAH)
+Y1  - 16-18 May 2018
+AB  - This paper presents the Home Interactive Interface (HIC), a ubiquitous projected GUI providing the dwellers of a Smart Home with an instrument for controlling appliances, comfort metrics and systems. This paper describes the architecture of the HIC and its underlying system, focusing on its appearance, modules and functions. The services provided by HIC are contextualized in two different use cases taking place inside a domestic environment. The first use case illustrates HIC's services and functionalities dedicated to support the dwellers during meal preparations; the use case describes how HIC is able to provide step-by-step tailored instructions and to monitor the whole process. In the second use case, HIC's features for easy comfort metrics management are depicted. The main advantages deriving from the adoption of this home controller system are summarized in the last section, together with the future directions of this work and the usability tests considered to validate the home controller.
+ER  - 
+
+TY  - CONF
+TI  - Modelling NFV concepts with ontologies
+T2  - 2018 21st Conference on Innovation in Clouds, Internet and Networks and Workshops (ICIN)
+SP  - 1
+EP  - 7
+AU  - I. Oliver
+AU  - S. Panda
+AU  - K. Wang
+AU  - A. Kalliola
+PY  - 2018
+KW  - Unified modeling language
+KW  - Ontologies
+KW  - Servers
+KW  - Cloud computing
+KW  - Computer architecture
+KW  - Semantics
+KW  - Terminology
+KW  - NFV
+KW  - Ontology
+KW  - Semantics
+KW  - IDM
+KW  - Attestation
+KW  - MANO
+DO  - 10.1109/ICIN.2018.8401590
+JO  - 2018 21st Conference on Innovation in Clouds, Internet and Networks and Workshops (ICIN)
+IS  - 
+SN  - 2472-8144
+VO  - 
+VL  - 
+JA  - 2018 21st Conference on Innovation in Clouds, Internet and Networks and Workshops (ICIN)
+Y1  - 19-22 Feb. 2018
+AB  - Reference architectures such as ETSI's Network Function Virtualisation Reference Architecture has the potential not just to clarify terminology but to confuse it. We propose mapping such an architecture and the concepts therein into a properly defined ontology based upon a formal description logic semantics. This enables modelling and reasoning over such concepts. We extend this by showing how such a concept can be integrated with real-life components such as, in the example here, attestation and trust/integrity management in NFV itself.
+ER  - 
+
+TY  - CONF
+TI  - An intelligent multi-agent system of mobile information consultation and sharing with big data and time series analysis technologies for smart tourism
+T2  - 2018 IEEE International Conference on Applied System Invention (ICASI)
+SP  - 9
+EP  - 12
+AU  - W. -C. Chen
+AU  - W. -H. Chen
+AU  - S. -Y. Yang
+PY  - 2018
+KW  - Cloud computing
+KW  - Ontologies
+KW  - Time series analysis
+KW  - Big Data
+KW  - Global Positioning System
+KW  - Reliability
+KW  - Prototypes
+KW  - Big Data Analysis
+KW  - Time Series Analysis
+KW  - Multi-agent Systems
+KW  - Smart Tourism
+DO  - 10.1109/ICASI.2018.8394253
+JO  - 2018 IEEE International Conference on Applied System Invention (ICASI)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2018 IEEE International Conference on Applied System Invention (ICASI)
+Y1  - 13-17 April 2018
+AB  - According to the practical progress of Dr. What-Info I and II, this paper continues to develop Dr. What-Info III. Moreover, the big data technology, the MapReduce paralleled decrement mechanism of the cloud information agent CEOntoIAS, as supported by the Hadoop-like framework, software R, and time series analysis are adopted to enhance the precision, reliability, and integrity of cloud information. Furthermore, the proposed system app receives a collective satisfaction score of 80% in terms of Quesenbery's 5Es and Nielsen ratings. In addition, the verification results of interface design show that the human-machine interface of our proposed system can meet important design preferences and provide approximately optimal balance.
+ER  - 
+
+TY  - JOUR
+TI  - Bioinformatic Workflow Extraction from Scientific Texts based on Word Sense Disambiguation
+T2  - IEEE/ACM Transactions on Computational Biology and Bioinformatics
+SP  - 1979
+EP  - 1990
+AU  - A. Halioui
+AU  - P. Valtchev
+AU  - A. B. Diallo
+PY  - 2018
+KW  - Task analysis
+KW  - Phylogeny
+KW  - Semantics
+KW  - Ontologies
+KW  - Data mining
+KW  - Metadata
+KW  - Bioinformatics
+KW  - Workflow extraction
+KW  - word sense disambiguation
+KW  - ontologies
+KW  - workflow similarity
+KW  - patterns
+DO  - 10.1109/TCBB.2018.2847336
+JO  - IEEE/ACM Transactions on Computational Biology and Bioinformatics
+IS  - 6
+SN  - 1557-9964
+VO  - 15
+VL  - 15
+JA  - IEEE/ACM Transactions on Computational Biology and Bioinformatics
+Y1  - 1 Nov.-Dec. 2018
+AB  - This paper introduces a method for automatic workflow extraction from texts using Process-Oriented Case-Based Reasoning (POCBR). While the current workflow management systems implement mostly different complicated graphical tasks based on advanced distributed solutions (e.g., cloud computing and grid computation), workflow knowledge acquisition from texts using case-based reasoning represents more expressive and semantic case representations. We propose in this context, an ontology-based workflow extraction framework to acquire processual knowledge from texts. Our methodology extends the classic NLP techniques to extract and disambiguate complex tasks and relations in texts. Using a graph-based representation of workflows and a domain ontology, our extraction process uses a context-aware approach to recognize workflow components in texts: data and control flows. We applied our framework in a technical domain in bioinformatics: i.e., phylogenetic analyses. An evaluation based on workflow semantic similarities in a gold standard proves that our approach provides promising results in the process extraction domain. Both data and implementation of our framework are available in: http://labo.bioinfo.uqam.ca/tgowler.
+ER  - 
+
+TY  - CONF
+TI  - An Improved Security Architecture for an InterCloud Reference Model
+T2  - 2017 European Conference on Electrical Engineering and Computer Science (EECS)
+SP  - 166
+EP  - 173
+AU  - C. Ghazel
+AU  - Y. Abassi
+AU  - L. Saidane
+PY  - 2017
+KW  - Cloud computing
+KW  - Computer architecture
+KW  - Security
+KW  - Interoperability
+KW  - Service-oriented architecture
+KW  - Complexity theory
+KW  - Architecture
+KW  - Cloud Computing
+KW  - InterCloud
+KW  - Cloud Federation
+KW  - Security Architecture
+KW  - Reference Model
+DO  - 10.1109/EECS.2017.40
+JO  - 2017 European Conference on Electrical Engineering and Computer Science (EECS)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2017 European Conference on Electrical Engineering and Computer Science (EECS)
+Y1  - 17-19 Nov. 2017
+AB  - Today, new offering appears frequently and the demand on Cloud services is growing in an exponential rate. In such dynamic and competitive market, working in silos is not a successful strategy. In such dynamic and competitive market, a cloud provider is unable to meet the needs of customers dispersed all over the world, and relying only on a single cloud provider and working in silos is not a successful strategy. Therefore, single providers should integrate their resources and move up to a new level of cooperation and interconnection. This federation would bring in added value in terms of QoS, security, economics, etc. but also more complexity regarding security, federation management and interoperability establishment between disparate providers. In this paper, we will present an improved federation concept through a layered autonomous InterCloud reference model driven by Security and Interoperability. Also, we will propose an End to End Cloud security architecture based on a virtualized infrastructure, together with an improved security solution. This offers the ease of resources management, access security, and service availability and interoperability in a robust structure with lower costs.
+ER  - 
+
+TY  - CONF
+TI  - Semantic annotation and retrieval of scientific documents in a big data environment
+T2  - 7th Latin American Conference on Networked and Electronic Media (LACNEM 2017)
+SP  - 1
+EP  - 6
+AU  - N. A. Portilla Herrera
+AU  - F. L. Gomez
+AU  - V. A. Bucheli
+AU  - O. S. Pabón
+PY  - 2017
+KW  - Semantic annotation
+KW  - Information retrieval
+KW  - Big data
+KW  - Hadoop
+KW  - Spark
+DO  - 10.1049/ic.2017.0032
+JO  - 7th Latin American Conference on Networked and Electronic Media (LACNEM 2017)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 7th Latin American Conference on Networked and Electronic Media (LACNEM 2017)
+Y1  - 6-7 Nov. 2017
+AB  - Semantic enrichment is widely used in information retrieval processes. Annotate semantically big sets of scientific documents could facilitate the search and retrieval using the concepts contained in them. Considering the increasing availability of scientific documents on the Web, it is necessary to have mechanisms that permit the annotation of large volumes of documents that grow at an accelerated pace. This article proposes a scalable software architecture to support the semantic annotation process and describes a prototype that implements the proposed architecture.
+ER  - 
+
+TY  - CONF
+TI  - Semantically enriched open API service descriptions in the cloud
+T2  - 2017 8th IEEE International Conference on Software Engineering and Service Science (ICSESS)
+SP  - 66
+EP  - 69
+AU  - N. Mainas
+AU  - E. G. M. Petrakis
+AU  - S. Sotiriadis
+PY  - 2017
+KW  - Semantics
+KW  - Ontologies
+KW  - Service-oriented architecture
+KW  - Cloud computing
+KW  - Security
+KW  - Database languages
+KW  - Tools
+KW  - Web services
+KW  - cloud computing
+KW  - ontology
+KW  - Open API
+KW  - REST
+DO  - 10.1109/ICSESS.2017.8342865
+JO  - 2017 8th IEEE International Conference on Software Engineering and Service Science (ICSESS)
+IS  - 
+SN  - 2327-0594
+VO  - 
+VL  - 
+JA  - 2017 8th IEEE International Conference on Software Engineering and Service Science (ICSESS)
+Y1  - 24-26 Nov. 2017
+AB  - We propose an extension of the Open API specification (OAS) for the semantic description of RESTful services. We suggest that API descriptions (eg. on Clouds) be semantically annotated by associating OAS entities to entities in an ontology. The new approach, referred to Semantic OAS (SOAS) eliminates ambiguities and produces descriptions of RESTful services that are understandable by both, humans and machines. Moreover, SOAS descriptions are equivalent (i.e. can be translated) to an ontology. Therefore, SOAS services can be easily discovered (i.e. by other services), queried by Semantic Web query languages (e.g. SPARQL), checked by reasoners (e.g. Pellet) for consistency or inferring new (hidden) relationships and, finally, be used by service orchestration mechanisms.
+ER  - 
+
+TY  - CONF
+TI  - Towards the Design of a System and a Workflow Model for Medical Big Data Processing in the Hybrid Cloud
+T2  - 2017 IEEE 15th Intl Conf on Dependable, Autonomic and Secure Computing, 15th Intl Conf on Pervasive Intelligence and Computing, 3rd Intl Conf on Big Data Intelligence and Computing and Cyber Science and Technology Congress(DASC/PiCom/DataCom/CyberSciTech)
+SP  - 1288
+EP  - 1291
+AU  - Y. -H. Kim
+AU  - E. -N. Huh
+PY  - 2017
+KW  - Batch production systems
+KW  - Big Data
+KW  - Task analysis
+KW  - Cloud computing
+KW  - Data models
+KW  - Ontologies
+KW  - Big data Computing; Hybrid Cloud; Dynamic Workflow; Directed Acyclic Graph; MapReduce
+DO  - 10.1109/DASC-PICom-DataCom-CyberSciTec.2017.207
+JO  - 2017 IEEE 15th Intl Conf on Dependable, Autonomic and Secure Computing, 15th Intl Conf on Pervasive Intelligence and Computing, 3rd Intl Conf on Big Data Intelligence and Computing and Cyber Science and Technology Congress(DASC/PiCom/DataCom/CyberSciTech)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2017 IEEE 15th Intl Conf on Dependable, Autonomic and Secure Computing, 15th Intl Conf on Pervasive Intelligence and Computing, 3rd Intl Conf on Big Data Intelligence and Computing and Cyber Science and Technology Congress(DASC/PiCom/DataCom/CyberSciTech)
+Y1  - 6-10 Nov. 2017
+AB  - Globally, a big data analytics technology is being issued in various business areas including the medical field. Because the technologies demand a large number of resources, studies on a distributed cloud including a hybrid cloud technology are needed. However, there are limitations of performance and cost since the most of hospitals use the private cloud of low computing resource. Thus, a research on the hybrid cloud is required to resolve the limitations. In this paper, we propose and evaluate a system called BigPros for medical big data processing with the proposed workflow model in the hybrid cloud resolving above issues. Based on this study, the BigPros can provide an efficient data processing method for a medical big data analytics in the hybrid cloud environment.
+ER  - 
+
+TY  - CONF
+TI  - A similarity computing method based Levenshtein distance and logic Petri net for renting cloud service processes
+T2  - 2017 3rd IEEE International Conference on Computer and Communications (ICCC)
+SP  - 2445
+EP  - 2449
+AU  - Q. Hu
+AU  - Z. Zhao
+AU  - D. Wang
+AU  - J. Du
+PY  - 2017
+KW  - Petri nets
+KW  - Cloud computing
+KW  - Business
+KW  - Semantics
+KW  - Computational modeling
+KW  - Process control
+KW  - Ontologies
+KW  - process process similarity
+KW  - logic Petri net
+KW  - Levenshtein distance
+DO  - 10.1109/CompComm.2017.8322974
+JO  - 2017 3rd IEEE International Conference on Computer and Communications (ICCC)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2017 3rd IEEE International Conference on Computer and Communications (ICCC)
+Y1  - 13-16 Dec. 2017
+AB  - An appropriate cloud service process can be obtained by applying similarity computation between service request and the existing service processes in renting or recommending cloud service processes. To improve efficiency of the similarity computation, a similarity computing method based on Levenshtein distance and logic Petri net for renting cloud service processes was proposed in this paper. Cloud service processes were first modeled as service nets by logic Petri nets. A method to generate path strings for service nets was put forward by introducing the routing identifiers. Business flows of cloud service processes were then converted into path strings based on reduction and recursion. Similarly, service request was mapped as a request string by the path string generating method. Finally, similarity computation was performed based on Levenshtein distance between path strings and request string. The algorithm for similarity computation was also presented. A case study was finally presented to show the effectiveness of the proposed method.
+ER  - 
+
+TY  - CONF
+TI  - Platform-as-a-Service for Human-Based Applications: Ontology-Driven Approach
+T2  - 2017 IEEE 7th International Symposium on Cloud and Service Computing (SC2)
+SP  - 157
+EP  - 162
+AU  - A. Smirnov
+AU  - A. Ponomarev
+AU  - T. Levashova
+AU  - N. Shilov
+PY  - 2017
+KW  - Cloud computing
+KW  - Ontologies
+KW  - Sensors
+KW  - Resource management
+KW  - Task analysis
+KW  - Contracts
+KW  - Computational modeling
+KW  - competencies
+KW  - interoperability
+KW  - human-computer cloud
+KW  - crowd computing
+KW  - crowdsourcing
+KW  - human-computer systems
+DO  - 10.1109/SC2.2017.31
+JO  - 2017 IEEE 7th International Symposium on Cloud and Service Computing (SC2)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2017 IEEE 7th International Symposium on Cloud and Service Computing (SC2)
+Y1  - 22-25 Nov. 2017
+AB  - The number of crowd computing applications is rapidly growing; however, they currently lack unification and interoperability as each platform usually has its own model of tasks, resources and computation process. We aim at the development of a unifying ontology-driven platform that would support deployment of various human-based applications. Key features of the proposed human-computer cloud platform are ontologies and digital contracts. Ontological mechanisms (ability to precisely define semantics and use inference to find related terms) are employed to find and allocate human resources required by software applications. Whereas digital contracts are leveraged to achieve predictability required by cloud users (application developers). The paper describes major principles behind the platform.
+ER  - 
+
+TY  - CONF
+TI  - Pattern-Based Cloud Service Recommendation and Integration for Hybrid Cloud
+T2  - 2017 IEEE 7th International Symposium on Cloud and Service Computing (SC2)
+SP  - 217
+EP  - 222
+AU  - J. Park
+AU  - D. Yun
+AU  - U. Kim
+AU  - K. Yeom
+PY  - 2017
+KW  - Cloud computing
+KW  - Hybrid power systems
+KW  - Semantics
+KW  - Quality of service
+KW  - Ontologies
+KW  - Authentication
+KW  - Computational modeling
+KW  - cloud computing
+KW  - hybrid cloud
+KW  - cloud design pattern
+KW  - cloud service recommendation
+KW  - cloud service integration
+DO  - 10.1109/SC2.2017.40
+JO  - 2017 IEEE 7th International Symposium on Cloud and Service Computing (SC2)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2017 IEEE 7th International Symposium on Cloud and Service Computing (SC2)
+Y1  - 22-25 Nov. 2017
+AB  - Hybrid Cloud, which is a cloud deployment model that integrates the public cloud and private cloud, is gaining considerable attention recently. The key technology for building a Hybrid Cloud environment involves the integration of different types of clouds. In this paper, the concept of Hybrid CSB and a method to solve the cloud integration problem are proposed. We present a structure for recommending a service based on a pattern according to users' requirements. In addition, we propose a method for integrating the recommended services with an integration script and a script generation process. The recommendation and integration method proposed in this study is expected to be used as an underlying technology to facilitate the transition to the Hybrid Cloud environment.
+ER  - 
+
+TY  - CONF
+TI  - Improving OpenID Connect Federation’s Interoperability with Web Semantics
+T2  - 2017 IEEE/ACS 14th International Conference on Computer Systems and Applications (AICCSA)
+SP  - 1269
+EP  - 1276
+AU  - R. Weingärtner
+AU  - P. H. P. Martins
+AU  - I. L. Salvadori
+AU  - C. M. Westphall
+AU  - F. Siqueira
+PY  - 2017
+KW  - Ontologies
+KW  - Semantics
+KW  - Proposals
+KW  - Authentication
+KW  - Resource description framework
+KW  - Data structures
+KW  - Protocols
+KW  - OpenId Connect
+KW  - Federation
+KW  - web semantics
+DO  - 10.1109/AICCSA.2017.106
+JO  - 2017 IEEE/ACS 14th International Conference on Computer Systems and Applications (AICCSA)
+IS  - 
+SN  - 2161-5330
+VO  - 
+VL  - 
+JA  - 2017 IEEE/ACS 14th International Conference on Computer Systems and Applications (AICCSA)
+Y1  - 30 Oct.-3 Nov. 2017
+AB  - Companies adhere to federate environments in order to add value to their businesses by aggregating third parties services. Cloud computing comes in hand in this process speeding up the development and deployment of new service providers (SPs) and identity providers (IdPs) to be used into a federated environment. However, IdPs and SPs of OpenID Connect federations have a strong dependency on each other, they have to use the very same attribute names in order to exchange data. Our proposal lowers the dependency between IdPs and SPs using web semantics; instead of an agreement at a lower level such as attributes names, we propose that IdPs and SPs establish an agreement on the ontology to be used. Therefore, the name of attributes would not matter, but the semantic concept that attributes are associated with. Further, our proposal was added and tested into the OpenId Connect Implementation called MITREid Connect.
+ER  - 
+
+TY  - CONF
+TI  - Semantic based clustering system with cloud computing
+T2  - 2017 International Conference on Intelligent Informatics and Biomedical Sciences (ICIIBMS)
+SP  - 195
+EP  - 197
+AU  - H. H. Tar
+AU  - Z. Y. Zaw
+PY  - 2017
+KW  - Cloud computing
+KW  - Ontologies
+KW  - Semantics
+KW  - Semantic Web
+KW  - Signal processing
+KW  - Telecommunications
+KW  - Clustering
+KW  - Ontology
+KW  - Cloud Technology
+DO  - 10.1109/ICIIBMS.2017.8279711
+JO  - 2017 International Conference on Intelligent Informatics and Biomedical Sciences (ICIIBMS)
+IS  - 
+SN  - 2189-8723
+VO  - 
+VL  - 
+JA  - 2017 International Conference on Intelligent Informatics and Biomedical Sciences (ICIIBMS)
+Y1  - 24-26 Nov. 2017
+AB  - This paper presented a novel approach for document clustering applying cloud technologies for the system's performance issue. It is critical for application service in cloud computing to provide precise information. Ontology servicing is one of the methods to deal with semantic ambiguity and information overload efficiently through appropriate semantic models and semantic technology. This system is the advanced and extended version of the system we have been published before. The experiments reveal that even the testing documents increased; the system may actually be able to produce useful result for text document clustering. In this paper, we propose a cloud service that exploits a novel ontology-based technique for identifying cloud service to improve the accuracy of cloud services searching. Our approach has the capability to perform cloud service concepts from cloud service sources. The main idea behind our method is cloud services using an ontology-based technique.
+ER  - 
+
+TY  - CONF
+TI  - Engineering environment to support product-service design using value chain data
+T2  - 2017 International Conference on Engineering, Technology and Innovation (ICE/ITMC)
+SP  - 1465
+EP  - 1471
+AU  - A. R. Campos
+AU  - A. T. Correia
+AU  - D. Mourtzis
+AU  - A. Margarito
+AU  - D. Ntalaperas
+PY  - 2017
+KW  - Tools
+KW  - Monitoring
+KW  - Companies
+KW  - Ontologies
+KW  - Diversity methods
+KW  - product-service system
+KW  - feedback data
+KW  - design
+KW  - engineering environment
+DO  - 10.1109/ICE.2017.8280055
+JO  - 2017 International Conference on Engineering, Technology and Innovation (ICE/ITMC)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2017 International Conference on Engineering, Technology and Innovation (ICE/ITMC)
+Y1  - 27-29 June 2017
+AB  - Companies are looking for new approaches and tools to help them meet their customer's demands, particularly the desire of customized products at lower costs. The paradigm of product-service systems brings companies the opportunity of enlarging their offer, looking at products and services in an integrated way. This paper presents the early prototype of a software platform that supports companies in designing PSSs using feedback information collected over the value chain. The prototype described has been tested in three industrial companies and is currently being further developed.
+ER  - 
+
+TY  - CONF
+TI  - Self-learning system for personalized e-learning
+T2  - 2017 International Conference on Emerging Trends in Computing and Communication Technologies (ICETCCT)
+SP  - 1
+EP  - 6
+AU  - V. Pant
+AU  - S. Bhasin
+AU  - S. Jain
+PY  - 2017
+KW  - Learning management systems
+KW  - Electronic learning
+KW  - Videos
+KW  - Crawlers
+KW  - Semantics
+KW  - Task analysis
+KW  - Machine learning
+KW  - e-learning system
+KW  - reinforcement learning
+KW  - learning management system
+DO  - 10.1109/ICETCCT.2017.8280344
+JO  - 2017 International Conference on Emerging Trends in Computing and Communication Technologies (ICETCCT)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2017 International Conference on Emerging Trends in Computing and Communication Technologies (ICETCCT)
+Y1  - 17-18 Nov. 2017
+AB  - Knowledge is a basic requirement in the era of globalization. The act of acquiring knowledge is learning and with the advent of technology, learning has become easier. E-Learning is a popular learning method which uses the web or other technologies to promote learning. A very traditional learning method is discussed and some new methods with the integration of modern technology have been discussed. Although technologies like artificial intelligence, cloud computing, ontology, fuzzy logic etc. have been used in learning systems they are still less automated, not personalized and do not pose the capability to self-learn. A method is proposed to increase the automation and self-learning in the e-learning management systems. Further, the personalization of learning for the user so that every type of learner can learn from the type and level of the content the learner seems fit is the main aim. The proposed system is feasible, economical and scalable which makes it suitable for every level.
+ER  - 
+
+TY  - CONF
+TI  - Towards an analysis for quality assessment of semantic web based applications and SaaS
+T2  - 2017 4th International Conference on Signal Processing, Computing and Control (ISPCC)
+SP  - 321
+EP  - 324
+AU  - N. Malik
+AU  - V. Malik
+AU  - S. K. Goel
+PY  - 2017
+KW  - Ontologies
+KW  - Semantic Web
+KW  - Measurement
+KW  - Quality assessment
+KW  - Software as a service
+KW  - Cloud computing
+KW  - Couplings
+KW  - quality
+KW  - ontology
+KW  - SaaS
+KW  - structure
+DO  - 10.1109/ISPCC.2017.8269697
+JO  - 2017 4th International Conference on Signal Processing, Computing and Control (ISPCC)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2017 4th International Conference on Signal Processing, Computing and Control (ISPCC)
+Y1  - 21-23 Sept. 2017
+AB  - Semantic Web based Applications have become very applauded these days due to their huge employment in social networks, e-learning, multimedia processing and health care industry besides their engagement in information retrieval. Semantic Web based Applications are accented by machine comprehensibility of the content, sharing and reuse among heterogeneous applications, modular structure of its domain vocabulary, and their availability as a service. Their welfares and vast usage implies us to assess quality with consideration to divergent aspects such as ontology and few other quality attributes. This paper ventures a rigorous verdict of the state-of-art in this direction. Quality assessment of Semantic Web based Applications has been probed with focus on the process, contributions and limitations of each work besides research gaps in the direction.
+ER  - 
+
+TY  - JOUR
+TI  - Data Science
+T2  - The Computer Journal
+SP  - 285
+EP  - 286
+AU  - S. Maneth
+AU  - A. Poulovassilis
+PY  - 2017
+KW  - data science
+KW  - network mappings
+KW  - graph pattern matching
+KW  - database fragmentation
+KW  - event detection
+KW  - transaction processing
+KW  - type inference
+KW  - medical ontologies
+DO  - 10.1093/comjnl/bxw073
+JO  - The Computer Journal
+IS  - 3
+SN  - 1460-2067
+VO  - 60
+VL  - 60
+JA  - The Computer Journal
+Y1  - March 2017
+AB  - 
+ER  - 
+
+TY  - CONF
+TI  - A comprehensive business domain ontology for cloud services
+T2  - 2017 Eighth International Conference on Intelligent Computing and Information Systems (ICICIS)
+SP  - 134
+EP  - 143
+AU  - Y. M. Afify
+AU  - N. L. Badr
+AU  - I. F. Moawad
+AU  - M. F. Tolba
+PY  - 2017
+KW  - Ontologies
+KW  - Cloud computing
+KW  - Cascading style sheets
+KW  - Quality of service
+KW  - Computational modeling
+KW  - Unified modeling language
+KW  - cloud services
+KW  - business domain ontology
+KW  - ontology development
+KW  - semantic representation
+KW  - service repository
+DO  - 10.1109/INTELCIS.2017.8260044
+JO  - 2017 Eighth International Conference on Intelligent Computing and Information Systems (ICICIS)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2017 Eighth International Conference on Intelligent Computing and Information Systems (ICICIS)
+Y1  - 5-7 Dec. 2017
+AB  - Despite the evident proliferation of Cloud Services (CS), many challenges hinder efficient service discovery and selection processes. A strong key enabler is use of ontology in CS domain. However, no broad cloud ontology has dominated yet. In this regard, we propose a fully-fledged comprehensive business domain ontology for CS with querying capabilities. The proposed CS ontology encompasses cloud taxonomy, delivery, deployment and price models. In addition to technical and computing aspects, it also covers business aspects of CS. Distinctively, it elaborates on non-functional aspects that are usually neglected in CS semantic modeling. It encompasses in-depth coverage of service characteristics, quality of service metrics and service level agreement terms. We present ontology development methodology, conceptual model and implementation details. Proposed CS ontology can be perceived as a knowledge base for CS discovery and selection. It was published as contribution to the research community.
+ER  - 
+
+TY  - CONF
+TI  - Evaluation of cloud service ontologies
+T2  - 2017 Eighth International Conference on Intelligent Computing and Information Systems (ICICIS)
+SP  - 144
+EP  - 153
+AU  - Y. M. Afify
+AU  - N. L. Badr
+AU  - I. F. Moawad
+AU  - M. F. Tolba
+PY  - 2017
+KW  - Ontologies
+KW  - Cloud computing
+KW  - OWL
+KW  - Measurement
+KW  - Quality of service
+KW  - Taxonomy
+KW  - cloud services
+KW  - domain ontology
+KW  - service taxonomy
+KW  - ontology evaluation
+KW  - semiotic metrics suite
+DO  - 10.1109/INTELCIS.2017.8260045
+JO  - 2017 Eighth International Conference on Intelligent Computing and Information Systems (ICICIS)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2017 Eighth International Conference on Intelligent Computing and Information Systems (ICICIS)
+Y1  - 5-7 Dec. 2017
+AB  - It is the cloud computing era. Substantial number of Cloud Services (CS) have emerged. The automation of the cloud services life cycle can be enhanced using domain ontologies in the cloud environment. Ontologies allow more efficient CS publication, discovery, selection, composition and recommendations. However, no broad cloud ontology for this purpose has dominated yet. This paper presents an in-depth analysis of existing cloud taxonomies and service ontologies. We present a comparison of the cloud service ontologies implementation features. Moreover, a semiotic metrics suite of ontology quality is used for the assessment process.
+ER  - 
+
+TY  - CONF
+TI  - Semantic Web Service Composition in Big Data Environment
+T2  - GLOBECOM 2017 - 2017 IEEE Global Communications Conference
+SP  - 1
+EP  - 7
+AU  - J. Huang
+AU  - Y. Zhou
+AU  - Q. Duan
+AU  - C. -c. Xing
+PY  - 2017
+KW  - Semantic Web
+KW  - Semantics
+KW  - Time complexity
+KW  - Big Data applications
+KW  - Cloud computing
+DO  - 10.1109/GLOCOM.2017.8254425
+JO  - GLOBECOM 2017 - 2017 IEEE Global Communications Conference
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - GLOBECOM 2017 - 2017 IEEE Global Communications Conference
+Y1  - 4-8 Dec. 2017
+AB  - The widespread deployment of web services and rapid development of big data applications bring in new challenges to web service compositions in the context of big data. The large number of web services processing a huge amount of diverse data together with the complex and dynamic relationships among the services require automatic composition of semantic web services to be performed quickly, thereby demanding more efficient service composition algorithms. In this paper, we investigate the issue of web service composition in big data environments by proposing novel composition algorithms with low time-complexity. Specifically, we decompose the service composition into three stages - construction of parameter expansion graphs, transformation of service dependence graphs, and backtracking search for service compositions. Based on the parameter expansion strategies, we then propose two efficient semantic web service composition algorithms and analyze their time complexity. We also conduct comparison experimentally to evaluate the efficiency of the algorithms and validate their effectiveness using a big data (service composition) set.
+ER  - 
+
+TY  - CONF
+TI  - Development of collaborative editing applications through semantic publish-subscribe platforms
+T2  - 2017 21st Conference of Open Innovations Association (FRUCT)
+SP  - 351
+EP  - 357
+AU  - F. Viola
+AU  - F. Antoniazzi
+AU  - A. D'Elia
+AU  - G. Corsi
+AU  - L. Roffia
+AU  - T. S. Cinotti
+PY  - 2017
+KW  - Collaboration
+KW  - Semantics
+KW  - Ontologies
+KW  - Graphics
+KW  - Semantic Web
+KW  - Publish-subscribe
+KW  - Knowledge based systems
+DO  - 10.23919/FRUCT.2017.8250203
+JO  - 2017 21st Conference of Open Innovations Association (FRUCT)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2017 21st Conference of Open Innovations Association (FRUCT)
+Y1  - 6-10 Nov. 2017
+AB  - Cloud computing revolutionized the way resources (i.e. services and data) are accessed and used. Among the many changes in data processing and service provision paradigms, Software as a Service (SaaS) and collaborative editing are two of the most significant. This paper presents an approach based on semantic publish/subscribe paradigm to the development of collaborative editing applications. The main aim of this research work consists in exploiting emerging technologies (i.e. semantic web data representation formalisms, publish-subscribe platforms) in order to (1) overcome limitations coming from the traditional paradigm of single-author workflows, (2) enhance the editing capabilities of the users, (3) ease the development and maintainment of applications and (4) provide a shared high- level abstraction of the documents that fosters information-level interoperability and reusability. The proposed approach is then validated through an ad-hoc vector graphics application, SCEd (Semantic Collaborative Editor) built upon a SPARQL Event Processing Architecture derived from the Smart-M3 semantic publish-subscribe platform.
+ER  - 
+
+
